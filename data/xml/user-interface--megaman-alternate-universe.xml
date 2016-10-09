@@ -1,0 +1,31 @@
+<portfolio-item type="ui">
+  <name>Mega Man: Alternate Universe</name>
+  <tag>megaman</tag>
+  <tag>gaming</tag>
+  <tag>community</tag>
+  <circa>2003</circa>
+  <client>MMAU Curators</client>
+  <brand>portfolio/ui/2003-megaman-alternate-universe/brand.png</brand>
+  <technologies>Photoshop, HTML, CSS</technologies>
+  <link artifact-index="0"/>
+  <summary>
+    A fan-curated website centerd on the MegaMan series featuring community
+    bulletin boards and fan-fiction, sprite, illustration and music
+    repositories.
+  </summary>
+  <narrative>
+    <p>
+      I got my start in web design building web pages for the various
+      fan-fiction writers, sketch/sprite artists, community forum
+      moderators, and the many other various creatives of the Mega Man
+      fan club Internet community. This is one of the last projects I
+      did for my old crew before I joined the military.
+    </p>
+  </narrative>
+  <artifact
+    name="Mockup"
+    href="portfolio/ui/2003-megaman-alternate-universe/mockup.png"
+    thumbnail="portfolio/ui/2003-megaman-alternate-universe/thumbnail-mockup.png"
+    description="This is just the mockup as I don't believe I ever saved the prototype."
+  />
+</portfolio-item>

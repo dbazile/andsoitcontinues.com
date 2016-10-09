@@ -1,0 +1,14 @@
+<portfolio-item type="photoshop">
+  <name>Finally</name>
+  <tag>derp</tag>
+  <circa>2014</circa>
+  <summary>
+    Historically, I've gotten tons of work done after 10pm, once
+    everyone's headed off to bed. This is a tribute to that nighttime
+    productivity.
+  </summary>
+  <artifact
+    href="portfolio/photoshop/2014-finally/finally.png"
+    thumbnail="portfolio/photoshop/2014-finally/finally-thumbnail.png"
+  />
+</portfolio-item>

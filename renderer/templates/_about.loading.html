@@ -1,0 +1,101 @@
+{%- macro render_leaf(x, y) -%}
+    <g class="fallingLeaves__leafContainer" transform="translate({{x}}, {{y}})">
+      <g class="fallingLeaves__leaf">
+        <path class="fallingLeaves__skin" d="M26.2630247,29.3926286 C30.3688383,29.3926286 38.1073714,21.3580061 38.1073714,14.1073714 C38.1073714,6.85673664 26.2630247,-9.89262863 26.2630247,-9.89262863 C26.2630247,-9.89262863 18.6073714,7.91573277 18.6073714,15.1073714 C18.6073714,22.29901 22.1075091,29.3926286 26.2630247,29.3926286 Z" transform="translate(28.357371, 9.750000) rotate(-270.000000) translate(-28.357371, -9.750000) "/>
+        <path class="fallingLeaves__stem" d="M19.6465778,18.1212074 L23.9154563,13.7708266 L23.9154563,10.3432539 M23.9154562,10.3432539 C23.1679129,10.3432539 22.5619094,9.57596555 22.5619094,8.62946746 C22.5619094,7.68296937 23.1679129,6.91568107 23.9154562,6.91568107 C24.6629995,6.91568107 25.269003,7.68296937 25.269003,8.62946746 C25.269003,9.57596555 24.6629995,10.3432539 23.9154562,10.3432539 Z" strokeLinecap="square" transform="translate(22.457790, 12.518444) rotate(-278.000000) translate(-22.457790, -12.518444) "/>
+        <path class="fallingLeaves__stem" d="M29.1658629,12.716321 L25.4670867,8.36594021 L26.0051105,4.71632101 M26.2198405,4.61632253 C26.8675505,4.61632253 27.3926232,3.84903423 27.3926232,2.90253614 C27.3926232,1.95603805 26.8675505,1.18874975 26.2198405,1.18874975 C25.5721306,1.18874975 25.0470579,1.95603805 25.0470579,2.90253614 C25.0470579,3.84903423 25.5721306,4.61632253 26.2198405,4.61632253 Z" strokeLinecap="square" transform="translate(27.106460, 6.952535) rotate(-282.000000) translate(-27.106460, -6.952535) "/>
+        <path class="fallingLeaves__stem" d="M23.893107,30.1068928 C23.893107,30.1068928 20.646419,22.2337675 21.3931072,18.1068928 C22.0309089,14.5818237 22.3931072,13.0449289 22.3931072,10.1604531 C22.3931072,4.42494295 19.6068936,-7.83490255 19.6068936,-7.83490255 M19.6068936,-7.96553384 C20.1591783,-7.96553384 20.6068936,-8.73282214 20.6068936,-9.67932023 C20.6068936,-10.6258183 20.1591783,-11.3931066 19.6068936,-11.3931066 C19.0546088,-11.3931066 18.6068936,-10.6258183 18.6068936,-9.67932023 C18.6068936,-8.73282214 19.0546088,-7.96553384 19.6068936,-7.96553384 Z" strokeLinecap="square" transform="translate(21.250000, 9.356893) rotate(-270.000000) translate(-21.250000, -9.356893) "/>
+      </g>
+    </g>
+{%- endmacro -%}
+
+<div class="placeholder placeholder--about">
+  <svg class="fallingLeaves" viewBox="-5 0 280 160" preserveAspectRatio="xMinYMin">
+    {{ render_leaf(0, 0) }}
+    {{ render_leaf(25, 0) }}
+    {{ render_leaf(40, 0) }}
+    {{ render_leaf(90, -5) }}
+    {{ render_leaf(120, 0) }}
+    {{ render_leaf(150, -5) }}
+    {{ render_leaf(180, 0) }}
+    {{ render_leaf(195, -5) }}
+    {{ render_leaf(210, 0) }}
+  </svg>
+  <div class="placeholder__text">
+    loading more information about me
+  </div>
+  <style>
+    {%- set duration = 3 -%}
+    {%- set rotation_magnitude = '20deg' %}
+
+    .fallingLeaves {}
+
+    .fallingLeaves__skin,
+    .fallingLeaves__stem {
+      stroke-width: 1;
+      stroke: #555;
+    }
+
+    .fallingLeaves__skin {
+      fill: white;
+    }
+
+    .fallingLeaves__leaf {
+      opacity: 0;
+    }
+
+    .fallingLeaves__leafContainer:nth-child(even) .fallingLeaves__leaf {
+      animation: {{duration}}s infinite forwards fallingLeaves__fallEven linear;
+    }
+
+    .fallingLeaves__leafContainer:nth-child(odd) .fallingLeaves__leaf {
+      animation: {{duration}}s infinite forwards fallingLeaves__fallOdd linear;
+    }
+
+    .fallingLeaves__leafContainer:nth-of-type(2) .fallingLeaves__leaf {
+      animation-delay: {{0.05 * duration}}s;
+    }
+
+    .fallingLeaves__leafContainer:nth-of-type(3) .fallingLeaves__leaf {
+      animation-delay: {{0.1 * duration}}s;
+    }
+
+    .fallingLeaves__leafContainer:nth-of-type(4) .fallingLeaves__leaf {
+      animation-delay: {{0.15 * duration}}s;
+    }
+
+    .fallingLeaves__leafContainer:nth-of-type(5) .fallingLeaves__leaf {
+      animation-delay: {{0.2 * duration}}s;
+    }
+
+    .fallingLeaves__leafContainer:nth-of-type(6) .fallingLeaves__leaf {
+      animation-delay: {{0.25 * duration}}s;
+    }
+
+    .fallingLeaves__leafContainer:nth-of-type(7) .fallingLeaves__leaf {
+      animation-delay: {{0.3 * duration}}s;
+    }
+
+    .fallingLeaves__leafContainer:nth-of-type(8) .fallingLeaves__leaf {
+      animation-delay: {{0.35 * duration}}s;
+    }
+
+    .fallingLeaves__leafContainer:nth-of-type(9) .fallingLeaves__leaf {
+      animation-delay: {{0.4 * duration}}s;
+    }
+
+    @keyframes fallingLeaves__fallEven {
+      0% { opacity: 0; }
+      40% { transform: translate(30px, 75px) rotate(-{{rotation_magnitude}}); opacity: 1; }
+      80% { transform: translate(0, 130px); }
+      100% { transform: translate(0, 130px); }
+    }
+
+    @keyframes fallingLeaves__fallOdd {
+      0% { opacity: 0; }
+      30% { transform: translate(0, 100px) rotate({{rotation_magnitude}}); opacity: 1; }
+      60% { transform: translate(0, 130px); }
+      100% { transform: translate(0, 130px); }
+    }
+  </style>
+</div>

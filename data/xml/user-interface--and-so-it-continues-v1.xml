@@ -1,0 +1,79 @@
+<portfolio-item type="ui">
+  <name>And So It Continues (v1.0)</name>
+  <category>Personal</category>
+  <tag>asic</tag>
+  <tag>personal</tag>
+  <technologies>Photoshop, HTML, CSS, JavaScript (Vanilla)</technologies>
+  <circa>2013</circa>
+  <client>Self</client>
+  <brand>portfolio/ui/2013-andsoitcontinues/brand.png</brand>
+  <link artifact-index="0"/>
+  <summary>
+    A previous design of this site
+  </summary>
+
+  <narrative>
+    <p>
+      Here lies a previous design of this site. My original intent was to
+      build a site without any frameworks or libraries—just vanilla HTML,
+      CSS, JavaScript and Python.  I almost pulled it off, but ended up using
+      <a target="_blank" href="https://highlightjs.org/">highlight.js</a> and
+      <a target="_blank" href="https://pypi.python.org/pypi/Markdown">Python
+      Markdown</a> because as it turns out, hand-rolling your own lexer for 7+
+      languages isn't exactly a walk in the park.
+    </p>
+    <p>
+      I started out intending to support as far back as IE8, until I realized
+      that I do enough of that at work and life is too short.
+    </p>
+    <p>
+      The original code has been bundled and archived into a <a target="_blank"
+      href="https://github.com/dbazile/archive-asic-2013">GitHub repository</a>.
+    </p>
+  </narrative>
+
+  <narrative>
+    <h3>Site Map (.PDF)</h3>
+    <p>
+      I designed this site map up front in order to build my URL strategy.  I
+      later learned that this is actually part of the design process, not just
+      some incidental action.
+    </p>
+    <link artifact-index="1" label="sitemap.pdf" />
+  </narrative>
+
+  <narrative>
+    <h3>Draft Mockups (.PDF)</h3>
+    <p>
+      This was the first shot at designing the page.  I ended up blending
+      parts of this design into the final version.
+    </p>
+    <link artifact-index="2" label="mockups-draft.pdf" />
+  </narrative>
+
+  <narrative>
+    <h3>Final Wireframes (.PDF)</h3>
+    <p>This is what I settled on for the design.</p>
+    <link artifact-index="3" label="wireframes-final.pdf" />
+  </narrative>
+
+  <artifact
+    name="Prototype"
+    href="portfolio/ui/2013-andsoitcontinues/prototype/"
+  />
+  <artifact
+    name="Sitemap"
+    href="portfolio/ui/2013-andsoitcontinues/sitemap.pdf"
+    thumbnail="portfolio/ui/2013-andsoitcontinues/thumbnail-sitemap.png"
+  />
+  <artifact
+    name="Mockups (Draft)"
+    href="portfolio/ui/2013-andsoitcontinues/mockups-draft.pdf"
+    thumbnail="portfolio/ui/2013-andsoitcontinues/thumbnail-mockups-draft.png"
+  />
+  <artifact
+    name="Wireframes (Final)"
+    href="portfolio/ui/2013-andsoitcontinues/wireframes-final.pdf"
+    thumbnail="portfolio/ui/2013-andsoitcontinues/thumbnail-wireframes-final.png"
+  />
+</portfolio-item>

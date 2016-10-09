@@ -1,0 +1,39 @@
+{% extends "layout.html" %}
+
+{% set title = subject + ' | And So It Continues' %}
+{% set meta = abstract|striptags %}
+{% set basehref = '../' %}
+
+{% set placeholder %}
+  {% include "_blog.loading.html" %}
+{% endset %}
+
+{% block body %}
+  <article class="post post--{{type}}">
+    <div class="post__timestamp block">
+      <span
+        class="post__year">{{date|format_datetime('%Y')}}</span><span
+        class="post__monthAndDate">{{date|format_datetime('%m/%d')}}</span>
+    </div>
+    <h1 class="post__title block">{{subject}}</h1>
+
+    <section class="post__abstract block">
+      {{abstract}}
+    </section>
+
+    <section class="post__content">
+      {{body}}
+    </section>
+
+    <section class="post__tags block">
+      <h6>Tagged</h6>
+      <ul>
+        {% for tag in tags %}
+        <li><a href="search.html?tagged={{tag}}">{{tag}}</a></li>
+        {% endfor %}
+      </ul>
+    </section>
+  </article>
+
+  <script src="scripts/blogpost.js"></script>
+{% endblock %}

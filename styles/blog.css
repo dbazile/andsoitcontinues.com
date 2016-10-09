@@ -1,0 +1,577 @@
+/* ==========================================================================
+   Theming & Layout
+   ========================================================================== */
+
+.__blog__ a {
+  color: #00B88F;
+}
+
+.__blog__ a:visited {
+  color: #81A89F;
+}
+
+.__blog__ a:hover {
+  color: #e24067;
+}
+
+.__blog__ h1 {
+  color: black;
+}
+
+.__blog__ h2 {
+  color: #8B305E;
+}
+
+.__blog__ h3 {
+  color: #B2698E;
+}
+
+@media (max-width: 832px) {
+  .__blog__ .block {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
+/* =========================================================================
+   Post Listing
+   ========================================================================= */
+
+.posts {}
+
+.posts .preamble {
+  padding-top: 2em;
+  padding-bottom: 2em;
+  text-align: center;
+  font-size: .9em;
+}
+
+.posts .preamble h1 {
+  margin-bottom: .1em;
+  font-size: 1.6em;
+}
+
+.posts .preamble p {
+  margin-top: 0;
+  padding: 0 15%;
+  line-height: 1.4em;
+  opacity: .5;
+}
+
+.posts__previews {
+  list-style: none;
+  margin: 2em 0;
+}
+
+/* container */
+.posts__graph {
+  position: absolute;
+  top: 0;
+  left: 100px;
+  bottom: 0;
+  width: 10px;
+  font-family: "Hammersmith One";
+  color: #888;
+}
+
+/* node */
+.posts__graph:before {
+  content: '';
+  display: inline-block;
+  position: absolute;
+  top: .5em;
+  left: 0;
+  width: 0;
+  height: 0;
+  border: 5px solid #ddd;
+  box-shadow: 0 0 0 10px white;
+  border-radius: 50%;
+}
+.posts__gap .posts__graph:before {
+  display: none;
+}
+
+/* edge */
+.posts__graph {
+  background-image:
+  linear-gradient(
+    to right,
+    transparent 3px,
+    #ddd 3px,
+    #ddd 6px,
+    transparent 6px
+  );
+}
+
+.posts__gap {
+  position: relative;
+  height: 3em;
+  text-align: center;
+}
+
+.posts__gap--medium {
+  height: 5em;
+}
+
+.posts__gap--long {
+  height: 10em;
+}
+
+.posts__gap img {
+  display: none;
+  position: absolute;
+  top: 2.2em;
+  left: 55%;
+  height: 3em;
+  opacity: .3;
+}
+
+.posts__gap--long img {
+  display: inline;
+}
+
+/* =========================================================================
+   Post Preview
+   ========================================================================= */
+
+.postPreview {
+  position: relative;
+  padding-left: 150px;
+  padding-bottom: 2em;
+  overflow-y: hidden;
+}
+
+/* Post Preview: Metadata
+   ========================================================================= */
+
+.postPreview__timestamp {
+  position: absolute;
+  top: .3em;
+  left: 0;
+  width: 90px;
+  display: flex;
+  justify-content: space-between;
+  font-family: "Hammersmith One";
+  font-size: .8em;
+}
+
+.postPreview__year {
+  color: #5f5f5f;
+}
+
+.postPreview__monthAndDate {
+  color: #aaa;
+}
+
+.postPreview:last-of-type .posts__graph {
+  background-image: none;
+}
+
+/* Post Preview: Content
+   ========================================================================= */
+
+.postPreview h2 {
+  margin: 5px 0 .4em;
+  font-size: 1.3em;
+  line-height: 1em;
+  color: inherit;
+}
+
+.postPreview__abstract :first-child {
+  margin-top: 0;
+}
+
+.postPreview__abstract a:link,
+.postPreview__abstract a:visited {
+  color: inherit;
+  text-decoration: none;
+  border-bottom: 1px dashed #aaa;
+}
+
+.postPreview__abstract a:hover {
+  color: #e24067;
+  border-color: #e24067;
+}
+
+.postPreview__loupe {
+  max-height: 75px;
+  overflow: hidden;
+  line-height: 0;
+  text-align: center;
+  transition: .6s ease-in-out;
+  transition-property: max-height;
+  opacity: .3;
+  background-color: rgba(0,0,0,.1);
+  border: 1px solid #ddd;
+  border-radius: 3px;
+}
+
+.postPreview__loupe img {
+  max-width: 100%;
+  transform: translateY(-50%);
+  transition: transform .6s ease-in-out;
+}
+
+.postPreview__content:hover .postPreview__loupe {
+  max-height: 800px;
+  opacity: 1;
+}
+
+.postPreview__content:hover .postPreview__loupe img {
+  transform: none;
+}
+
+.postPreview--quote blockquote {
+  margin: .5em 0 0;
+  padding: 0 .75em;
+  border-left: 3px solid;
+  font: italic 1.6rem "Cormorant Garamond";
+  color: #777;
+}
+
+.postPreview--quote blockquote p {
+  line-height: 1.25em;
+}
+
+.postPreview--quote blockquote :first-child {
+  margin-top: 0;
+}
+
+.postPreview--quote blockquote :last-child {
+  margin-bottom: 0;
+}
+
+.postPreview--quote blockquote strong {
+  color: #5f5f5f;
+}
+
+.postPreview--quote blockquote h1,
+.postPreview--quote blockquote h2,
+.postPreview--quote blockquote h3,
+.postPreview--quote blockquote h4,
+.postPreview--quote blockquote h5,
+.postPreview--quote blockquote h6 {
+  margin-top: .5em;
+  color: #5f5f5f;
+  font-family: inherit;
+}
+
+.postPreview--quote blockquote li + li {
+  margin-top: .2em;
+}
+
+.postPreview--quote pre {
+  background-color: transparent;
+  border: 0;
+  color: inherit;
+  font-style: normal;
+  font-size: .8em;
+}
+
+/* =========================================================================
+   Post
+   ========================================================================= */
+
+.post {}
+
+/* Post: Header
+   ========================================================================= */
+
+.post__timestamp {
+  margin: 5em 0 2em;
+  font-family: "Hammersmith One";
+  font-size: .8em;
+}
+
+.post__monthAndDate {
+  color: #aaa;
+}
+
+.post__monthAndDate:before {
+  content: "/";
+}
+
+.post__title {
+  font-size: 3.5em;
+  line-height: 1em;
+  overflow: visible;
+}
+
+.post__abstract {
+  margin-bottom: 1.3em;
+  margin-right: 10%;
+  font-size: 1.2em;
+  color: #999;
+}
+
+.post__abstract p {
+  line-height: 1.3em;
+}
+
+/* =========================================================================
+   Content
+   ========================================================================= */
+
+/* Content: Of Type "quote"
+   ========================================================================= */
+
+.post--quote .post__content {
+  margin-top: 1em;
+  padding-top: 2em;
+  padding-bottom: 2em;
+  background-color: #444;
+  color: white;
+  font-size: 1.2em;
+}
+
+.post--quote .post__content h1,
+.post--quote .post__content h2,
+.post--quote .post__content h3,
+.post--quote .post__content h4,
+.post--quote .post__content h5,
+.post--quote .post__content h6 {
+  color: inherit;
+  font-family: inherit;
+}
+
+.post--quote li {
+  margin-top: .2em;
+}
+
+.quoth {
+  display: block;
+  margin: 1em 0 0 !important;
+  font-size: .625em;
+  color: #aaa;
+  font-family: "Hammersmith One";
+  font-style: normal;
+}
+
+.quoth:before {
+  content: '\2014';
+}
+
+/* Content: Block Defaults
+   ========================================================================= */
+
+.post__content p,
+.post__content blockquote,
+.post__content h1,
+.post__content h2,
+.post__content h3,
+.post__content h4,
+.post__content h5,
+.post__content h6,
+.post__content pre,
+.post__content ul,
+.post__content ol {
+  margin: 1.5rem 0 .5rem;
+  padding: 0 calc(((100% - 800px) / 2) + 20px);
+}
+
+@media (max-width: 832px) {
+  .post__content p,
+  .post__content blockquote,
+  .post__content h1,
+  .post__content h2,
+  .post__content h3,
+  .post__content h4,
+  .post__content h5,
+  .post__content h6,
+  .post__content pre,
+  .post__content ul,
+  .post__content ol {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
+.post__content p,
+.post__content blockquote,
+.post__content ul,
+.post__content ol {
+  font-size: 1.1em;
+}
+
+/* Content: Headings
+   ========================================================================= */
+
+.post__content h1 + *,
+.post__content h2 + *,
+.post__content h3 + *,
+.post__content h4 + *,
+.post__content h5 + *,
+.post__content h6 + * {
+  margin-top: 0;
+}
+
+.post__content h6 {
+  font-style: italic;
+}
+
+/* Content: Quotations
+   ========================================================================= */
+
+.post__content blockquote {
+  opacity: .8;
+  font-size: 1.2em;
+  margin-top: 1.2em;
+  font: italic 1.6rem "Cormorant Garamond";
+  color: #777;
+}
+
+.post__content blockquote > * {
+  padding: 1em 20% 1em 1em;
+  border-left: 4px solid;
+  margin: 0;
+}
+
+.post__content blockquote > * + * {
+  padding-top: 0;
+}
+
+.post__content blockquote .quoth {
+  display: block;
+  font-size: .7em;
+  color: #5f5f5f;
+  font-family: "Hammersmith One";
+  font-style: normal;
+}
+
+.post__content blockquote .quoth:before {
+  content: '\2014';
+}
+
+/* Content: Lists
+   ========================================================================= */
+
+.post__content li {
+  margin-left: 2.5em;
+  padding-left: .7em;
+}
+
+.post__content li + li {
+  margin-top: .5em;
+}
+
+/* Content: Code
+   ========================================================================= */
+
+.post__content pre {
+  margin: 1.3em 0;
+  overflow-x: auto;
+  padding-top: 2em;
+  padding-bottom: 2em;
+}
+
+/* Images
+   ========================================================================= */
+
+.post__content img {
+  max-width: 100%;
+  border-radius: .25em;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Tables
+   ========================================================================= */
+
+.post__content table {
+  width: 100%;
+  background-color: #444;
+  color: #ddd;
+  margin: 1em 0;
+}
+
+.post__content th {
+  font-family: "Hammersmith One";
+  font-weight: normal;
+}
+
+.post__content thead th {
+  padding: .5em .5em .25em;
+  border-bottom: 1px solid #ddd;
+  text-align: left;
+}
+
+.post__content tbody th {
+  padding: .25em .5em;
+  color: lighten(#444, 20%);
+}
+
+.post__content tbody th:first-child:not(:only-child) {
+  text-align: right;
+}
+
+.post__content tbody th.group {
+  text-transform: uppercase;
+  background-color: lighten(#444, 5%);
+  color: white;
+  font-size: .8em;
+}
+
+.post__content tbody td {
+  padding: .25em .5em;
+}
+
+/* =========================================================================
+   Tags
+   ========================================================================= */
+
+.post__tags {
+  margin-top: 2em;
+  padding-top: 1em;
+  padding-bottom: 3em;
+}
+
+.post__tags h6 {
+  margin: 0;
+  text-transform: uppercase;
+  font-size: 18px;
+  font-weight: normal;
+  font-family: "Hammersmith One";
+}
+
+.post__tags ul {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: .75em 0 0;
+  padding: 0;
+}
+
+.post__tags li {
+  display: inline-block;
+  margin: 0 .5em 0 0;
+  padding: 0;
+}
+
+.post__tags a {
+  display: block;
+  padding: .4em 1em;
+  margin: 0 2px 6px;
+  border-radius: 3px;
+  box-shadow:
+    0 0 0 1px #5f5f5f,
+    2px 0 0 1px #5f5f5f;
+  opacity: .5;
+  color: #5f5f5f;
+  text-decoration: none;
+  font-family: "Ubuntu Mono";
+  font-size: .8em;
+}
+
+.post__tags a:before {
+  content: '#';
+}
+
+.post__tags a:hover {
+  opacity: .7;
+  color: #5f5f5f;
+}
+
+.post__tags li:first-of-type a {
+  font-weight: bold;
+  color: black;
+}

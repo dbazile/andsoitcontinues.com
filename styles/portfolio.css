@@ -1,0 +1,491 @@
+/* ==========================================================================
+   Theming & Layout
+   ========================================================================== */
+
+.__portfolio__ a {
+  color: #66d9ef;
+}
+
+.__portfolio__ a:visited {
+  color: #c4b3d2;
+}
+
+.__portfolio__ a:hover {
+  color: #0fff6e;
+}
+
+.__portfolio__ h1 {
+  margin: 0;
+  font-size: 3.5em;
+  color: white;
+}
+
+.portfolio__heading {
+  background: #e53866;
+  box-shadow: 0px 5px rgba(0,0,0,0.50);
+  text-align: center;
+  color: white;
+  line-height: 2em;
+}
+
+.photoshoppery {
+  margin-top: 15vh;
+}
+
+.__portfolio__ h3,
+.__portfolio__ h4,
+.__portfolio__ h5,
+.__portfolio__ h6 {
+  color: white;
+}
+
+/* ==========================================================================
+   Preamble
+   ========================================================================== */
+
+.__portfolio__ .preamble {
+  height: 35vh;
+  align-items: center;
+}
+
+@media (max-width: 832px) {
+  .__portfolio__ .preamble {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
+.skills-pie-chart {
+  width: 100%;
+}
+
+.preamble__github {
+  align-self: flex-end;
+  text-align: right;
+  margin-bottom: 2em;
+}
+
+.github__link {
+  opacity: .5;
+  transition: opacity .1s linear;
+}
+
+.github__link:hover {
+  opacity: 1;
+}
+
+.github__icon {
+  width: 3em;
+  height: 3em;
+}
+
+/* ==========================================================================
+   UI
+   ========================================================================== */
+
+.ui {
+  background-color: #1e1e1e;
+}
+
+/* ==========================================================================
+   UI: Tiles
+   ========================================================================== */
+
+.tiles {
+  z-index: 2;
+  position: relative;
+  background-color: #3a3b55;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  height: 18vw;
+  width: 100%;
+  box-shadow: inset 0 5px rgba(0,0,0,.3);
+}
+
+.tiles__tile {
+  position: relative;
+  flex: 1;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #3A3B55;
+}
+
+.tiles__tile img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  transition: 0.2s ease-out;
+  transition-property: opacity;
+}
+
+.tiles--hasActiveTile img {
+  opacity: .3;
+}
+
+.tiles__tile.isActive img {
+  opacity: 1;
+}
+
+.tiles__tile {
+  transition: 0.2s cubic-bezier(0.3, 1.35, 0.43, 1.43);
+  transition-property: transform, box-shadow;
+  box-shadow: 0 5px rgba(0,0,0,.3);
+}
+
+.tiles__tile:hover {
+  transform: translateY(.5em);
+}
+
+.tiles__tile.isActive {
+  transform: translateY(1em);
+  box-shadow:
+    0 5px rgba(0,0,0,.3);
+}
+
+.tiles__tile.tiles__tile--isActive img,
+.tiles__tile:hover img {
+  opacity: 1;
+}
+
+/* ==========================================================================
+   UI Narratives
+   ========================================================================== */
+
+.narrative-group {
+  opacity: 0;
+  transform: translateY(3em);
+  transition: .7s cubic-bezier(.3,1.2,.32,1.23);
+}
+
+.narrative-group .narrative {
+  display: none;
+}
+
+.narrative-group:target {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.narrative-group:target .narrative {
+  display: flex;
+}
+
+.narrative {
+  background-color: #3A3B55;
+  min-height: 70vh;
+  display: flex;
+}
+
+.narrative + .narrative {
+  box-shadow:
+    inset 0 1px rgba(255,255,255,.2),
+    0 10px rgba(0,0,0,.2);
+}
+
+/* UI Narratives: Heading
+   ========================================================================== */
+
+.narrative--heading {
+  background-color: #1e1e1e;
+  min-height: 0;
+  padding: 4em 0;
+  font-size: 1.15em;
+}
+
+.narrative--heading .narrative__column:last-child {
+  flex: .5;
+  text-align: left;
+}
+
+.narrative--heading .narrative__column:first-child {
+  padding-left: calc((100% - 800px) / 2);
+}
+
+.narrative--heading .narrative__column:last-child {
+  padding-right: calc((100% - 800px) / 2);
+}
+
+.narrative--heading h3 {
+  margin-top: 0;
+}
+
+@media (max-width: 832px) {
+  .narrative--heading .narrative__column:first-child {
+    padding-left: 1rem;
+  }
+  .narrative--heading .narrative__column:last-child {
+    padding-right: 1rem;
+  }
+}
+
+/* UI Narratives: Contents
+   ========================================================================== */
+
+.narrative {
+  display: flex;
+}
+
+.narrative h3 {
+  font-size: 2.5em;
+  letter-spacing: -.03em;
+  color: white;
+  text-shadow: 0 1px rgba(0,0,0,.4);
+}
+
+.narrative h3 small {
+  display: block;
+  font-size: .3em;
+  opacity: .4;
+  letter-spacing: normal;
+}
+
+.column__microdata h4 {
+  opacity: .4;
+  text-transform: uppercase;
+  font-size: .8em;
+  letter-spacing: .15em;
+}
+
+.column__microdata p {
+  margin: 0;
+  color: white;
+}
+
+.column__microdata + .column__microdata {
+  margin-top: 1em;
+}
+
+.narrative__column {
+  flex: 1;
+  overflow: hidden;
+}
+
+.narrative__column--media {
+  position: relative;
+  background-color: rgba(0,0,0,.2);
+}
+
+.narrative__mural {
+  position: absolute;
+  top: 50%;
+  height: 100%;
+  transform: translateY(-50%);
+}
+
+.narrative__column--text {
+  align-self: center;
+  padding: 2em;
+}
+
+.narrative__column--text strong {
+  color: white;
+}
+
+.narrative__column--text > h4 {
+  margin: .5em 0 .25em;
+  color: white;
+  font-size: 1.3em;
+}
+
+.narrative__column--text > h4 + p {
+  margin-top: 0;
+}
+
+/* UI Narratives: Interlacing
+   ========================================================================== */
+
+.narrative--artifact:nth-of-type(odd) {
+  flex-direction: row-reverse;
+}
+
+.narrative--artifact:nth-of-type(even) .narrative__column--text {
+  padding-left: calc((100% - 800px) / 2);
+}
+.narrative--artifact:nth-of-type(odd) .narrative__column--text {
+  padding-right: calc((100% - 800px) / 2);
+}
+
+@media (max-width: 832px) {
+  .narrative--artifact:nth-of-type(even) .narrative__column--text {
+    padding-left: 1rem;
+  }
+  .narrative--artifact:nth-of-type(odd) .narrative__column--text {
+    padding-right: 1rem;
+  }
+}
+
+.narrative--artifact:nth-of-type(odd) .narrative__mural {
+  right: 0;
+}
+.narrative--artifact:nth-of-type(even) .narrative__mural {
+  left: 0;
+}
+
+/* UI Narratives: File Links
+   ========================================================================= */
+
+.narrative__files {
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap-columns;
+  list-style: none;
+  margin: 1em 0 0;
+}
+
+.narrative__file {
+  display: flex;
+  text-align: center;
+  max-width: 15em;
+  margin: 0;
+  padding: 0;
+}
+
+.narrative__file a {
+  padding: 1em;
+  font-family: "Hammersmith One";
+  font-size: 16px;
+  color: white !important;
+  border: 1px solid transparent;
+  border-radius: 3px;
+}
+
+.narrative__file a:hover {
+  background-color: rgba(255,255,255,.1);
+  border-color: rgba(255,255,255,.1);
+}
+
+.narrative__file img {
+  display: block;
+  height: 4.5em;
+  margin: 0 auto .25em;
+}
+
+/* =========================================================================
+   Random Photoshoppery
+   ========================================================================= */
+
+.photoshoppery__artifacts {
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+  padding: 5em calc((100% - 800px) / 2);
+  overflow: hidden;
+  box-shadow: inset 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #3B3B56;
+}
+
+.photoshoppery__entry {
+  width: 33.3333%;
+  margin: 0 0 5em;
+  padding: 10px;
+  /*vertical-align: top;*/
+  border-left: 2px solid rgba(190, 190, 210, 0.5);
+  font-size: .9em;
+}
+
+.photoshoppery__entry:hover > a {
+  opacity: .7;
+}
+
+.photoshoppery__entry > a {
+  opacity: .4;
+  transition: 0.2s cubic-bezier(0.3, 1.35, 0.43, 1.43);
+  transition-property: opacity, transform, box-shadow;
+  position: relative;
+  display: block;
+  margin-right: 15px;
+  width: 100%;
+  height: 80px;
+  overflow: hidden;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.3);
+}
+
+.photoshoppery__entry > a:hover {
+  z-index: 2;
+  opacity: 1;
+  transform: scale(1.1);
+  box-shadow: 0 0.4em 0 0.1em rgba(0, 0, 0, 0.15);
+}
+
+.photoshoppery__entry > a img {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+}
+
+.photoshoppery__title {
+  margin: .5em 0 .15em;
+  font-size: 1.3em;
+  color: white;
+}
+
+.photoshoppery__circa {
+  margin: 0;
+  line-height: 1em;
+  text-transform: uppercase;
+  font-family: "Hammersmith One";
+  font-size: .8em;
+  color: rgba(199, 179, 216, 0.5);
+}
+
+.photoshoppery__circa:before {
+  content: 'Circa ';
+}
+
+.photoshoppery__background {
+  margin-top: .75em;
+  line-height: 1.2em;
+}
+
+.photoshoppery :target {
+  border-color: #50e388;
+  background-color: rgba(217, 204, 255, 0.13);
+  color: white;
+}
+
+/* =========================================================================
+   Footer
+   ========================================================================= */
+
+.attributions {
+  margin: 0;
+  overflow: hidden;
+  box-shadow: inset 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #222;
+  color: #555;
+  font-size: 14px;
+  padding-top: 3em;
+  padding-bottom: 3em;
+}
+
+.attributions h2 {
+  color: #999;
+  font-size: 14px;
+  margin-bottom: .5em;
+}
+
+.attributions p {
+  margin-top: 0;
+  padding-right: 35%;
+  line-height: 18px;
+}
+
+.attributions a {
+  color: #888;
+}
+
+.attributions a:hover {
+  color: #0FFF6E;
+}
+
+.photoshoppery {
+  margin-top: 7em;
+}

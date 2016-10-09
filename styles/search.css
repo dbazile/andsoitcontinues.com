@@ -1,0 +1,47 @@
+body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  font-family: Abhaya Libre;
+  align-items: stretch;
+  min-height: 100vh;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Hammersmith One";
+  font-weight: normal;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  min-height: 20vh;
+}
+
+input {
+  border: 1px solid #ddd;
+  padding: .5em;
+  font-size: 1em;
+  width: 500px;
+  font-family: "Hammersmith One";
+  font-weight: normal;
+}
+
+input:focus {
+  border-color: #aaa;
+}
+
+.results {
+  list-style
+  margin: 0;
+  border: 1px solid #999;
+  background-color: #eee;
+  flex: 1;
+}

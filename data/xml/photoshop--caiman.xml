@@ -1,0 +1,15 @@
+<portfolio-item type="photoshop">
+  <name>Caiman</name>
+  <tag>star fox</tag>
+  <tag>gaming</tag>
+  <tag>nintendo</tag>
+  <circa>2009</circa>
+  <summary>
+    A recreation of one of my favorite NPCs from Star Fox 64. Any true
+    Nintendo fan will remember this little guy.
+  </summary>
+  <artifact
+    href="portfolio/photoshop/2009-caiman/caiman.png"
+    thumbnail="portfolio/photoshop/2009-caiman/caiman-thumbnail.png"
+  />
+</portfolio-item>

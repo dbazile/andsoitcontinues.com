@@ -1,0 +1,56 @@
+/******** Typography ********/
+/* Base */
+body				{ font-family:"Verdana", "Arial", sans-serif; font-size:11px; line-height:16px; color:#000; }
+h1				{ font-size:48px; line-height:38px; letter-spacing:-3px; }
+h2				{ font-size:18px; line-height:18px; letter-spacing:-1px; }
+h3				{ font-size:15px; line-height:15px; color:#606060; }
+h4				{ font-size:14px; line-height:14px; color:#606060; }
+code				{ font-family:Monaco, "Lucida Console", Courier, monospace; font-size:10px; line-height:10px; color:#666666; }
+blockquote p			{ color:#505050; border-left:5px solid #c0c0c0; line-height:13px; }
+
+/* Hyperlinks */
+a:link				{ color:#693; text-decoration:underline; }
+a:visited			{ color:#693; text-decoration:line-through; }
+a:active			{ color:red; }
+a:hover				{ color:#f30 !important; }
+
+/* Content */
+#Sidebar .title			{ font-size:10px; font-weight:bold; color:#ffffff; }
+#Sidebar .content		{ color:#404040; }
+
+/* Footer */
+#Footer #Copyright		{ color:#ffffff; }
+
+
+/******** Look & Feel ********/
+body				{ background:#2E3944 url(backdrop.gif); }
+
+/* Header */
+#Header				{ background:#ffffff; }
+
+/* Navigation */
+#Navigation			{ background:#ffffff; }
+#Navigation span		{ display:none; }
+#Navigation #News		{ background:#2E3944 url(navigation_01.gif) 0 0 no-repeat; }
+#Navigation #News:hover		{ background:transparent url(navigation_01.gif) 0 -29px no-repeat; }
+#Navigation #Anime		{ background:#2E3944 url(navigation_02.gif) 0 0 no-repeat; }
+#Navigation #Anime:hover	{ background:#2E3944 url(navigation_02.gif) 0 -29px no-repeat; }
+#Navigation #Articles		{ background:#2E3944 url(navigation_03.gif) 0 0 no-repeat; }
+#Navigation #Articles:hover	{ background:#2E3944 url(navigation_03.gif) 0 -29px no-repeat; }
+#Navigation #Downloads		{ background:#2E3944 url(navigation_04.gif) 0 0 no-repeat; }
+#Navigation #Downloads:hover	{ background:#2E3944 url(navigation_04.gif) 0 -29px no-repeat; }
+#Navigation #About		{ background:#2E3944 url(navigation_05.gif) 0 0 no-repeat; }
+#Navigation #About:hover	{ background:#2E3944 url(navigation_05.gif) 0 -29px no-repeat; }
+
+/* Main */
+#Main				{ background:#ffffff; }
+#Sidebar			{ border:1px solid #E6E9EB; border-width:0 0 1px 1px; }
+#Sidebar .title			{ background:#93A4AB; }
+#Sidebar .content		{ background:#E6E9EB; }
+
+/* Footer */
+#Footer				{ background:#ffffff; }
+#Footer #Copyright		{ background:#000000; }
+#Footer #ButtonDavidius		{ background:#000000 url(button-davidius.gif) 0 0 no-repeat; }
+#Footer #ButtonDavidius:hover	{ background:#000000 url(button-davidius.gif) 0 -31px no-repeat; }
+#Footer #ButtonDavidius span	{ display:none; }

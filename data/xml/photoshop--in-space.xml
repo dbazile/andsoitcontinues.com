@@ -1,0 +1,13 @@
+<portfolio-item type="photoshop">
+  <name>In Space</name>
+  <tag>tutorials</tag>
+  <circa>2014</circa>
+  <summary>
+    I was just messing around with Photoshop one day and put this
+    together. I haven't used an Epic Lens Flare since 2001!
+  </summary>
+  <artifact
+    href="portfolio/photoshop/2014-in-space/in-space.png"
+    thumbnail="portfolio/photoshop/2014-in-space/in-space-thumbnail.png"
+  />
+</portfolio-item>

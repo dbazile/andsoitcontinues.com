@@ -1,0 +1,13 @@
+<portfolio-item type="photoshop">
+  <name>Avatar (Pixel)</name>
+  <tag>avatar</tag>
+  <tag>pixel</tag>
+  <circa>2014</circa>
+  <summary>
+    An avatar I made for my online persona.
+  </summary>
+  <artifact
+    href="portfolio/photoshop/2014-avatar-pixel/avatar-pixel.png"
+    thumbnail="portfolio/photoshop/2014-avatar-pixel/avatar-pixel-thumbnail.png"
+  />
+</portfolio-item>

@@ -1,0 +1,36 @@
+<portfolio-item type="ui">
+  <name>No Man's Land</name>
+  <tag>wolfenstein</tag>
+  <tag>gaming</tag>
+  <tag>rtcw</tag>
+  <circa>2002</circa>
+  <client>No Man's Land Dev Team</client>
+  <brand>portfolio/ui/2002-no-mans-land/brand.png</brand>
+  <technologies>Photoshop, HTML, CSS</technologies>
+  <link artifact-index="0"/>
+  <summary>
+    A promotion page for an ambitious game mod development project based on
+    Return to Castle Wolfensten.
+  </summary>
+  <narrative>
+    <h3>Background</h3>
+    <p>
+      This mod was based on the PC-based first-person-shooter <a target="_blank"
+      href="http://wolfenstein.wikia.com/wiki/Return_to_Castle_Wolfenstein">Return
+      to Castle Wolfenstein</a>.  The team was attempting to use the RTCW engine
+      to write a campaign mission storyline.  The goal here was replacing the
+      HTML 3.0 monstrosity that was their original site to help build hype for
+      the mod.
+    </p>
+    <h4>So what happened?</h4>
+    <p>
+      I'm pretty sure this project ended up being vaporware and was never
+      released.
+    </p>
+  </narrative>
+  <artifact
+    name="Prototype"
+    href="portfolio/ui/2002-no-mans-land/prototype"
+    thumbnail="portfolio/ui/2002-no-mans-land/thumbnail-prototype.png"
+  />
+</portfolio-item>

@@ -1,0 +1,43 @@
+<portfolio-item type="ui">
+  <name>Tribal Destroyers</name>
+  <tag>tribes</tag>
+  <tag>gaming</tag>
+  <circa>2001</circa>
+  <client>M.U.</client>
+  <brand>portfolio/ui/2001-tribal-destroyers/brand.png</brand>
+  <technologies>Photoshop, HTML, CSS, JavaScript</technologies>
+  <link artifact-index="0"/>
+  <summary>
+    A modest-sized PC gamers' guild community website I made for a friend.
+  </summary>
+  <narrative>
+    <h3>Background</h3>
+    <p>
+      Implemented with limited CSS knowledge and the ubiquitous table-based
+      layout, getting that goon's arm to properly float off the main body made
+      this relatively simple design a big pain.  Looking at this code to package
+      it up makes me cringe. I'm still trying to figure out how I made this work
+      all those years ago.
+    </p>
+    <p>
+      This gamers' group was centered on the <a target="_blank"
+      href="http://tribes.wikia.com/wiki/Tribes_Wiki">Tribes</a> series.  I
+      don't know much about any of the games as I never played any of them but
+      this was made as a favor for a friend.
+    </p>
+    <h4>What the heck is d3fect studios?</h4>
+    <p>
+      In case you're wondering, <strong>d3fect studios</strong> was my design
+      <em>nom de plume</em> back then, .com and everything!  Of course, with
+      the clientele being what it was (i.e., broke teenagers without the means
+      to pay), I never charged anything and it went nowhere.  Oddly enough, a
+      squatter picked it the domain name within days after I let it expire...
+    </p>
+  </narrative>
+  <artifact
+    name="Prototype"
+    href="portfolio/ui/2001-tribal-destroyers/prototype/"
+    thumbnail="portfolio/ui/2001-tribal-destroyers/thumbnail-prototype.png"
+    description="Click to open a working prototype of the design."
+  />
+</portfolio-item>

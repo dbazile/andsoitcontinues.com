@@ -1,0 +1,15 @@
+<portfolio-item type="photoshop">
+  <name>Avatar (Falling)</name>
+  <tag>coding</tag>
+  <tag>falling</tag>
+  <tag>vector</tag>
+  <circa>2015</circa>
+  <summary>
+    Another avatar for my online accounts. This one seems to
+    hold truer to reality most of the time.
+  </summary>
+  <artifact
+    href="portfolio/photoshop/2015-avatar-html/avatar-html.png"
+    thumbnail="portfolio/photoshop/2015-avatar-html/avatar-html-thumbnail.png"
+  />
+</portfolio-item>

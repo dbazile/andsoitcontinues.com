@@ -1,0 +1,15 @@
+<portfolio-item type="photoshop">
+  <name>Closet Rack</name>
+  <tag>blueprints</tag>
+  <tag>design</tag>
+  <circa>2010</circa>
+  <summary>
+    An illustration of the closet rack I built in our home a few years
+    ago. Just a little something I procrastinated with before actually
+    building the darn thing.
+  </summary>
+  <artifact
+    href="portfolio/photoshop/2010-closet-rack/closet-rack.png"
+    thumbnail="portfolio/photoshop/2010-closet-rack/closet-rack-thumbnail.png"
+  />
+</portfolio-item>

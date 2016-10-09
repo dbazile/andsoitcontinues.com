@@ -1,0 +1,221 @@
+/* =========================================================================
+   Containers
+   ========================================================================= */
+
+pre {
+  overflow-x: auto;
+  border: 10px solid #303030; /*@syntax-background-color*/
+  line-height: 1.17em;
+  word-wrap: normal;
+  background-color: #303030; /*@syntax-background-color*/
+  color: #ccc; /*@syntax-text-color*/
+}
+
+code {
+  white-space: pre;
+  color: inherit;
+}
+
+/*
+  @syntax-text-color: #ccc;
+  @syntax-background-color: #303030;
+
+  @syntax-language-attribute-color: #fcd;
+  @syntax-language-class-color: white;
+  @syntax-language-comment-color: #555;
+  @syntax-language-constant-color: #66D9EF;
+  @syntax-language-function-color: #6f7;
+  @syntax-language-keyword-color: #c6f;
+  @syntax-language-keyword-modifier-color: #de9bff;
+  @syntax-language-number-color: #fe00ff;
+  @syntax-language-string-color: #ffa13d;
+  @syntax-language-parameter-color: #cad;
+  @syntax-language-warning-color: #ff0;
+  @syntax-language-tag-punctuation: #888;
+*/
+
+/* =========================================================================
+   Languages
+   ========================================================================= */
+
+
+/* Languages: Defaults
+   ========================================================================= */
+
+.hljs-regexp,
+.hljs-string {
+  color: #ffa13d; /*@syntax-language-string-color*/
+}
+
+.hljs-string .hljs-subst {
+  color: #de9bff; /*@syntax-language-keyword-modifier-color*/
+}
+
+.hljs-comment {
+  color: #555; /*@syntax-language-comment-color*/
+}
+.hljs-doctag {
+  font-weight: bold;
+}
+
+.hljs-number {
+  color: #fe00ff; /*@syntax-language-number-color*/
+}
+
+.hljs-built_in,
+.hljs-prompt,
+.hljs-preprocessor,
+.hljs-class .hljs-title,
+.hljs-variable {
+  color: white; /*@syntax-language-class-color*/
+}
+
+.hljs-built_in {
+  font-weight: bold;
+  font-style: italic;
+}
+
+.hljs-class .hljs-title {
+  font-weight: bold;
+}
+
+.hljs-literal,
+.hljs-keyword,
+.hljs-title {
+  color: #c6f; /*@syntax-language-keyword-color*/
+}
+
+.hljs-tag .hljs-name {
+  color: #f7b;
+}
+
+.hljs-params {
+  color: #cad; /*@syntax-language-parameter-color*/
+}
+
+.hljs-params {
+  font-style: italic;
+}
+
+.hljs-function .hljs-title {
+  color: #6f7; /*@syntax-language-function-color*/
+}
+
+.hljs-meta,
+.hljs-symbol {
+  color: #66D9EF; /*@syntax-language-constant-color*/
+}
+
+/* Languages: CSS
+   ========================================================================= */
+
+.css .hljs-attribute {
+  font-style: italic;
+}
+
+.hljs-selector-attr,
+.hljs-selector-pseudo {
+  color: white; /*@syntax-language-class-color*/
+}
+
+.hljs-selector-tag {
+  color: #c6f; /*@syntax-language-keyword-color*/
+}
+
+.css .hljs-function {
+  color: #6f7; /*@syntax-language-function-color*/
+}
+
+.hljs-selector-id,
+.hljs-selector-class {
+  color: #66D9EF; /*@syntax-language-constant-color*/
+}
+
+/* Languages: Diff
+   ========================================================================= */
+
+.diff {
+  color: #ccc; /*@syntax-text-color*/
+}
+
+.diff .hljs-meta {
+  color: #66D9EF; /*@syntax-language-constant-color*/
+}
+
+/* Header */
+.diff .hljs-comment {
+  color: white; /*@syntax-language-class-color*/
+  font-weight: bold;
+}
+
+.diff .hljs-addition {
+  color: #2feb3b;
+}
+
+.diff .hljs-deletion {
+  color: #fe4a4a;
+}
+
+/* Languages: JSON
+   ========================================================================= */
+
+.json .hljs-attr {
+  color: #66D9EF; /*@syntax-language-constant-color*/
+  font-weight: bold;
+}
+
+/* Languages: Objective-C
+   ========================================================================= */
+
+.objectivec .hljs-variable {
+  color: #de9bff; /*@syntax-language-keyword-modifier-color*/
+}
+
+/* Languages: Python
+   ========================================================================= */
+
+/* Decorators */
+.python .hljs-meta {
+  color: #66D9EF; /*@syntax-language-constant-color*/
+}
+
+/* Languages: XML
+   ========================================================================= */
+
+.xml .javascript,
+.xml .css,
+.xml .hljs-cdata {
+  opacity: 0.5;
+}
+
+.xml .hljs-tag {
+  /* '<' '/' and '>' */
+  color: #888; /*@syntax-language-tag-punctuation*/
+}
+
+.xml .hljs-attr {
+  color: #fcd; /*@syntax-language-attribute-color*/
+}
+
+/* Languages: XCode
+   ========================================================================= */
+
+.hljs-preprocessor {
+  /* Used in PHP and Obj-C */
+  font-style: italic;
+  font-weight: bold;
+  color: #ccc; /*@syntax-text-color*/
+}
+
+.swift .hljs-type {
+  color: #66D9EF; /*@syntax-language-constant-color*/
+}
+
+.swift .hljs-class .hljs-keyword {
+  color: #c6f; /*@syntax-language-keyword-color*/
+}
+
+.swift .hljs-class .hljs-title {
+  color: #de9bff; /*@syntax-language-keyword-modifier-color*/
+}
+

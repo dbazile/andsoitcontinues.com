@@ -1,0 +1,47 @@
+<portfolio-item type="ui">
+  <name>Hidden Palace Zone</name>
+  <tag>sonic the hedgehog</tag>
+  <tag>gaming</tag>
+  <circa>2001</circa>
+  <client>P.J.</client>
+  <brand>portfolio/ui/2001-hidden-palace-zone/brand.png</brand>
+  <technologies>Photoshop, HTML, CSS, JavaScript (Vanilla)</technologies>
+  <link artifact-index="0"/>
+  <summary>
+    A design I threw together for a friend's fan-fiction website.
+  </summary>
+  <narrative>
+    <h3>Background</h3>
+    <p>
+      For those not in the know, <a target="_blank"
+      href="http://sonic.wikia.com/wiki/Hidden_Palace_Zone_(Sonic_the_Hedgehog_2)"><em>Hidden
+      Palace Zone</em></a> is the name of a stage from the <a target="_blank"
+      href="http://sonic.wikia.com/wiki/Sonic_the_Hedgehog_series">Sonic the
+      Hedgehog</a> series. It also happened to be the name my friend decided on
+      for his fanfic repository.
+    </p>
+    <p>
+      The &ldquo;chaos gems&rdquo; in the background were actually the
+      result of a completely serendipitous mistake I made in a 3d
+      modeling program I was messing with at the time. I just adjusted
+      the HSB values for each in Photoshop, then stuck em in the
+      background.
+    </p>
+    <p>
+      I committed my biggest web development atrocity on this
+      project&mdash;using Flash for the navigation items. The nav made a
+      little <em>bleep</em> sound when you clicked on one of the elements. This,
+      of course, does not fall back to anything in the event Flash
+      isn't installed, and the list of URLs is hardcoded into the .SWF
+      file. In my defense, I was 16 and Progressive Enhancement
+      wouldn't pop up on anyone's radar until a few years after I
+      delivered this.
+    </p>
+  </narrative>
+  <artifact
+    name="Prototype"
+    href="portfolio/ui/2001-hidden-palace-zone/prototype/"
+    thumbnail="portfolio/ui/2001-hidden-palace-zone/thumbnail-prototype.png"
+    description="Click to open a working prototype of the design."
+  />
+</portfolio-item>

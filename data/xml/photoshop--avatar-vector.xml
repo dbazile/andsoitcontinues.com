@@ -1,0 +1,14 @@
+<portfolio-item type="photoshop">
+  <name>Avatar (Vector)</name>
+  <tag>coding</tag>
+  <tag>falling</tag>
+  <tag>vector</tag>
+  <circa>2014</circa>
+  <summary>
+    An avatar I made for my online persona.
+  </summary>
+  <artifact
+    href="portfolio/photoshop/2014-avatar-vector/avatar-vector.png"
+    thumbnail="portfolio/photoshop/2014-avatar-vector/avatar-vector-thumbnail.png"
+  />
+</portfolio-item>

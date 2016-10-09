@@ -1,0 +1,408 @@
+/* ==========================================================================
+   Layout
+   ========================================================================== */
+
+body {
+  margin: 0;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  cursor: default;
+}
+
+main {
+  flex: 1;
+}
+
+* {
+  box-sizing: inherit;
+}
+
+.block {
+  margin: 0;
+  padding: 0 calc(((100% - 800px) / 2) + 20px);
+
+  /*
+    Account for the phantom vertical margin at the edges of containers
+    with <p>s and <h1>s
+  */
+  overflow: hidden;
+}
+
+.columns {
+  display: flex;
+}
+
+.column {
+  flex: 1;
+}
+
+/* ==========================================================================
+   Typography
+   ========================================================================== */
+
+body {
+  font-family: "Abhaya Libre";
+  font-size: 19px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 1em 0 .5em;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Hammersmith One";
+  font-weight: normal;
+}
+
+h5,
+h6 {
+  font-family: "Abhaya Libre";
+  font-weight: 700;
+}
+
+h1 {
+  margin: 0;
+  font-size: 3.9em;
+}
+
+h2 {
+  font-size: 2.3em;
+}
+
+h3 {
+  font-size: 1.5em;
+}
+
+h4 {
+  font-size: 1em;
+  font-weight: bold;
+  letter-spacing: .07em;
+}
+
+h5 {
+  text-transform: uppercase;
+  font-size: 1em;
+}
+
+h6 {
+  text-transform: uppercase;
+  font-size: 1em;
+}
+
+p {
+  line-height: 1.6em;
+}
+
+pre,
+code {
+  font-family: "Anonymous Pro";
+}
+
+pre code,
+p code {
+  font-size: .9em;
+}
+
+p code {
+  padding: .2em .3em;
+  border-radius: .25em;
+  color: hsl(350, 53%, 47%);
+  background-color: hsl(350, 44%, 95%);
+  font-size: .9em;
+}
+
+a {
+  outline: none;
+}
+
+/* ==========================================================================
+   Theming
+   ========================================================================== */
+
+html {
+  transition: .4s background-color ease;
+}
+
+.__blog__ {
+  background-color: white;
+  color: #555;
+}
+
+.__portfolio__ {
+  background-color: #865dff;
+  color: #d9ccff;
+}
+
+.__about__ {
+  background-color: #50e388;
+  color: #555;
+}
+
+/* ==========================================================================
+   Navigation
+   ========================================================================== */
+
+.navigation svg {
+  width: 100%;
+  height: 150px;
+}
+
+.navigation line {
+  stroke-width: 3;
+  shape-rendering: crispEdges;
+}
+
+.navigation circle {
+  stroke-width: 3;
+  transition:
+    stroke-width .75s cubic-bezier(.14,1.38,.7,1.27),
+    fill .1s ease-in-out,
+    stroke .1s ease-in-out;
+}
+
+.navigation path {
+  fill: transparent;
+  stroke-dasharray: 680;
+  stroke-dashoffset: 680;
+  stroke-width: 2;
+  transition:
+    stroke-dashoffset .3s ease-in-out,
+    fill-opacity .1s linear;
+}
+
+.navigation text {
+  font-family: "Hammersmith One";
+  font-size: 18px;
+  fill-opacity: .7;
+  transition:
+    font-size .2s ease-in-out,
+    fill-opacity .1s linear;
+}
+
+.navigation__brand path {
+  stroke-width: 0;
+}
+
+.navigation__brand rect {
+  fill: transparent;
+}
+
+/* Navigation: Default State
+   ========================================================================= */
+
+/* blog      |  white  |  black  |   #999  */
+/* portfolio | #865dff | #d9ccff | #b69eff */
+/* about     | #50e388 |  white  | #dcf9e7 */
+
+.__blog__ .navigation line { stroke: #999; }
+.__blog__ .navigation circle { fill: white; stroke: #999; }
+.__blog__ .navigation path { stroke: #999; }
+.__blog__ .navigation text { fill: #999; }
+.__blog__ .navigation__brand path { fill: #999; }
+
+.__portfolio__ .navigation line { stroke: #b69eff; }
+.__portfolio__ .navigation circle { fill: #865dff; stroke: #b69eff; }
+.__portfolio__ .navigation path { stroke: #b69eff; }
+.__portfolio__ .navigation text { fill: #b69eff; }
+.__portfolio__ .navigation__brand path { fill: #b69eff; }
+
+.__about__ .navigation line { stroke: #dcf9e7; }
+.__about__ .navigation__link circle { fill: #50e388; stroke: #dcf9e7; }
+.__about__ .navigation__link path { stroke: #dcf9e7; }
+.__about__ .navigation__link text { fill: #dcf9e7; }
+.__about__ .navigation__brand path { fill: #dcf9e7; }
+
+/* Navigation: Hover State
+   ========================================================================= */
+
+.navigation:hover circle {
+  stroke-width: 2;
+}
+.navigation:hover .navigation__link path,
+.navigation:hover .navigation__link text {
+  fill-opacity: 0.35;
+}
+.navigation__link:hover circle {
+  stroke-width: 10 !important;
+}
+.navigation__link:hover path {
+  fill-opacity: 1;
+  stroke-dashoffset: 0;
+}
+.navigation__link:hover text {
+  fill-opacity: 1 !important;
+  font-size: 24px;
+}
+.navigation .navigation__brand:hover path {
+  fill-opacity: 1;
+}
+
+.__blog__ .navigation:hover circle { fill: #999; stroke: white;}
+.__blog__ .navigation__link:hover circle { fill: black; stroke: white; }
+.__blog__ .navigation__link:hover path { stroke: black; }
+.__blog__ .navigation__link:hover text { fill: black; }
+.__blog__ .navigation__brand:hover path { fill: black; }
+
+.__portfolio__ .navigation:hover circle { fill: #b69eff; stroke: #865dff;}
+.__portfolio__ .navigation__link:hover circle { fill: white !important; stroke: #865dff !important; }
+.__portfolio__ .navigation__link:hover path { stroke: white; }
+.__portfolio__ .navigation__link:hover text { fill: white; }
+.__portfolio__ .navigation__brand:hover path { fill: white; }
+
+.__about__ .navigation:hover circle { fill: #dcf9e7; stroke: #50e388; }
+.__about__ .navigation__link:hover circle { fill: #50e388 !important; stroke: #50e388 !important; }
+.__about__ .navigation__link:hover path { stroke: white; }
+.__about__ .navigation__link:hover text { fill: white; }
+.__about__ .navigation__brand:hover path { fill: white; }
+
+/* Navigation: Active State
+   ========================================================================= */
+
+.__blog__ .navigation__link--blog circle,
+.__portfolio__ .navigation__link--portfolio circle,
+.__about__ .navigation__link--about circle {
+  stroke-width: 10 !important;
+}
+.__blog__ .navigation__link--blog text,
+.__blog__ .navigation__link--blog path,
+.__portfolio__ .navigation__link--portfolio text,
+.__portfolio__ .navigation__link--portfolio path,
+.__about__ .navigation__link--about text,
+.__about__ .navigation__link--about path {
+  fill-opacity: 1 !important;
+  stroke-dashoffset: 0;
+}
+
+.__blog__ .navigation__link--blog circle { fill: white !important; stroke: white !important; }
+.__blog__ .navigation__link--blog path { fill: black; stroke: black; }
+.__blog__ .navigation__link--blog text,
+.__blog__ .navigation__link--blog:hover text { fill: white; }
+
+.__portfolio__ .navigation__link--portfolio circle { fill: #865dff !important; stroke: #865dff !important; }
+.__portfolio__ .navigation__link--portfolio path { fill: white !important; stroke: white !important; }
+.__portfolio__ .navigation__link--portfolio text,
+.__portfolio__ .navigation__link--portfolio:hover text { fill: #6944a6; }
+
+.__about__ .navigation__link--about circle { fill: #50e388 !important; stroke: #50e388 !important; }
+.__about__ .navigation__link--about path { fill: white; stroke: white; }
+.__about__ .navigation__link--about text,
+.__about__ .navigation__link--about:hover text { fill: #3a7519; }
+
+/* =========================================================================
+   Placeholders
+   ========================================================================= */
+
+.placeholders {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  will-change: contents;
+}
+
+.__showPlaceholder__ .placeholders {
+  position: fixed;
+}
+
+.placeholder {
+  display: none;
+  opacity: .4;
+  text-align: center;
+  font-family: "Hammersmith One";
+}
+
+.__blog__ .placeholder {
+  color: black;
+}
+
+.__about__ .placeholder,
+.__portfolio__ .placeholder {
+  color: white;
+}
+
+.placeholder__text {
+  margin-top: 1em;
+}
+
+.placeholder svg {
+  height: 175px;
+}
+
+.__about__.__showPlaceholder__ .placeholder--about,
+.__blog__.__showPlaceholder__ .placeholder--blog,
+.__portfolio__.__showPlaceholder__ .placeholder--portfolio {
+  display: block;
+}
+
+main,
+footer {
+  transition: .4s cubic-bezier(0.3, 1.2, 0.32, 1.23);
+}
+
+.__showPlaceholder__ main,
+.__showPlaceholder__ footer {
+  opacity: 0;
+  transform: translateY(1em);
+}
+
+.__showPlaceholder__ {
+  overflow: hidden;
+}
+
+/* =========================================================================
+   Footer
+   ========================================================================= */
+
+.footer--standard {
+  display: flex;
+  padding-top: 1.5em;
+  padding-bottom: 1.5em;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row-reverse;
+  background-color: #555;
+  color: #999;
+}
+
+.footer__link img {
+  height: 1.5em;
+}
+
+.footer__link + .footer__link {
+  margin-left: .6em;
+}
+
+.footer__link {
+  opacity: .2;
+  transition: .1s linear opacity;
+}
+
+.footer:hover .footer__link {
+  opacity: .1;
+}
+
+.footer .footer__link:hover {
+  opacity: 1;
+}
+
+.footer__copyright {
+  font-family: "Hammersmith One";
+  font-size: .8em;
+  margin: 0;
+  line-height: normal;
+}

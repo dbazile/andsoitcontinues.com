@@ -1,0 +1,122 @@
+{%- set render_ui_card -%}
+      <g class="scatteringCards__card">
+        <rect class="scatteringCards__light" x="0" y="0" width="20" height="15"/>
+        <rect class="scatteringCards__mid" x="2" y="2" width="4" height="7"/>
+        <rect class="scatteringCards__dark" x="7" y="2" width="10" height="2"/>
+        <rect class="scatteringCards__mid" x="7" y="5" width="9" height="1"/>
+        <rect class="scatteringCards__mid" x="7" y="7" width="11" height="1"/>
+        <rect class="scatteringCards__mid" x="7" y="10" width="2" height="2"/>
+        <rect class="scatteringCards__mid" x="10" y="10" width="2" height="2"/>
+        <rect class="scatteringCards__mid" x="13" y="10" width="2" height="2"/>
+        <rect class="scatteringCards__mid" x="16" y="10" width="2" height="2"/>
+      </g>
+{%- endset -%}
+{%- set photoshop_card -%}
+      <g class="scatteringCards__card">
+        <rect class="scatteringCards__light" x="0" y="0" width="20" height="15"/>
+        <rect class="scatteringCards__mid" x="4" y="3" width="14" height="3"/>
+        <rect class="scatteringCards__dark" x="4" y="7" width="8" height="1"/>
+        <rect class="scatteringCards__mid" x="4" y="9" width="11" height="1"/>
+        <rect class="scatteringCards__mid" x="4" y="11" width="5" height="1"/>
+      </g>
+{%- endset -%}
+
+<div class="placeholder placeholder--portfolio">
+  <svg class="scatteringCards" viewBox="10 15 80 65" preserveAspectRatio="xMidYMax">
+    <g class="scatteringCards__stage" transform="translate(40,40)">
+      {{ photoshop_card }}
+      {{ render_ui_card }}
+      {{ render_ui_card }}
+
+      {{ photoshop_card }}
+      {{ photoshop_card }}
+      {{ photoshop_card }}
+
+      {{ photoshop_card }}
+      {{ render_ui_card }}
+      {{ render_ui_card }}
+    </g>
+  </svg>
+  <div class="placeholder__text">
+    loading a list of my previous work
+  </div>
+
+  <style>
+    .scatteringCards {}
+
+    .scatteringCards__card {
+      transform-origin: 50%;
+      animation: 2s infinite alternate cubic-bezier(.21,1.31,.65,1.23);
+    }
+
+    .scatteringCards__card:nth-child(1) { animation-delay: .60s; animation-name: scatteringCards-moveCard1; }
+    .scatteringCards__card:nth-child(2) { animation-delay: .55s; animation-name: scatteringCards-moveCard2; }
+    .scatteringCards__card:nth-child(3) { animation-delay: .50s; animation-name: scatteringCards-moveCard3; }
+    .scatteringCards__card:nth-child(4) { animation-delay: .45s; animation-name: scatteringCards-moveCard4; }
+    .scatteringCards__card:nth-child(5) { animation-delay: .40s; animation-name: scatteringCards-moveCard5; }
+    .scatteringCards__card:nth-child(6) { animation-delay: .35s; animation-name: scatteringCards-moveCard6; }
+    .scatteringCards__card:nth-child(7) { animation-delay: .30s; animation-name: scatteringCards-moveCard7; }
+    .scatteringCards__card:nth-child(8) { animation-delay: .25s; animation-name: scatteringCards-moveCard8; }
+    .scatteringCards__card:nth-child(9) { animation-delay: .20s; animation-name: scatteringCards-moveCard9; }
+
+    .scatteringCards__light {
+      fill: white;
+    }
+
+    .scatteringCards__mid {
+      fill: #ddd;
+    }
+
+    .scatteringCards__dark {
+      fill: #999;
+    }
+
+    /* ==========================================================
+       Keyframe Definitions
+       ========================================================== */
+
+    /*
+      Spatial Arrangement:
+        9 2 3
+        8 1 4
+        7 6 5
+    */
+
+    @keyframes scatteringCards-moveCard1 {
+      40% { transform: translate(0, 0); }
+      65%, 100% { transform: translate(0, 0); }
+    }
+    @keyframes scatteringCards-moveCard2 {
+      40% { transform: translate(0, 0); }
+      65%, 100% { transform: translate(0, -20px); }
+    }
+    @keyframes scatteringCards-moveCard3 {
+      40% { transform: translate(0, 0); }
+      65%, 100% { transform: translate(25px, -20px); }
+    }
+    @keyframes scatteringCards-moveCard4 {
+      40% { transform: translate(0, 0); }
+      65%, 100% { transform: translate(25px, 0); }
+    }
+    @keyframes scatteringCards-moveCard5 {
+      40% { transform: translate(0, 0); }
+      65%, 100% { transform: translate(25px, 20px); }
+    }
+    @keyframes scatteringCards-moveCard6 {
+      40% { transform: translate(0, 0); }
+      65%, 100% { transform: translate(0, 20px); }
+    }
+    @keyframes scatteringCards-moveCard7 {
+      40% { transform: translate(0, 0); }
+      65%, 100% { transform: translate(-25px, 20px); }
+    }
+    @keyframes scatteringCards-moveCard8 {
+      40% { transform: translate(0, 0); }
+      65%, 100% { transform: translate(-25px, 0); }
+    }
+    @keyframes scatteringCards-moveCard9 {
+      40% { transform: translate(0, 0); }
+      65%, 100% { transform: translate(-25px, -20px); }
+    }
+  </style>
+</div>

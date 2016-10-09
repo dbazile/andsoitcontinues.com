@@ -1,0 +1,16 @@
+{
+	"folders":
+	[
+		{
+			"path": "."
+		}
+	],
+  "build_systems": [
+    {
+      "name": "Render",
+        "cmd": ["/usr/local/bin/python3", "-m", "renderer"],
+        "working_dir": "$project_path",
+        "env": {"LANG": "en_US.UTF-8"}
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+<portfolio-item type="photoshop">
+  <name>Funkmobile</name>
+  <tag>car</tag>
+  <tag>posterized</tag>
+  <tag>vector art</tag>
+  <circa>2002</circa>
+  <summary>
+    A stylized version of a buddy's car I did up in Photoshop for
+    kicks.  I think I was learning about paths and vector art around
+    this time.
+  </summary>
+  <artifact
+    href="portfolio/photoshop/2002-funkmobile/funkmobile.jpg"
+    thumbnail="portfolio/photoshop/2002-funkmobile/funkmobile-thumbnail.png"
+  />
+</portfolio-item>

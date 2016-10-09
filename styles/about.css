@@ -1,0 +1,134 @@
+/* ==========================================================================
+   Theming & Layout
+   ========================================================================== */
+
+.__about__ a {
+  color: hsl(120, 100%, 35%);
+}
+
+.__about__ a:visited {
+  color: hsl(120, 40%, 70%);
+}
+
+.__about__ a:hover {
+  color: #e24067;
+}
+
+.__about__ h2 {
+  color: #e24067;
+}
+
+@media (max-width: 832px) {
+  .__about__ .block {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
+/* =========================================================================
+   Preamble
+   ========================================================================= */
+
+.__about__ .preamble {
+  box-shadow:
+    inset 0 -1px rgba(0,0,0,.1),
+    inset 0 -5px rgba(65,117,5,.3);
+  padding-top: 45px;
+  padding-bottom: 45px;
+  color: white;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@media (max-width: 832px) {
+  .__about__ .preamble {
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.__about__ h1 {
+  text-shadow: 0 1px rgba(0,0,0,.3);
+  letter-spacing: -.05em;
+  margin: .5em 0 0;
+  margin-right: 1em;
+  line-height: .7em;
+}
+
+@media (max-width: 832px) {
+  .__about__ h1 {
+    margin: 0;
+    text-align: center;
+  }
+}
+
+.__about__ h1 small {
+  display: block;
+  margin-top: .5em;
+  letter-spacing: -.06em;
+  font-size: .355em;
+  line-height: 1em;
+}
+
+@media (max-width: 832px) {
+  .__about__ h1 small {
+    font-size: .5em;
+  }
+}
+
+.__about__ .preamble img {
+  width: 40%;
+  border-radius: 50%;
+  box-shadow:
+    0 0 0 0px black,
+    0 0 0 12px white;
+}
+
+@media (max-width: 832px) {
+  .__about__ .preamble img {
+    width: 65vw;
+    margin: 10vh 0;
+  }
+}
+
+/* =========================================================================
+   Sections
+   ========================================================================= */
+
+.__about__ .aboutMe,
+.__about__ .aboutThisSite {
+  background-color: white;
+  padding-top: 2em;
+  padding-bottom: 2em;
+}
+
+/* Sections: Pictograms
+   ========================================================================= */
+
+.__about__ .pictograms {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  align-items: flex-start;
+}
+
+.__about__ .pictograms li {
+  flex: 1;
+  margin: 0;
+  text-align: center;
+  font-family: "Hammersmith One";
+  font-size: .9em;
+}
+
+.__about__ .pictograms li + li {
+  margin-left: 1em;
+}
+
+.__about__ .pictograms img {
+  display: block;
+  margin: 0 auto .7em;
+  width: 100%;
+}

@@ -1,0 +1,118 @@
+{% extends "layout.html" %}
+
+{% set route = '__portfolio__' %}
+{% set title = 'Portfolio | ASIC' %}
+{% set basehref = '../' %}
+
+{% set placeholder %}
+  {% include "_portfolio.loading.html" %}
+{% endset %}
+
+{% block body %}
+  <section class="preamble block columns">
+    <div class="column">
+      <h1>David Bazile</h1>
+      <img class="skills-pie-chart" src="images/skills-pie-chart.svg" alt="A breakdown of my skills"/>
+    </div>
+    <div class="preamble__github column">
+      <h3>Looking for code?</h3>
+      <p>All that stuff is over at GitHub.</p>
+      <a class="github__link" href="https://github.com/dbazile" target="_blank">
+        <img class="github__icon" src="images/github-icon.svg" alt="Go to my GitHub profile" />
+      </a>
+    </div>
+  </section>
+
+  <section class="ui">
+    <h2 class="portfolio__heading block">User Interface</h2>
+    <ul class="tiles">
+      {% for work in ui_works %}
+      <li class="tiles__tile"><a href="portfolio/index.html#{{work.id}}"><img src="{{work.brand}}" alt="{{work.name}}"/></a></li>
+      {% endfor %}
+    </ul>
+
+    {% for work in ui_works %}
+    <div id="{{work.id}}" class="narrative-group">
+      <div class="narrative narrative--heading">
+        <div class="narrative__column narrative__column--text">
+          <h3>
+            {{work.name}}
+            {% if work.category %}<small>{{work.category}}</small>{% endif %}
+          </h3>
+          <p>{{work.summary}}</p>
+        </div>
+        <div class="narrative__column narrative__column--text">
+          <div class="column__microdata column__microdata--circa">
+            <h4>Circa</h4>
+            <p>{{work.circa}}</p>
+          </div>
+          <div class="column__microdata column__microdata--url">
+            <h4>URL</h4>
+            <p><a target="_blank" href="{{work.artifacts[work.link.artifactIndex].href}}">View {{work.link.label or work.artifacts[work.link.artifactIndex].name or 'Wat'}}</a></p>
+          </div>
+          <div class="column__microdata column__microdata--technologies">
+            <h4>Technologies</h4>
+            <p>{{work.technologies}}</p>
+          </div>
+        </div>
+      </div>
+      {% for narrative_block in work.narratives %}
+      <div class="narrative narrative--artifact">
+        <div class="narrative__column narrative__column--text">
+          {{narrative_block.markup}}
+
+          <ul class="narrative__files">
+            {% for link in narrative_block.links %}
+            <li class="narrative__file"><a target="_blank" href="{{work.artifacts[link.artifactIndex].href}}"><img src="{{work.artifacts[link.artifactIndex].thumbnail}}" alt="thumbnail">{{link.label or work.artifacts[link.artifactIndex].name or 'Untitled Artifact'}}</a></li>
+            {% endfor %}
+          </ul>
+        </div>
+        <div class="narrative__column narrative__column--media">
+          <img class="narrative__mural" src="{{narrative_block.mural or 'images/placeholder.svg'}}" alt="narrative mural"/>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+    {% endfor %}
+  </section>
+
+  <script src="scripts/portfolio.js"></script>
+
+  <section class="photoshoppery">
+    <h2 class="portfolio__heading block">Random Photoshoppery</h2>
+    <ul class="photoshoppery__artifacts">
+      {% for work in photoshop_works %}
+      <li id="{{work.id}}" class="photoshoppery__entry">
+        <a target="_blank" href="{{work.artifact.href}}"><img src="{{work.artifact.thumbnail}}" alt="thumbnail"/></a>
+        <h2 class="photoshoppery__title">{{work.name}}</h2>
+        <div class="photoshoppery__circa">{{work.circa}}</div>
+        <div class="photoshoppery__background">{{work.summary}}</div>
+      </li>
+      {% endfor %}
+    </ul>
+  </section>
+{% endblock %}
+
+{% block footer %}
+  <footer class="attributions block">
+    <h2>Copyright Notice</h2>
+    <p>
+      I make no claims to ownership or authorship of the video game character
+      likenesses and other related concepts depicted in some of the above
+      designs/illustrations.  The aforementioned concepts remain the intellectual
+      property of their respective owners (i.e., <a
+      target="_blank" href="http://www.nintendo.com">Nintendo</a>, <a
+      target="_blank" href="http://www.sega.com">Sega</a>, <a
+      target="_blank" href="http://www.capcom.com">Capcom</a>, <a
+      target="_blank" href="http://www.sierra.com">Sierra Entertainment</a>, <a
+      target="_blank" href="http://www.idsoftware.com/">id Software</a>, <a
+      target="_blank" href="http://www.sony.com">Sony</a>, etc). If there is
+      any discrepancy with something posted, please <a
+      target="_blank" href="https://twitter.com/spoonchucks">contact me</a> so
+      I can take action. <strong>TL;DR, please don’t sue me!</strong>
+    </p>
+    <p>
+      Everything else is &copy;2013-2016 David Bazile.
+    </p>
+  </footer>
+{% endblock %}

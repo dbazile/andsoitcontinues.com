@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="812px" height="483px" viewBox="0 0 812 483" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.4.4 (17249) - http://www.bohemiancoding.com/sketch -->
+    <title>Avatar-HTML</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="&gt;" sketch:type="MSLayerGroup" transform="translate(634.000000, 11.000000)">
+            <g id="mirage" sketch:type="MSShapeGroup">
+                <path d="M8.353,461.435 L129.409,243.15 L40.361,5.972 L96.544,6.712 L172.063,243.716 L51.274,466.582 L8.353,461.435 Z" id="lower" fill="#006837"></path>
+                <path d="M47.615,11.068 L92.874,11.664 L166.654,243.205 L48.497,461.213 L16.332,457.355 L134.902,243.556 L47.615,11.068 L47.615,11.068 Z M33.107,0.876 L38.253,14.583 L123.916,242.745 L7.587,452.505 L0.373,465.512 L15.141,467.283 L47.306,471.141 L54.051,471.95 L57.288,465.977 L175.445,247.97 L177.474,244.226 L176.181,240.169 L102.401,8.628 L100.213,1.76 L93.005,1.665 L47.746,1.069 L33.107,0.876 L33.107,0.876 Z" id="upper" fill="#39B54A"></path>
+            </g>
+            <path d="M68.281,459 L23.993,459 L128.928,235.075 L27.72,2 L72.401,2 L174.923,235.599 L68.281,459 Z" id="white" fill="#FFFFFF" sketch:type="MSShapeGroup"></path>
+        </g>
+        <g id="/" sketch:type="MSLayerGroup" transform="translate(344.000000, 13.000000)">
+            <g id="mirage" transform="translate(44.000000, 0.000000)" sketch:type="MSShapeGroup">
+                <path d="M76.309,457 L34.741,457 L208.351,0 L222.937,0 L76.309,457 Z" id="lower" opacity="0.79" fill="#D9FF00"></path>
+                <path d="M35.811,457 L0.868,457 L210.796,0 L230.272,0 L35.811,457 Z" id="upper" fill="#E0FF94"></path>
+            </g>
+            <path d="M45.694,457 L0.854,457 L250.539,0 L295.231,0 L45.694,457 Z" id="white" fill="#FFFFFF" sketch:type="MSShapeGroup"></path>
+        </g>
+        <g id="&lt;" sketch:type="MSLayerGroup" transform="translate(-1.000000, 0.000000)">
+            <g id="mirage" sketch:type="MSShapeGroup">
+                <path d="M114.256,474.414 L6.603,252.709 L146.277,5.996 L190.032,7.723 L49.817,245.199 L167.856,476.53 L114.256,474.414 Z" id="lower" fill="#006837"></path>
+                <path d="M149.127,11.112 L181.471,12.389 L44.114,245.023 L159.522,471.197 L117.446,469.536 L12.248,252.887 L149.127,11.112 L149.127,11.112 Z M143.429,0.88 L140.425,6.186 L3.546,247.96 L0.959,252.53 L3.253,257.254 L108.45,473.904 L111.066,479.292 L117.051,479.528 L159.127,481.189 L176.19,481.863 L168.428,466.652 L55.52,245.374 L190.082,17.473 L198.594,3.057 L181.866,2.397 L149.522,1.12 L143.429,0.88 L143.429,0.88 Z" id="upper" fill="#39B54A"></path>
+            </g>
+            <path d="M126.386,15 L170.674,15 L65.739,238.925 L166.947,472 L122.266,472 L19.744,238.401 L126.386,15 Z" id="fore" fill="#FFFFFF" sketch:type="MSShapeGroup"></path>
+        </g>
+        <g id="falling-laptop" sketch:type="MSLayerGroup" transform="translate(160.000000, 184.000000)">
+            <path d="M5.254,0.249 L5.994,31.988 L0.993,35.744 L0.295,4.392 L5.254,0.249 Z" id="highlights" fill="#999999" sketch:type="MSShapeGroup"></path>
+            <path d="M175.207,56.161 L88.7,104.248 L0.993,35.744 L5.994,31.988 L89.56,97.27 L171.015,52.274 L169.302,21.496 L173.498,25.296 L175.207,56.161 Z" id="shadows" fill="#4D4D4D" sketch:type="MSShapeGroup"></path>
+            <path d="M5.254,0.249 L5.994,31.988 L89.56,97.27 L89.276,67.825 L5.254,0.249 Z" id="screen" fill="#1A1A1A" sketch:type="MSShapeGroup"></path>
+            <path d="M171.015,52.274 L89.374,97.425 L89.276,67.825 L169.302,21.496 L171.015,52.274 Z" id="keyboard" fill="#999999" sketch:type="MSShapeGroup"></path>
+        </g>
+        <g id="dave" sketch:type="MSLayerGroup" transform="translate(247.000000, 42.000000)" stroke="#000000">
+            <path d="M0.083,91.612 L173.179,68.79" id="arm-rear" stroke-width="8" sketch:type="MSShapeGroup"></path>
+            <path d="M301.473,20.656 L223.925,68.154 L244.813,148.542 L227.157,147.317" id="leg-rear" stroke-width="8" sketch:type="MSShapeGroup"></path>
+            <path d="M269.161,0.623 C296.626,-1.154 324.252,15.325 324.252,15.325 C324.252,15.325 226.887,91.546 207.5,93 C188.113,94.454 147.03,91.143 147.03,91.143 L147.03,91.143 L169.5,62.5 C169.5,62.5 241.697,2.4 269.161,0.623 L269.161,0.623 Z" id="torso" stroke-width="4" fill="#FFFFFF" sketch:type="MSShapeGroup"></path>
+            <path d="M153.017,209.569 L199.692,225.672 L215.686,45.374 L315.528,18.718" id="leg-fore" stroke-width="8" sketch:type="MSShapeGroup"></path>
+            <path d="M67.225,130.959 C51.996,130.959 40.179,124.681 33.051,112.804 C26.661,102.158 25.215,66.452 34.574,52.49 C39.555,45.06 59.036,32.344 75.607,22.922 C91.237,14.034 112.101,3.656 119.46,3.656 C119.641,3.656 119.81,3.662 119.974,3.673 C132.198,4.504 159.828,26.381 169.247,42.688 C180.185,61.624 162.269,88.216 122.494,112.088 C101.921,124.434 82.81,130.959 67.225,130.959 L67.225,130.959 Z" id="face" stroke-width="4" fill="#FFFFFF" sketch:type="MSShapeGroup"></path>
+            <path d="M72.255,95.762 C55.181,98.235 40.322,78.218 47.547,62.551 C53.327,50.018 65.076,42.419 77.61,48.199 C87.637,52.823 92.016,64.7 87.392,74.726 C83.693,82.747 74.191,86.251 66.17,82.552 C59.753,79.593 56.95,71.991 59.909,65.574 C62.277,60.44 68.357,58.198 73.491,60.566 C77.598,62.46 79.392,67.325 77.498,71.432 C75.983,74.718 72.091,76.153 68.805,74.637 C66.177,73.425 65.028,70.311 66.241,67.683 C67.211,65.58 69.701,64.662 71.804,65.632" id="eye-left" sketch:type="MSShapeGroup"></path>
+            <path d="M128.772,68.564 C111.698,71.037 96.838,51.02 104.064,35.353 C109.844,22.82 121.593,15.221 134.127,21.001 C144.154,25.625 148.533,37.502 143.909,47.528 C140.21,55.549 130.708,59.053 122.687,55.354 C116.27,52.395 113.467,44.793 116.426,38.376 C118.794,33.242 124.874,31 130.008,33.368 C134.115,35.262 135.909,40.127 134.015,44.234 C132.5,47.52 128.608,48.955 125.322,47.439 C122.694,46.227 121.545,43.113 122.758,40.485 C123.728,38.382 126.218,37.464 128.321,38.434" id="eye-right" sketch:type="MSShapeGroup"></path>
+            <path d="M178.867,70.998 L19.734,133.209" id="arm-fore" stroke-width="8" sketch:type="MSShapeGroup"></path>
+        </g>
+    </g>
+</svg>

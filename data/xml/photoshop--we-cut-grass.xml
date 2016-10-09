@@ -1,0 +1,17 @@
+<portfolio-item type="photoshop">
+  <name>We Cut Grass</name>
+  <tag>landscaping</tag>
+  <tag>marine corps</tag>
+  <tag>master guns</tag>
+  <circa>2009</circa>
+  <summary>
+    Adapted from an actual photo I took of my boss mowing the lawn,
+    this is a fake bumper sticker I made for my coworkers from my
+    last unit in the Marine Corps. We did a non-trivial amount of
+    landscaping for some odd reason.
+  </summary>
+  <artifact
+    href="portfolio/photoshop/2009-we-cut-grass/we-cut-grass.png"
+    thumbnail="portfolio/photoshop/2009-we-cut-grass/we-cut-grass-thumbnail.png"
+  />
+</portfolio-item>

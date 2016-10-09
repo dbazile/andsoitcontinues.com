@@ -1,0 +1,14 @@
+<portfolio-item type="photoshop">
+  <name>Sword Guy</name>
+  <tag>vector</tag>
+  <tag>paintbrush</tag>
+  <circa>2014</circa>
+  <summary>
+    He wields his paintbrush in pursuit of justice and his red
+    Swingline... This was an experiment on an avatar.
+  </summary>
+  <artifact
+    href="portfolio/photoshop/2014-sword-guy/sword-guy.png"
+    thumbnail="portfolio/photoshop/2014-sword-guy/sword-guy-thumbnail.png"
+  />
+</portfolio-item>

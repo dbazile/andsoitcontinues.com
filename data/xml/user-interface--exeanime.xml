@@ -1,0 +1,40 @@
+<portfolio-item type="ui">
+  <name>exeanime</name>
+  <tag>anime</tag>
+  <circa>2004</circa>
+  <client>B.T.</client>
+  <brand>portfolio/ui/2004-exeanime/brand.png</brand>
+  <technologies>Photoshop, HTML, CSS, JavaScript (Vanilla)</technologies>
+  <link artifact-index="0"/>
+  <summary>
+    A design for an anime-themed website that never launched. The
+    site owner was a friend of mine (i.e., broke teenager without
+    the means to pay).
+  </summary>
+  <narrative>
+    <h3>Prototype</h3>
+    <p>
+      This site and its name were heavily inspired by <a target="_blank"
+      href="http://megaman.wikia.com/wiki/Mega_Man_Battle_Network_(series)">Mega
+      Man Battle Network series</a>, which around the time my friend pitched the
+      site to me was blowing up in popularity online.
+    </p>
+    <p>
+      At this time, I was learning about advanced CSS 2.0 techniques.
+    </p>
+    <link artifact-index="0"/>
+    <link artifact-index="1"/>
+  </narrative>
+  <artifact
+    name="Prototype"
+    href="portfolio/ui/2004-exeanime/prototype"
+    thumbnail="portfolio/ui/2004-exeanime/thumbnail-prototype.png"
+    description="Click to open a working prototype of the design."
+  />
+  <artifact
+    name="Mockup"
+    href="portfolio/ui/2004-exeanime/mockup.png"
+    thumbnail="portfolio/ui/2004-exeanime/thumbnail-mockup.png"
+    description="This is the Photoshop mockup where everything's all pretty."
+  />
+</portfolio-item>

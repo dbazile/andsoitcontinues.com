@@ -1,0 +1,54 @@
+<portfolio-item type="ui">
+  <name>Lunch Money Buddy</name>
+  <category>Classwork</category>
+  <tag>coursework</tag>
+  <tag>user experience</tag>
+  <circa>2016</circa>
+  <client>Self</client>
+  <brand>portfolio/ui/2016-lunch-money-buddy/brand.png</brand>
+  <technologies>Sketch, proto.io, Pages, Keynote</technologies>
+  <link artifact-index="0"/>
+  <summary>
+    An imaginary mobile application designed to allow parents and guardians of
+    school age children to manage various aspects of their kids’ in-school
+    cafeteria lunch accounts.
+  </summary>
+  <narrative>
+    <h3>Personas</h3>
+    <p>The main challenge designing the app was trying to meet the conflicting expectations of two very different personas:</p>
+    <ul>
+      <li><strong>A young “wired” couple with lots of smartphone experience</strong> who expects the app to meet the same level of fluidity and aesthetics as apps they’ve used in the past.  Automation and exploratory search are high priorities for this persona.</li>
+      <li><strong>A retiree with very little smartphone experience</strong> who expects an uncomplicated interface for a system whose use is now compulsory.  He will not want anything “magic” happening, which rules out automation and he will not have any desire to poke around the application “looking” for things.</li>
+    </ul>
+  </narrative>
+  <narrative>
+    <h3>User Journeys &amp; Wireframes</h3>
+    <p>I mapped out two user journeys for each persona:</p>
+    <ul>
+      <li><strong>Setup</strong>, in which the persona walks through their first interactions with the app, from installation, through registration of accounts, and finally to completion of the persona’s first task (i.e., adding funds to an account)</li>
+      <li><strong>Maintenance</strong>, in which the persona performs their primary tasks.  Along the way, unobtrusive affordances for enhanced functionality were presented for easy discovery.</li>
+    </ul>
+
+    <h4>Mantra: Keep the "Simple Path" clear</h4>
+    <p>With Henry in mind, I defined a concept I called the “Simple Path”, which is effectively a beeline from the central hub view to the app’s primary purpose: adding funds to an account.</p>
+    <p>Henry’s primary focus would be to just open the app, check his balance and possibly add funds without being bothered by whichever artistic idiosyncrasies an app vendor decides to inflict upon him.  With that in mind, it made sense to keep the account balance and a direct shortcut to adding funds front and center.  On the way there, he may see something he wants to explore, but it won’t obstruct his goal.</p>
+    <p>Samantha and Jorge on the other hand may manually add funds, but if they use auto-refill (which we expect), the first view they see will be the entry point for exploratory search (i.e., the lunch menu) which they are very likely to engage in.</p>
+    <link artifact-index="1"/>
+    <link artifact-index="2"/>
+  </narrative>
+  <artifact
+    name="Prototype"
+    href="portfolio/ui/2016-lunch-money-buddy/Proto.io Wireframes/index.html"
+    thumbnail="portfolio/ui/2016-lunch-money-buddy/mural-prototype.png"
+  />
+  <artifact
+    name="User Journeys (PDF)"
+    href="portfolio/ui/2016-lunch-money-buddy/User%20Journeys.pdf"
+    thumbnail="images/pdf-icon.svg"
+  />
+  <artifact
+    name="Wireframes (PDF)"
+    href="portfolio/ui/2016-lunch-money-buddy/Wireframes.pdf"
+    thumbnail="images/pdf-icon.svg"
+  />
+</portfolio-item>

@@ -1,0 +1,71 @@
+{% extends "layout.html" %}
+
+{% set placeholder %}
+  {% include "_blog.loading.html" %}
+{% endset %}
+
+{% block body %}
+  {% set DURATION_LONG = 90 %}
+  {% set DURATION_MEDIUM = 60 %}
+  {% set DURATION_SHORT = 30 %}
+  <div class="posts">
+    <div class="preamble block">
+      <h1>All Posts</h1>
+      <p>
+        Occasionally, I’ll write about things.  Generally lessons learned,
+        interesting discoveries and other stuff like that.
+      </p>
+    </div>
+
+    <ul class="posts__previews block">
+      {%- set _year = None -%}
+      {%- set _previous_date = None -%}
+      {%- for post in posts -%}
+
+      {# Render duration gaps #}
+      {% if _previous_date and (_previous_date - post.date).days > DURATION_LONG %}
+      <li class="posts__gap posts__gap--long"><div class="posts__graph"></div><img src="images/pictogram-hibernation.svg"/></li>
+      {% elif _previous_date and (_previous_date - post.date).days > DURATION_MEDIUM %}
+      <li class="posts__gap posts__gap--medium"><div class="posts__graph"></div></li>
+      {% elif _previous_date and (_previous_date - post.date).days > DURATION_SHORT %}
+      <li class="posts__gap posts__gap--short"><div class="posts__graph"></div></li>
+      {% endif %}
+      {% set _previous_date = post.date %}
+
+      <li class="postPreview postPreview--{{post.type}}">
+        <div class="postPreview__timestamp">
+          <span class="postPreview__year">
+            {% if _year is not equalto post.date|format_datetime('%Y') %}
+            {% set _year = post.date|format_datetime('%Y') %}
+            {{_year}}
+            {% endif %}
+          </span>
+          <span class="postPreview__monthAndDate">{{post.date|format_datetime('%m/%d')}}</span>
+        </div>
+        <div class="posts__graph"></div>
+        <div class="postPreview__content">
+          {% if post.type is equalto 'text' %}
+          <h2><a href="{{post.url}}">{{post.subject}}</a></h2>
+          <div class="postPreview__abstract">{{post.abstract}}</div>
+          {% elif post.type is equalto 'image' %}
+          <a target="_blank" href="{{post.url}}">
+            <h2>{{post.subject}}</h2>
+            <div class="postPreview__loupe">
+              <img src="{{post.url}}" alt="{{post.subject}}"/>
+            </div>
+          </a>
+
+          {% elif post.type is equalto 'link' -%}
+          <h2><a target="_blank" href="{{post.url}}">{{post.subject}}</a></h2>
+          <div class="postPreview__abstract"/>{{post.abstract}}</div>
+
+          {% elif post.type is equalto 'quote' %}
+          <h2><a href="{{post.url}}">{{post.subject}}</a></h2>
+          <blockquote>{{post.abstract}}</blockquote>
+          {% endif %}
+        </div>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+{% endblock %}

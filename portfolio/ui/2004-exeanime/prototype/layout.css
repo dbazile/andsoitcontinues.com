@@ -1,0 +1,41 @@
+/* Base */
+body				{ margin:0; padding:0; }
+h1, h2, h3, h4, h5		{ margin:0; padding:0; }
+h2, h3, h4, h5 { margin-top:1em; }
+form				{ margin:0; padding:0; }
+ul, ol				{ margin-top:0; margin-bottom:0; }
+h1				{ margin:0 0 10px 0; }
+p				{ margin:0 0 15px 0; }
+blockquote			{ margin:0 0 15px 30px; }
+blockquote p			{ margin:0; padding:10px; }
+a img				{ border:0px; }
+
+#Container			{ position:absolute; top:0px; left:50%; width:594px; margin:20px 0 20px -297px; }
+
+/* Header */
+#Header				{ position:absolute; left:0px; top:0px; width:594px; height:107px; }
+#Header #Logo			{ position:absolute; left:7px; top:7px; }
+#Header #Banner			{ position:absolute; left:107px; top:7px; }
+
+/* Navigation */
+#Navigation			{ position:absolute; left:0px; top:107px; width:594px; height:29px; }
+#Navigation A			{ width:116px; height:29px; }
+#Navigation #News		{ position:absolute; left:7px; top:0px; }
+#Navigation #Anime		{ position:absolute; left:123px; top:0px; }
+#Navigation #Articles		{ position:absolute; left:239px; top:0px; }
+#Navigation #Downloads		{ position:absolute; left:355px; top:0px; }
+#Navigation #About		{ position:absolute; left:471px; top:0px; }
+
+/* Content */
+#Main				{ position:absolute; top:136px; left:0px; width:580px; padding:7px 7px 45px 7px; }
+#Sidebar			{ float:right; clear:both; width:194px; padding:0 0 5px 5px; margin-left:5px; }
+#Sidebar .title			{ padding:5px; margin-top:5px; }
+#Sidebar .content		{ padding:5px; }
+
+/* Footer */
+#Footer				{ position:absolute; bottom:0px; left:0px; width:594px; height:38px; }
+#Footer #ButtonDavidius		{ position:absolute; top:0px; left:7px; width:83px; height:31px; }
+#Footer #Copyright		{ position:absolute; top:0px; left:90px; width:388px; height:31px; }
+#Footer #ButtonExe		{ position:absolute; top:0px; right:7px; width:109px; height:31px; }
+
+#Main h1 {width:352px; float:left; padding:150px 10px 0; background-color:#6c8ca8; color:white;}

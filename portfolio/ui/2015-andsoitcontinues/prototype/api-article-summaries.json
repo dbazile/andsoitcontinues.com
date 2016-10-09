@@ -1,0 +1,54 @@
+{
+  "articleSummaries": [
+    {
+      "abstract": "<p>Sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>",
+      "id": "example-blog-post",
+      "postedOn": "2015-12-31T23:59:59-04:00",
+      "subject": "Example Blog Post",
+      "tags": [
+        "lorem",
+        "ipsum",
+        "dolor"
+      ],
+      "type": "text"
+    },
+    {
+      "abstract": "<p>Sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>",
+      "id": "example-blog-post-image",
+      "postedOn": "2015-12-31T23:59:59-04:00",
+      "subject": "Example Blog Post (Image)",
+      "url": "assets/images/placeholder.svg",
+      "tags": [
+        "lorem",
+        "ipsum",
+        "dolor"
+      ],
+      "type": "image"
+    },
+    {
+      "abstract": "<p>Sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>",
+      "id": "example-blog-post-quote",
+      "postedOn": "2015-12-31T23:59:59-04:00",
+      "subject": "Example Blog Post (Quote)",
+      "tags": [
+        "lorem",
+        "ipsum",
+        "dolor"
+      ],
+      "type": "quote"
+    },
+    {
+      "abstract": "<p>Sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>",
+      "id": "example-blog-post-link",
+      "postedOn": "2015-12-31T23:59:59-04:00",
+      "subject": "Example Blog Post (Link)",
+      "url": "javascript:void(0)",
+      "tags": [
+        "lorem",
+        "ipsum",
+        "dolor"
+      ],
+      "type": "link"
+    }
+  ]
+}

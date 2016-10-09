@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en-us">
+	<head>
+		<title>&#12384;&#12417;&#12384;</title>
+		<meta charset="utf-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=0.7, minimum-scale=0.7" />
+		<style type="text/css">
+			* {
+				margin: 0;
+			}
+
+			body {
+				background-color: rgb(  0,   0,   0);
+				           color: rgb(255, 255, 255);
+				            font: 11px Verdana, sans-serif;
+			}
+
+			a {
+				          color: #0c0;
+				  border-bottom: 1px solid #0c0;
+				text-decoration: none;
+			}
+
+			a:hover {
+				       color: #0d7;
+				border-color: #0d7;
+			}
+
+			#frame {
+				position: absolute;
+				    left: 0px;
+				     top: 0px;
+				   width: 100%;
+				  height: 100%;
+			}
+
+			#contents {
+				position: absolute;
+				    left: 20%;
+				     top: 40%;
+				   width: 60%;
+			}
+
+			h1 {
+				font-family: Helvetica, Arial, sans-serif;
+				font-weight: 100;
+				  font-size: 3em;
+			}
+
+			h2 {
+				  font-size: 1em;
+				font-weight: normal;
+				line-height: 1.5em;
+				     margin: .7em 0 1em 0;
+				      color: rgb(150, 130, 130);
+			}
+
+			svg {
+				position: absolute;
+				    left: -115px;
+				     top: -15px;
+			}
+
+			circle {
+				transition: all ease 0.5s;
+			}
+
+		</style>
+	</head>
+	<body>
+		<div id="frame">
+			<div id="contents">
+				<svg width="100" height="100">
+					<circle cx="50" cy="50" r="50" style="fill:#789;"/>
+					<circle cx="50" cy="50" r="46" style="fill:#000;"/>
+					<circle cx="50" cy="50" r="40" style="fill:#500;"/>
+					<circle cx="50" cy="50" r="30" style="fill:#d00;"/>
+					<circle cx="50" cy="50" r="15" style="fill:#a00;"/>
+					<circle cx="50" cy="50" r="10" style="fill:#f80;"/>
+				</svg>
+				<h1>I can't let you do that, Dave</h1>
+				<h2>The content at <code id="uri"></code> isn't meant to be accessed this way.</h2>
+				<p><a href="../../writing/index.html">&lt; Return to Blog</a></p>
+			</div>
+		</div>
+		<script type="text/javascript">
+			(function() {
+				document.querySelector("#uri").textContent = location.pathname;
+				var circles = document.querySelectorAll("circle");
+
+				window.setInterval(function() {
+					var currentOpacity;
+
+					for (var n=3, N=circles.length; n<N; n++) {
+						currentOpacity = parseFloat(circles[n].style.opacity);
+						circles[n].style.opacity = (currentOpacity < 1) ? 1 : 0.25;
+					}
+				}, 750);
+			})();
+		</script>
+	</body>
+</html>

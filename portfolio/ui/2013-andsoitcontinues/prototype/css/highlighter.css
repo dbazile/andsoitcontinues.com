@@ -1,0 +1,73 @@
+pre code,
+pre .hljs-tag .hljs-title {
+	color: #444;
+}
+
+pre .hljs-string {
+	color: #d73;
+}
+
+pre .hljs-title,
+pre .ruby .hljs-symbol {
+	color: #c36;
+}
+
+pre .hljs-comment,
+pre .hljs-javadoc,
+pre .hljs-annotation,
+pre .hljs-template_comment {
+	color: #aaa;
+}
+
+pre .hljs-number {
+	color: #f6d;
+}
+
+pre .hljs-built_in,
+pre .hljs-regexp,
+pre .hljs-label,
+pre .hljs-decorator,
+pre .hljs-array,
+pre .hljs-attr_selector,
+pre .hljs-important,
+pre .hljs-pseudo,
+pre .hljs-doctype,
+pre .hljs-envvar,
+pre .hljs-shebang,
+pre .hljs-prompt,
+pre .apache .hljs-sqbracket,
+pre .cs .hljs-preprocessor,
+pre .dos .hljs-envvar {
+	color: #3ab;
+}
+
+pre .hljs-literal,
+pre .hljs-keyword,
+pre .hljs-id,
+pre .hljs-phpdoc,
+pre .hljs-title,
+pre .css .hljs-tag,
+pre .hljs-javadoctag,
+pre .hljs-winutils,
+pre .apache .hljs-tag,
+pre .hljs-request,
+pre .hljs-status,
+pre .dos .hljs-keyword,
+pre .dos .hljs-winutils {
+	font-weight: bold;
+}
+
+pre .javascript .xml,
+pre .xml .javascript,
+pre .xml .css,
+pre .xml .hljs-cdata {
+	opacity: 0.5;
+}
+
+pre .diff { color: #aaa; }
+pre .diff .hljs-addition { color: #3a6; }
+pre .diff .hljs-deletion { color: #c00; }
+pre .diff .hljs-change { color: #ca0; }
+pre .diff .hljs-header,
+pre .diff .hljs-chunk { color: #444; }
+pre .diff .hljs-header { font-weight: bold; }

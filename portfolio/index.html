@@ -1,0 +1,903 @@
+<!doctype html>
+<html lang="en-us" class="__portfolio__">
+<head>
+  <meta charset="utf-8"/>
+  <title>Portfolio | ASIC</title>
+  <meta name="description" content="On the road to technical mastery, this is my laboratory, my record of lessons learned and my portfolio."/>
+  <meta name="viewport" content="width=device-width, initial-scale=0.7, minimum-scale=0.7"/>
+  <base href="../"/>
+  <link rel="icon" href="images/favicon.png"/>
+  <link rel="apple-touch-icon" href="images/favicon.png"/>
+  <link rel="stylesheet" type="text/css" href="styles/common.css"/>
+  <link rel="stylesheet" type="text/css" href="styles/blog.css"/>
+  <link rel="stylesheet" type="text/css" href="styles/highlighter.css"/>
+  <link rel="stylesheet" type="text/css" href="styles/portfolio.css"/>
+  <link rel="stylesheet" type="text/css" href="styles/about.css"/>
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Hammersmith+One|Abhaya+Libre:400,700|Cormorant+Garamond:400i,700i|Anonymous+Pro:400,400i,700,700i">
+  <script src="scripts/libhljs.js"></script>
+  <script src="scripts/utils.js"></script>
+  <script src="scripts/transitioner.js"></script>
+</head>
+<body>
+
+  <header>
+    <nav class="navigation">
+      <svg viewBox="0 0 760 150" preserveAspectRatio="xMidYMin">
+        <line x1="-3000" y1="140" x2="3000" y2="140" />
+        <g class="navigation__item" transform="translate(0, 112), rotate(-45)">
+          <a class="navigation__link navigation__link--blog" xlink:href="index.html">
+            <circle cx="0" cy="40" r="6" />
+            <path d="M0,40 l0,-40 l300,0 l0,40 z" />
+            <text x="4" y="30">blog</text>
+          </a>
+        </g>
+        <g class="navigation__item" transform="translate(75, 112), rotate(-45)">
+          <a class="navigation__link navigation__link--portfolio" xlink:href="portfolio/index.html">
+            <circle cx="0" cy="40" r="6" />
+            <path d="M0,40 l0,-40 l300,0 l0,40 z" />
+            <text x="4" y="30">portfolio</text>
+          </a>
+        </g>
+        <g class="navigation__item" transform="translate(150, 112), rotate(-45)">
+          <a class="navigation__link navigation__link--about" xlink:href="about.html">
+            <circle cx="0" cy="40" r="6" />
+            <path d="M0,40 l0,-40 l300,0 l0,40 z" />
+            <text x="4" y="30">about</text>
+          </a>
+        </g>
+        <a class="navigation__brand navigation__link" xlink:href="index.html">
+          <g transform="translate(685, 88) scale(0.75)">
+            <rect x="-5" y="-5" width="110" height="70" rx="20" />
+            <path d="M48.361541,21.4785721 C49.5995624,21.5647052 52.1865138,21.7221366 53.9601115,21.6740356 L52.7250151,35.2830673 L48.7168154,34.0165864 L47.97067,36.1591957 L54.76234,38.4911427 L56.2416532,21.8947542 L57.9443369,28.0567191 L56.2924646,27.7733329 L55.8643707,29.0485707 L60.430706,29.8987287 L58.0285547,19.9783949 C62.1511986,17.3864329 68.192391,12.6797593 68.192391,12.6797593 C68.192391,12.6797593 64.9901324,10.7787296 61.806536,10.9837257 C58.9806297,11.1656962 52.0689189,16.6492921 50.5519,17.8788506 L50.5374543,17.7703046 C50.6653863,17.077182 50.5665284,16.4247429 50.2250378,15.8363752 C49.1332375,13.9551876 45.9305152,11.4314407 44.5135743,11.3355759 C44.4945643,11.334307 44.4749747,11.3336148 44.4539941,11.3336148 C43.6009781,11.3336148 41.1825344,12.5308286 39.3707881,13.5561548 C37.4499662,14.6430837 35.1918325,16.1100109 34.6144615,16.9671412 C34.1605031,17.641132 33.9258553,18.7543548 33.8607381,19.9111827 L30.4668926,20.3565091 L30.7660048,22.6040592 L33.9446517,22.1869703 C34.045398,22.9291024 34.2159195,23.5569088 34.4379235,23.9250089 C34.5277085,24.0738979 34.6239117,24.2151597 34.7263432,24.3486939 L32.4778126,25.2235273 L33.3107631,27.3343624 L37.0801073,25.8678276 C37.4901032,25.9683767 37.9307201,26.0193832 38.3991914,26.0193832 C40.2057215,26.0193832 42.4209667,25.2666544 44.8056792,23.8424107 C45.9882177,23.1360711 47.004069,22.4090892 47.8395519,21.6816619 L48.361541,21.4785721 Z" />
+            <path d="M14.1313192,0 L20,0 L6.09487842,29.58154 L19.5061287,60.3718378 L13.5853707,60.3718378 L0,29.5123171 L14.1313192,0 Z" />
+            <path d="M85.8686808,0 L80,0 L93.9051216,29.58154 L80.4938713,60.3718378 L86.4146293,60.3718378 L100,29.5123171 L85.8686808,0 Z" />
+            <path d="M47.9336063,60.3718378 L42.119488,60.3718378 L74.494558,0 L80.2894861,0 L47.9336063,60.3718378 Z" />
+            <path d="M20.998765,22.3161539 L26.5753271,31.8016347 L37.7968773,30.1169642 L38.0606663,32.9296577 L24.7787018,34.8732031 L18.5030355,23.3755282 L20.998765,22.3161539 Z" />
+          </g>
+        </a>
+      </svg>
+    </nav>
+  </header>
+
+  <main>
+  <section class="preamble block columns">
+    <div class="column">
+      <h1>David Bazile</h1>
+      <img class="skills-pie-chart" src="images/skills-pie-chart.svg" alt="A breakdown of my skills"/>
+    </div>
+    <div class="preamble__github column">
+      <h3>Looking for code?</h3>
+      <p>All that stuff is over at GitHub.</p>
+      <a class="github__link" href="https://github.com/dbazile" target="_blank">
+        <img class="github__icon" src="images/github-icon.svg" alt="Go to my GitHub profile" />
+      </a>
+    </div>
+  </section>
+
+  <section class="ui">
+    <h2 class="portfolio__heading block">User Interface</h2>
+    <ul class="tiles">
+      <li class="tiles__tile"><a href="portfolio/index.html#lunch-money-buddy"><img src="portfolio/ui/2016-lunch-money-buddy/brand.png" alt="Lunch Money Buddy"/></a></li>
+      <li class="tiles__tile"><a href="portfolio/index.html#and-so-it-continues--v2-0-"><img src="portfolio/ui/2015-andsoitcontinues/brand.png" alt="And So It Continues (v2.0)"/></a></li>
+      <li class="tiles__tile"><a href="portfolio/index.html#and-so-it-continues--v1-0-"><img src="portfolio/ui/2013-andsoitcontinues/brand.png" alt="And So It Continues (v1.0)"/></a></li>
+      <li class="tiles__tile"><a href="portfolio/index.html#exeanime"><img src="portfolio/ui/2004-exeanime/brand.png" alt="exeanime"/></a></li>
+      <li class="tiles__tile"><a href="portfolio/index.html#a-rabid-penguin-s-thoughts"><img src="portfolio/ui/2003-a-rabid-penguins-thoughts/brand.png" alt="A Rabid Penguin's Thoughts"/></a></li>
+      <li class="tiles__tile"><a href="portfolio/index.html#mega-man--alternate-universe"><img src="portfolio/ui/2003-megaman-alternate-universe/brand.png" alt="Mega Man: Alternate Universe"/></a></li>
+      <li class="tiles__tile"><a href="portfolio/index.html#no-man-s-land"><img src="portfolio/ui/2002-no-mans-land/brand.png" alt="No Man's Land"/></a></li>
+      <li class="tiles__tile"><a href="portfolio/index.html#sharp-shooters"><img src="portfolio/ui/2002-sharp-shooters/brand.png" alt="Sharp Shooters"/></a></li>
+      <li class="tiles__tile"><a href="portfolio/index.html#hidden-palace-zone"><img src="portfolio/ui/2001-hidden-palace-zone/brand.png" alt="Hidden Palace Zone"/></a></li>
+      <li class="tiles__tile"><a href="portfolio/index.html#tribal-destroyers"><img src="portfolio/ui/2001-tribal-destroyers/brand.png" alt="Tribal Destroyers"/></a></li>
+    </ul>
+
+    <div id="lunch-money-buddy" class="narrative-group">
+      <div class="narrative narrative--heading">
+        <div class="narrative__column narrative__column--text">
+          <h3>
+            Lunch Money Buddy
+<small>Classwork</small>          </h3>
+          <p>An imaginary mobile application designed to allow parents and guardians of
+    school age children to manage various aspects of their kids’ in-school
+    cafeteria lunch accounts.</p>
+        </div>
+        <div class="narrative__column narrative__column--text">
+          <div class="column__microdata column__microdata--circa">
+            <h4>Circa</h4>
+            <p>2016</p>
+          </div>
+          <div class="column__microdata column__microdata--url">
+            <h4>URL</h4>
+            <p><a target="_blank" href="portfolio/ui/2016-lunch-money-buddy/Proto.io Wireframes/index.html">View Prototype</a></p>
+          </div>
+          <div class="column__microdata column__microdata--technologies">
+            <h4>Technologies</h4>
+            <p>Sketch, proto.io, Pages, Keynote</p>
+          </div>
+        </div>
+      </div>
+      <div class="narrative narrative--artifact">
+        <div class="narrative__column narrative__column--text">
+          <h3>Personas</h3><p>The main challenge designing the app was trying to meet the conflicting expectations of two very different personas:</p><ul>
+      <li><strong>A young &#8220;wired&#8221; couple with lots of smartphone experience</strong> who expects the app to meet the same level of fluidity and aesthetics as apps they&#8217;ve used in the past.  Automation and exploratory search are high priorities for this persona.</li>
+      <li><strong>A retiree with very little smartphone experience</strong> who expects an uncomplicated interface for a system whose use is now compulsory.  He will not want anything &#8220;magic&#8221; happening, which rules out automation and he will not have any desire to poke around the application &#8220;looking&#8221; for things.</li>
+    </ul>
+
+          <ul class="narrative__files">
+          </ul>
+        </div>
+        <div class="narrative__column narrative__column--media">
+          <img class="narrative__mural" src="images/placeholder.svg" alt="narrative mural"/>
+        </div>
+      </div>
+      <div class="narrative narrative--artifact">
+        <div class="narrative__column narrative__column--text">
+          <h3>User Journeys &amp; Wireframes</h3><p>I mapped out two user journeys for each persona:</p><ul>
+      <li><strong>Setup</strong>, in which the persona walks through their first interactions with the app, from installation, through registration of accounts, and finally to completion of the persona&#8217;s first task (i.e., adding funds to an account)</li>
+      <li><strong>Maintenance</strong>, in which the persona performs their primary tasks.  Along the way, unobtrusive affordances for enhanced functionality were presented for easy discovery.</li>
+    </ul><h4>Mantra: Keep the "Simple Path" clear</h4><p>With Henry in mind, I defined a concept I called the &#8220;Simple Path&#8221;, which is effectively a beeline from the central hub view to the app&#8217;s primary purpose: adding funds to an account.</p><p>Henry&#8217;s primary focus would be to just open the app, check his balance and possibly add funds without being bothered by whichever artistic idiosyncrasies an app vendor decides to inflict upon him.  With that in mind, it made sense to keep the account balance and a direct shortcut to adding funds front and center.  On the way there, he may see something he wants to explore, but it won&#8217;t obstruct his goal.</p><p>Samantha and Jorge on the other hand may manually add funds, but if they use auto-refill (which we expect), the first view they see will be the entry point for exploratory search (i.e., the lunch menu) which they are very likely to engage in.</p>
+
+          <ul class="narrative__files">
+            <li class="narrative__file"><a target="_blank" href="portfolio/ui/2016-lunch-money-buddy/User%20Journeys.pdf"><img src="images/pdf-icon.svg" alt="thumbnail">User Journeys (PDF)</a></li>
+            <li class="narrative__file"><a target="_blank" href="portfolio/ui/2016-lunch-money-buddy/Wireframes.pdf"><img src="images/pdf-icon.svg" alt="thumbnail">Wireframes (PDF)</a></li>
+          </ul>
+        </div>
+        <div class="narrative__column narrative__column--media">
+          <img class="narrative__mural" src="images/placeholder.svg" alt="narrative mural"/>
+        </div>
+      </div>
+    </div>
+    <div id="and-so-it-continues--v2-0-" class="narrative-group">
+      <div class="narrative narrative--heading">
+        <div class="narrative__column narrative__column--text">
+          <h3>
+            And So It Continues (v2.0)
+          </h3>
+          <p></p>
+        </div>
+        <div class="narrative__column narrative__column--text">
+          <div class="column__microdata column__microdata--circa">
+            <h4>Circa</h4>
+            <p>2015</p>
+          </div>
+          <div class="column__microdata column__microdata--url">
+            <h4>URL</h4>
+            <p><a target="_blank" href="portfolio/ui/2015-andsoitcontinues/prototype">View Prototype</a></p>
+          </div>
+          <div class="column__microdata column__microdata--technologies">
+            <h4>Technologies</h4>
+            <p>Illustrator, HTML, CSS, EmberJS</p>
+          </div>
+        </div>
+      </div>
+      <div class="narrative narrative--artifact">
+        <div class="narrative__column narrative__column--text">
+          <p>The main challenge designing the app was trying to meet the conflicting expectations of two very different personas:</p><ul>
+      <li><strong>A young &#8220;wired&#8221; couple with lots of smartphone experience</strong> who expects the app to meet the same level of fluidity and aesthetics as apps they&#8217;ve used in the past.  Automation and exploratory search are high priorities for this persona.</li>
+      <li><strong>A retiree with very little smartphone experience</strong> who expects an uncomplicated interface for a system whose use is now compulsory.  He will not want anything &#8220;magic&#8221; happening, which rules out automation and he will not have any desire to poke around the application &#8220;looking&#8221; for things.</li>
+    </ul>
+
+          <ul class="narrative__files">
+            <li class="narrative__file"><a target="_blank" href="portfolio/ui/2015-andsoitcontinues/mockups.pdf"><img src="portfolio/ui/2015-andsoitcontinues/thumbnail-mockups.png" alt="thumbnail">Mockups (.PDF)</a></li>
+          </ul>
+        </div>
+        <div class="narrative__column narrative__column--media">
+          <img class="narrative__mural" src="images/placeholder.svg" alt="narrative mural"/>
+        </div>
+      </div>
+    </div>
+    <div id="and-so-it-continues--v1-0-" class="narrative-group">
+      <div class="narrative narrative--heading">
+        <div class="narrative__column narrative__column--text">
+          <h3>
+            And So It Continues (v1.0)
+<small>Personal</small>          </h3>
+          <p>A previous design of this site</p>
+        </div>
+        <div class="narrative__column narrative__column--text">
+          <div class="column__microdata column__microdata--circa">
+            <h4>Circa</h4>
+            <p>2013</p>
+          </div>
+          <div class="column__microdata column__microdata--url">
+            <h4>URL</h4>
+            <p><a target="_blank" href="portfolio/ui/2013-andsoitcontinues/prototype/">View Prototype</a></p>
+          </div>
+          <div class="column__microdata column__microdata--technologies">
+            <h4>Technologies</h4>
+            <p>Photoshop, HTML, CSS, JavaScript (Vanilla)</p>
+          </div>
+        </div>
+      </div>
+      <div class="narrative narrative--artifact">
+        <div class="narrative__column narrative__column--text">
+          <p>
+      Here lies a previous design of this site. My original intent was to
+      build a site without any frameworks or libraries&#8212;just vanilla HTML,
+      CSS, JavaScript and Python.  I almost pulled it off, but ended up using
+      <a href="https://highlightjs.org/" target="_blank">highlight.js</a> and
+      <a href="https://pypi.python.org/pypi/Markdown" target="_blank">Python
+      Markdown</a> because as it turns out, hand-rolling your own lexer for 7+
+      languages isn't exactly a walk in the park.
+    </p><p>
+      I started out intending to support as far back as IE8, until I realized
+      that I do enough of that at work and life is too short.
+    </p><p>
+      The original code has been bundled and archived into a <a href="https://github.com/dbazile/archive-asic-2013" target="_blank">GitHub repository</a>.
+    </p>
+
+          <ul class="narrative__files">
+          </ul>
+        </div>
+        <div class="narrative__column narrative__column--media">
+          <img class="narrative__mural" src="images/placeholder.svg" alt="narrative mural"/>
+        </div>
+      </div>
+      <div class="narrative narrative--artifact">
+        <div class="narrative__column narrative__column--text">
+          <h3>Site Map (.PDF)</h3><p>
+      I designed this site map up front in order to build my URL strategy.  I
+      later learned that this is actually part of the design process, not just
+      some incidental action.
+    </p>
+
+          <ul class="narrative__files">
+            <li class="narrative__file"><a target="_blank" href="portfolio/ui/2013-andsoitcontinues/sitemap.pdf"><img src="portfolio/ui/2013-andsoitcontinues/thumbnail-sitemap.png" alt="thumbnail">sitemap.pdf</a></li>
+          </ul>
+        </div>
+        <div class="narrative__column narrative__column--media">
+          <img class="narrative__mural" src="images/placeholder.svg" alt="narrative mural"/>
+        </div>
+      </div>
+      <div class="narrative narrative--artifact">
+        <div class="narrative__column narrative__column--text">
+          <h3>Draft Mockups (.PDF)</h3><p>
+      This was the first shot at designing the page.  I ended up blending
+      parts of this design into the final version.
+    </p>
+
+          <ul class="narrative__files">
+            <li class="narrative__file"><a target="_blank" href="portfolio/ui/2013-andsoitcontinues/mockups-draft.pdf"><img src="portfolio/ui/2013-andsoitcontinues/thumbnail-mockups-draft.png" alt="thumbnail">mockups-draft.pdf</a></li>
+          </ul>
+        </div>
+        <div class="narrative__column narrative__column--media">
+          <img class="narrative__mural" src="images/placeholder.svg" alt="narrative mural"/>
+        </div>
+      </div>
+      <div class="narrative narrative--artifact">
+        <div class="narrative__column narrative__column--text">
+          <h3>Final Wireframes (.PDF)</h3><p>This is what I settled on for the design.</p>
+
+          <ul class="narrative__files">
+            <li class="narrative__file"><a target="_blank" href="portfolio/ui/2013-andsoitcontinues/wireframes-final.pdf"><img src="portfolio/ui/2013-andsoitcontinues/thumbnail-wireframes-final.png" alt="thumbnail">wireframes-final.pdf</a></li>
+          </ul>
+        </div>
+        <div class="narrative__column narrative__column--media">
+          <img class="narrative__mural" src="images/placeholder.svg" alt="narrative mural"/>
+        </div>
+      </div>
+    </div>
+    <div id="exeanime" class="narrative-group">
+      <div class="narrative narrative--heading">
+        <div class="narrative__column narrative__column--text">
+          <h3>
+            exeanime
+          </h3>
+          <p>A design for an anime-themed website that never launched. The
+    site owner was a friend of mine (i.e., broke teenager without
+    the means to pay).</p>
+        </div>
+        <div class="narrative__column narrative__column--text">
+          <div class="column__microdata column__microdata--circa">
+            <h4>Circa</h4>
+            <p>2004</p>
+          </div>
+          <div class="column__microdata column__microdata--url">
+            <h4>URL</h4>
+            <p><a target="_blank" href="portfolio/ui/2004-exeanime/prototype">View Prototype</a></p>
+          </div>
+          <div class="column__microdata column__microdata--technologies">
+            <h4>Technologies</h4>
+            <p>Photoshop, HTML, CSS, JavaScript (Vanilla)</p>
+          </div>
+        </div>
+      </div>
+      <div class="narrative narrative--artifact">
+        <div class="narrative__column narrative__column--text">
+          <h3>Prototype</h3><p>
+      This site and its name were heavily inspired by <a href="http://megaman.wikia.com/wiki/Mega_Man_Battle_Network_(series)" target="_blank">Mega
+      Man Battle Network series</a>, which around the time my friend pitched the
+      site to me was blowing up in popularity online.
+    </p><p>
+      At this time, I was learning about advanced CSS 2.0 techniques.
+    </p>
+
+          <ul class="narrative__files">
+            <li class="narrative__file"><a target="_blank" href="portfolio/ui/2004-exeanime/prototype"><img src="portfolio/ui/2004-exeanime/thumbnail-prototype.png" alt="thumbnail">Prototype</a></li>
+            <li class="narrative__file"><a target="_blank" href="portfolio/ui/2004-exeanime/mockup.png"><img src="portfolio/ui/2004-exeanime/thumbnail-mockup.png" alt="thumbnail">Mockup</a></li>
+          </ul>
+        </div>
+        <div class="narrative__column narrative__column--media">
+          <img class="narrative__mural" src="images/placeholder.svg" alt="narrative mural"/>
+        </div>
+      </div>
+    </div>
+    <div id="a-rabid-penguin-s-thoughts" class="narrative-group">
+      <div class="narrative narrative--heading">
+        <div class="narrative__column narrative__column--text">
+          <h3>
+            A Rabid Penguin's Thoughts
+          </h3>
+          <p>A simple design for a simple blog.</p>
+        </div>
+        <div class="narrative__column narrative__column--text">
+          <div class="column__microdata column__microdata--circa">
+            <h4>Circa</h4>
+            <p>2003</p>
+          </div>
+          <div class="column__microdata column__microdata--url">
+            <h4>URL</h4>
+            <p><a target="_blank" href="portfolio/ui/2003-a-rabid-penguins-thoughts/mockup.png">View Mockup</a></p>
+          </div>
+          <div class="column__microdata column__microdata--technologies">
+            <h4>Technologies</h4>
+            <p>Photoshop, HTML, CSS</p>
+          </div>
+        </div>
+      </div>
+      <div class="narrative narrative--artifact">
+        <div class="narrative__column narrative__column--text">
+          <h3>Background</h3><p>
+      Blogs were exploding in popularity around the time a friend of a friend
+      asked for this design for her own blog.
+    </p><p>
+      Unfortunately, all I've got left from this project is just the mockup as I
+      don't believe I ever properly backed-up the prototype.
+    </p>
+
+          <ul class="narrative__files">
+          </ul>
+        </div>
+        <div class="narrative__column narrative__column--media">
+          <img class="narrative__mural" src="images/placeholder.svg" alt="narrative mural"/>
+        </div>
+      </div>
+    </div>
+    <div id="mega-man--alternate-universe" class="narrative-group">
+      <div class="narrative narrative--heading">
+        <div class="narrative__column narrative__column--text">
+          <h3>
+            Mega Man: Alternate Universe
+          </h3>
+          <p>A fan-curated website centerd on the MegaMan series featuring community
+    bulletin boards and fan-fiction, sprite, illustration and music
+    repositories.</p>
+        </div>
+        <div class="narrative__column narrative__column--text">
+          <div class="column__microdata column__microdata--circa">
+            <h4>Circa</h4>
+            <p>2003</p>
+          </div>
+          <div class="column__microdata column__microdata--url">
+            <h4>URL</h4>
+            <p><a target="_blank" href="portfolio/ui/2003-megaman-alternate-universe/mockup.png">View Mockup</a></p>
+          </div>
+          <div class="column__microdata column__microdata--technologies">
+            <h4>Technologies</h4>
+            <p>Photoshop, HTML, CSS</p>
+          </div>
+        </div>
+      </div>
+      <div class="narrative narrative--artifact">
+        <div class="narrative__column narrative__column--text">
+          <p>
+      I got my start in web design building web pages for the various
+      fan-fiction writers, sketch/sprite artists, community forum
+      moderators, and the many other various creatives of the Mega Man
+      fan club Internet community. This is one of the last projects I
+      did for my old crew before I joined the military.
+    </p>
+
+          <ul class="narrative__files">
+          </ul>
+        </div>
+        <div class="narrative__column narrative__column--media">
+          <img class="narrative__mural" src="images/placeholder.svg" alt="narrative mural"/>
+        </div>
+      </div>
+    </div>
+    <div id="no-man-s-land" class="narrative-group">
+      <div class="narrative narrative--heading">
+        <div class="narrative__column narrative__column--text">
+          <h3>
+            No Man's Land
+          </h3>
+          <p>A promotion page for an ambitious game mod development project based on
+    Return to Castle Wolfensten.</p>
+        </div>
+        <div class="narrative__column narrative__column--text">
+          <div class="column__microdata column__microdata--circa">
+            <h4>Circa</h4>
+            <p>2002</p>
+          </div>
+          <div class="column__microdata column__microdata--url">
+            <h4>URL</h4>
+            <p><a target="_blank" href="portfolio/ui/2002-no-mans-land/prototype">View Prototype</a></p>
+          </div>
+          <div class="column__microdata column__microdata--technologies">
+            <h4>Technologies</h4>
+            <p>Photoshop, HTML, CSS</p>
+          </div>
+        </div>
+      </div>
+      <div class="narrative narrative--artifact">
+        <div class="narrative__column narrative__column--text">
+          <h3>Background</h3><p>
+      This mod was based on the PC-based first-person-shooter <a href="http://wolfenstein.wikia.com/wiki/Return_to_Castle_Wolfenstein" target="_blank">Return
+      to Castle Wolfenstein</a>.  The team was attempting to use the RTCW engine
+      to write a campaign mission storyline.  The goal here was replacing the
+      HTML 3.0 monstrosity that was their original site to help build hype for
+      the mod.
+    </p><h4>So what happened?</h4><p>
+      I'm pretty sure this project ended up being vaporware and was never
+      released.
+    </p>
+
+          <ul class="narrative__files">
+          </ul>
+        </div>
+        <div class="narrative__column narrative__column--media">
+          <img class="narrative__mural" src="images/placeholder.svg" alt="narrative mural"/>
+        </div>
+      </div>
+    </div>
+    <div id="sharp-shooters" class="narrative-group">
+      <div class="narrative narrative--heading">
+        <div class="narrative__column narrative__column--text">
+          <h3>
+            Sharp Shooters
+          </h3>
+          <p>A modest-sized PC gamers' guild community website.</p>
+        </div>
+        <div class="narrative__column narrative__column--text">
+          <div class="column__microdata column__microdata--circa">
+            <h4>Circa</h4>
+            <p>2002</p>
+          </div>
+          <div class="column__microdata column__microdata--url">
+            <h4>URL</h4>
+            <p><a target="_blank" href="portfolio/ui/2002-sharp-shooters/prototype/">View Prototype</a></p>
+          </div>
+          <div class="column__microdata column__microdata--technologies">
+            <h4>Technologies</h4>
+            <p>Photoshop, HTML, CSS, PHP</p>
+          </div>
+        </div>
+      </div>
+      <div class="narrative narrative--artifact">
+        <div class="narrative__column narrative__column--text">
+          <h3>Background</h3><p>
+      A design I made for a <a href="http://wolfenstein.wikia.com/wiki/Return_to_Castle_Wolfenstein" target="_blank">Return
+      to Castle Wolfenstein</a> gamers' group I was a member of. This was a
+      pretty straightforward layout with a minimal amount of PHP for server-side
+      includes for itemizing directories of thumbnails and screenshots.
+    </p><p>
+      I bumped into these guys back when I was averaging about 15 hours
+      a week of RTCW. I'd hang out on their server because it was
+      well-coordinated, organized and people actually contributed to the
+      match instead of just running around aimlessly. Impressed by my mad
+      medic skills and because I was there all the time anyway, they
+      asked me to join up. After I went to their website to register, I
+      saw what they had up there and offered to spiff it up for them.
+    </p><p>
+      I believe they went live with the redesign shortly after delivery.
+    </p>
+
+          <ul class="narrative__files">
+          </ul>
+        </div>
+        <div class="narrative__column narrative__column--media">
+          <img class="narrative__mural" src="images/placeholder.svg" alt="narrative mural"/>
+        </div>
+      </div>
+    </div>
+    <div id="hidden-palace-zone" class="narrative-group">
+      <div class="narrative narrative--heading">
+        <div class="narrative__column narrative__column--text">
+          <h3>
+            Hidden Palace Zone
+          </h3>
+          <p>A design I threw together for a friend's fan-fiction website.</p>
+        </div>
+        <div class="narrative__column narrative__column--text">
+          <div class="column__microdata column__microdata--circa">
+            <h4>Circa</h4>
+            <p>2001</p>
+          </div>
+          <div class="column__microdata column__microdata--url">
+            <h4>URL</h4>
+            <p><a target="_blank" href="portfolio/ui/2001-hidden-palace-zone/prototype/">View Prototype</a></p>
+          </div>
+          <div class="column__microdata column__microdata--technologies">
+            <h4>Technologies</h4>
+            <p>Photoshop, HTML, CSS, JavaScript (Vanilla)</p>
+          </div>
+        </div>
+      </div>
+      <div class="narrative narrative--artifact">
+        <div class="narrative__column narrative__column--text">
+          <h3>Background</h3><p>
+      For those not in the know, <a href="http://sonic.wikia.com/wiki/Hidden_Palace_Zone_(Sonic_the_Hedgehog_2)" target="_blank"><em>Hidden
+      Palace Zone</em></a> is the name of a stage from the <a href="http://sonic.wikia.com/wiki/Sonic_the_Hedgehog_series" target="_blank">Sonic the
+      Hedgehog</a> series. It also happened to be the name my friend decided on
+      for his fanfic repository.
+    </p><p>
+      The &#8220;chaos gems&#8221; in the background were actually the
+      result of a completely serendipitous mistake I made in a 3d
+      modeling program I was messing with at the time. I just adjusted
+      the HSB values for each in Photoshop, then stuck em in the
+      background.
+    </p><p>
+      I committed my biggest web development atrocity on this
+      project&#8212;using Flash for the navigation items. The nav made a
+      little <em>bleep</em> sound when you clicked on one of the elements. This,
+      of course, does not fall back to anything in the event Flash
+      isn't installed, and the list of URLs is hardcoded into the .SWF
+      file. In my defense, I was 16 and Progressive Enhancement
+      wouldn't pop up on anyone's radar until a few years after I
+      delivered this.
+    </p>
+
+          <ul class="narrative__files">
+          </ul>
+        </div>
+        <div class="narrative__column narrative__column--media">
+          <img class="narrative__mural" src="images/placeholder.svg" alt="narrative mural"/>
+        </div>
+      </div>
+    </div>
+    <div id="tribal-destroyers" class="narrative-group">
+      <div class="narrative narrative--heading">
+        <div class="narrative__column narrative__column--text">
+          <h3>
+            Tribal Destroyers
+          </h3>
+          <p>A modest-sized PC gamers' guild community website I made for a friend.</p>
+        </div>
+        <div class="narrative__column narrative__column--text">
+          <div class="column__microdata column__microdata--circa">
+            <h4>Circa</h4>
+            <p>2001</p>
+          </div>
+          <div class="column__microdata column__microdata--url">
+            <h4>URL</h4>
+            <p><a target="_blank" href="portfolio/ui/2001-tribal-destroyers/prototype/">View Prototype</a></p>
+          </div>
+          <div class="column__microdata column__microdata--technologies">
+            <h4>Technologies</h4>
+            <p>Photoshop, HTML, CSS, JavaScript</p>
+          </div>
+        </div>
+      </div>
+      <div class="narrative narrative--artifact">
+        <div class="narrative__column narrative__column--text">
+          <h3>Background</h3><p>
+      Implemented with limited CSS knowledge and the ubiquitous table-based
+      layout, getting that goon's arm to properly float off the main body made
+      this relatively simple design a big pain.  Looking at this code to package
+      it up makes me cringe. I'm still trying to figure out how I made this work
+      all those years ago.
+    </p><p>
+      This gamers' group was centered on the <a href="http://tribes.wikia.com/wiki/Tribes_Wiki" target="_blank">Tribes</a> series.  I
+      don't know much about any of the games as I never played any of them but
+      this was made as a favor for a friend.
+    </p><h4>What the heck is d3fect studios?</h4><p>
+      In case you're wondering, <strong>d3fect studios</strong> was my design
+      <em>nom de plume</em> back then, .com and everything!  Of course, with
+      the clientele being what it was (i.e., broke teenagers without the means
+      to pay), I never charged anything and it went nowhere.  Oddly enough, a
+      squatter picked it the domain name within days after I let it expire...
+    </p>
+
+          <ul class="narrative__files">
+          </ul>
+        </div>
+        <div class="narrative__column narrative__column--media">
+          <img class="narrative__mural" src="images/placeholder.svg" alt="narrative mural"/>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="scripts/portfolio.js"></script>
+
+  <section class="photoshoppery">
+    <h2 class="portfolio__heading block">Random Photoshoppery</h2>
+    <ul class="photoshoppery__artifacts">
+      <li id="avatar--falling-" class="photoshoppery__entry">
+        <a target="_blank" href="portfolio/photoshop/2015-avatar-html/avatar-html.png"><img src="portfolio/photoshop/2015-avatar-html/avatar-html-thumbnail.png" alt="thumbnail"/></a>
+        <h2 class="photoshoppery__title">Avatar (Falling)</h2>
+        <div class="photoshoppery__circa">2015</div>
+        <div class="photoshoppery__background">Another avatar for my online accounts. This one seems to
+    hold truer to reality most of the time.</div>
+      </li>
+      <li id="avatar--pixel-" class="photoshoppery__entry">
+        <a target="_blank" href="portfolio/photoshop/2014-avatar-pixel/avatar-pixel.png"><img src="portfolio/photoshop/2014-avatar-pixel/avatar-pixel-thumbnail.png" alt="thumbnail"/></a>
+        <h2 class="photoshoppery__title">Avatar (Pixel)</h2>
+        <div class="photoshoppery__circa">2014</div>
+        <div class="photoshoppery__background">An avatar I made for my online persona.</div>
+      </li>
+      <li id="avatar--vector-" class="photoshoppery__entry">
+        <a target="_blank" href="portfolio/photoshop/2014-avatar-vector/avatar-vector.png"><img src="portfolio/photoshop/2014-avatar-vector/avatar-vector-thumbnail.png" alt="thumbnail"/></a>
+        <h2 class="photoshoppery__title">Avatar (Vector)</h2>
+        <div class="photoshoppery__circa">2014</div>
+        <div class="photoshoppery__background">An avatar I made for my online persona.</div>
+      </li>
+      <li id="finally" class="photoshoppery__entry">
+        <a target="_blank" href="portfolio/photoshop/2014-finally/finally.png"><img src="portfolio/photoshop/2014-finally/finally-thumbnail.png" alt="thumbnail"/></a>
+        <h2 class="photoshoppery__title">Finally</h2>
+        <div class="photoshoppery__circa">2014</div>
+        <div class="photoshoppery__background">Historically, I've gotten tons of work done after 10pm, once
+    everyone's headed off to bed. This is a tribute to that nighttime
+    productivity.</div>
+      </li>
+      <li id="in-space" class="photoshoppery__entry">
+        <a target="_blank" href="portfolio/photoshop/2014-in-space/in-space.png"><img src="portfolio/photoshop/2014-in-space/in-space-thumbnail.png" alt="thumbnail"/></a>
+        <h2 class="photoshoppery__title">In Space</h2>
+        <div class="photoshoppery__circa">2014</div>
+        <div class="photoshoppery__background">I was just messing around with Photoshop one day and put this
+    together. I haven't used an Epic Lens Flare since 2001!</div>
+      </li>
+      <li id="sword-guy" class="photoshoppery__entry">
+        <a target="_blank" href="portfolio/photoshop/2014-sword-guy/sword-guy.png"><img src="portfolio/photoshop/2014-sword-guy/sword-guy-thumbnail.png" alt="thumbnail"/></a>
+        <h2 class="photoshoppery__title">Sword Guy</h2>
+        <div class="photoshoppery__circa">2014</div>
+        <div class="photoshoppery__background">He wields his paintbrush in pursuit of justice and his red
+    Swingline... This was an experiment on an avatar.</div>
+      </li>
+      <li id="three-days-later---" class="photoshoppery__entry">
+        <a target="_blank" href="portfolio/photoshop/2013-three-days-later/three-days-later.png"><img src="portfolio/photoshop/2013-three-days-later/three-days-later-thumbnail.png" alt="thumbnail"/></a>
+        <h2 class="photoshoppery__title">Three Days Later...</h2>
+        <div class="photoshoppery__circa">2013</div>
+        <div class="photoshoppery__background">What inevitably happens whenever Mommy is away for a few days and
+    Dad's in charge of the food...</div>
+      </li>
+      <li id="closet-rack" class="photoshoppery__entry">
+        <a target="_blank" href="portfolio/photoshop/2010-closet-rack/closet-rack.png"><img src="portfolio/photoshop/2010-closet-rack/closet-rack-thumbnail.png" alt="thumbnail"/></a>
+        <h2 class="photoshoppery__title">Closet Rack</h2>
+        <div class="photoshoppery__circa">2010</div>
+        <div class="photoshoppery__background">An illustration of the closet rack I built in our home a few years
+    ago. Just a little something I procrastinated with before actually
+    building the darn thing.</div>
+      </li>
+      <li id="caiman" class="photoshoppery__entry">
+        <a target="_blank" href="portfolio/photoshop/2009-caiman/caiman.png"><img src="portfolio/photoshop/2009-caiman/caiman-thumbnail.png" alt="thumbnail"/></a>
+        <h2 class="photoshoppery__title">Caiman</h2>
+        <div class="photoshoppery__circa">2009</div>
+        <div class="photoshoppery__background">A recreation of one of my favorite NPCs from Star Fox 64. Any true
+    Nintendo fan will remember this little guy.</div>
+      </li>
+      <li id="we-cut-grass" class="photoshoppery__entry">
+        <a target="_blank" href="portfolio/photoshop/2009-we-cut-grass/we-cut-grass.png"><img src="portfolio/photoshop/2009-we-cut-grass/we-cut-grass-thumbnail.png" alt="thumbnail"/></a>
+        <h2 class="photoshoppery__title">We Cut Grass</h2>
+        <div class="photoshoppery__circa">2009</div>
+        <div class="photoshoppery__background">Adapted from an actual photo I took of my boss mowing the lawn,
+    this is a fake bumper sticker I made for my coworkers from my
+    last unit in the Marine Corps. We did a non-trivial amount of
+    landscaping for some odd reason.</div>
+      </li>
+      <li id="drawing-board" class="photoshoppery__entry">
+        <a target="_blank" href="portfolio/photoshop/2006-drawing-board/drawing-board.png"><img src="portfolio/photoshop/2006-drawing-board/drawing-board-thumbnail.png" alt="thumbnail"/></a>
+        <h2 class="photoshoppery__title">Drawing Board</h2>
+        <div class="photoshoppery__circa">2006</div>
+        <div class="photoshoppery__background">Not immune to the skeumorphic bandwagon, I made this overseas
+    using things directly around me as inspiration. I was going for
+    a “Wind Waker” style of rendering.</div>
+      </li>
+      <li id="funkmobile" class="photoshoppery__entry">
+        <a target="_blank" href="portfolio/photoshop/2002-funkmobile/funkmobile.jpg"><img src="portfolio/photoshop/2002-funkmobile/funkmobile-thumbnail.png" alt="thumbnail"/></a>
+        <h2 class="photoshoppery__title">Funkmobile</h2>
+        <div class="photoshoppery__circa">2002</div>
+        <div class="photoshoppery__background">A stylized version of a buddy's car I did up in Photoshop for
+    kicks.  I think I was learning about paths and vector art around
+    this time.</div>
+      </li>
+    </ul>
+  </section>
+  </main>
+
+  <div class="scripts"></div>
+
+  <div class="placeholders">
+    <div class="placeholder placeholder--portfolio">
+      <svg class="scatteringCards" viewBox="10 15 80 65" preserveAspectRatio="xMidYMax">
+        <g class="scatteringCards__stage" transform="translate(40,40)">
+          <g class="scatteringCards__card">
+            <rect class="scatteringCards__light" x="0" y="0" width="20" height="15"/>
+            <rect class="scatteringCards__mid" x="4" y="3" width="14" height="3"/>
+            <rect class="scatteringCards__dark" x="4" y="7" width="8" height="1"/>
+            <rect class="scatteringCards__mid" x="4" y="9" width="11" height="1"/>
+            <rect class="scatteringCards__mid" x="4" y="11" width="5" height="1"/>
+          </g>
+          <g class="scatteringCards__card">
+            <rect class="scatteringCards__light" x="0" y="0" width="20" height="15"/>
+            <rect class="scatteringCards__mid" x="2" y="2" width="4" height="7"/>
+            <rect class="scatteringCards__dark" x="7" y="2" width="10" height="2"/>
+            <rect class="scatteringCards__mid" x="7" y="5" width="9" height="1"/>
+            <rect class="scatteringCards__mid" x="7" y="7" width="11" height="1"/>
+            <rect class="scatteringCards__mid" x="7" y="10" width="2" height="2"/>
+            <rect class="scatteringCards__mid" x="10" y="10" width="2" height="2"/>
+            <rect class="scatteringCards__mid" x="13" y="10" width="2" height="2"/>
+            <rect class="scatteringCards__mid" x="16" y="10" width="2" height="2"/>
+          </g>
+          <g class="scatteringCards__card">
+            <rect class="scatteringCards__light" x="0" y="0" width="20" height="15"/>
+            <rect class="scatteringCards__mid" x="2" y="2" width="4" height="7"/>
+            <rect class="scatteringCards__dark" x="7" y="2" width="10" height="2"/>
+            <rect class="scatteringCards__mid" x="7" y="5" width="9" height="1"/>
+            <rect class="scatteringCards__mid" x="7" y="7" width="11" height="1"/>
+            <rect class="scatteringCards__mid" x="7" y="10" width="2" height="2"/>
+            <rect class="scatteringCards__mid" x="10" y="10" width="2" height="2"/>
+            <rect class="scatteringCards__mid" x="13" y="10" width="2" height="2"/>
+            <rect class="scatteringCards__mid" x="16" y="10" width="2" height="2"/>
+          </g>
+    
+          <g class="scatteringCards__card">
+            <rect class="scatteringCards__light" x="0" y="0" width="20" height="15"/>
+            <rect class="scatteringCards__mid" x="4" y="3" width="14" height="3"/>
+            <rect class="scatteringCards__dark" x="4" y="7" width="8" height="1"/>
+            <rect class="scatteringCards__mid" x="4" y="9" width="11" height="1"/>
+            <rect class="scatteringCards__mid" x="4" y="11" width="5" height="1"/>
+          </g>
+          <g class="scatteringCards__card">
+            <rect class="scatteringCards__light" x="0" y="0" width="20" height="15"/>
+            <rect class="scatteringCards__mid" x="4" y="3" width="14" height="3"/>
+            <rect class="scatteringCards__dark" x="4" y="7" width="8" height="1"/>
+            <rect class="scatteringCards__mid" x="4" y="9" width="11" height="1"/>
+            <rect class="scatteringCards__mid" x="4" y="11" width="5" height="1"/>
+          </g>
+          <g class="scatteringCards__card">
+            <rect class="scatteringCards__light" x="0" y="0" width="20" height="15"/>
+            <rect class="scatteringCards__mid" x="4" y="3" width="14" height="3"/>
+            <rect class="scatteringCards__dark" x="4" y="7" width="8" height="1"/>
+            <rect class="scatteringCards__mid" x="4" y="9" width="11" height="1"/>
+            <rect class="scatteringCards__mid" x="4" y="11" width="5" height="1"/>
+          </g>
+    
+          <g class="scatteringCards__card">
+            <rect class="scatteringCards__light" x="0" y="0" width="20" height="15"/>
+            <rect class="scatteringCards__mid" x="4" y="3" width="14" height="3"/>
+            <rect class="scatteringCards__dark" x="4" y="7" width="8" height="1"/>
+            <rect class="scatteringCards__mid" x="4" y="9" width="11" height="1"/>
+            <rect class="scatteringCards__mid" x="4" y="11" width="5" height="1"/>
+          </g>
+          <g class="scatteringCards__card">
+            <rect class="scatteringCards__light" x="0" y="0" width="20" height="15"/>
+            <rect class="scatteringCards__mid" x="2" y="2" width="4" height="7"/>
+            <rect class="scatteringCards__dark" x="7" y="2" width="10" height="2"/>
+            <rect class="scatteringCards__mid" x="7" y="5" width="9" height="1"/>
+            <rect class="scatteringCards__mid" x="7" y="7" width="11" height="1"/>
+            <rect class="scatteringCards__mid" x="7" y="10" width="2" height="2"/>
+            <rect class="scatteringCards__mid" x="10" y="10" width="2" height="2"/>
+            <rect class="scatteringCards__mid" x="13" y="10" width="2" height="2"/>
+            <rect class="scatteringCards__mid" x="16" y="10" width="2" height="2"/>
+          </g>
+          <g class="scatteringCards__card">
+            <rect class="scatteringCards__light" x="0" y="0" width="20" height="15"/>
+            <rect class="scatteringCards__mid" x="2" y="2" width="4" height="7"/>
+            <rect class="scatteringCards__dark" x="7" y="2" width="10" height="2"/>
+            <rect class="scatteringCards__mid" x="7" y="5" width="9" height="1"/>
+            <rect class="scatteringCards__mid" x="7" y="7" width="11" height="1"/>
+            <rect class="scatteringCards__mid" x="7" y="10" width="2" height="2"/>
+            <rect class="scatteringCards__mid" x="10" y="10" width="2" height="2"/>
+            <rect class="scatteringCards__mid" x="13" y="10" width="2" height="2"/>
+            <rect class="scatteringCards__mid" x="16" y="10" width="2" height="2"/>
+          </g>
+        </g>
+      </svg>
+      <div class="placeholder__text">
+        loading a list of my previous work
+      </div>
+    
+      <style>
+        .scatteringCards {}
+    
+        .scatteringCards__card {
+          transform-origin: 50%;
+          animation: 2s infinite alternate cubic-bezier(.21,1.31,.65,1.23);
+        }
+    
+        .scatteringCards__card:nth-child(1) { animation-delay: .60s; animation-name: scatteringCards-moveCard1; }
+        .scatteringCards__card:nth-child(2) { animation-delay: .55s; animation-name: scatteringCards-moveCard2; }
+        .scatteringCards__card:nth-child(3) { animation-delay: .50s; animation-name: scatteringCards-moveCard3; }
+        .scatteringCards__card:nth-child(4) { animation-delay: .45s; animation-name: scatteringCards-moveCard4; }
+        .scatteringCards__card:nth-child(5) { animation-delay: .40s; animation-name: scatteringCards-moveCard5; }
+        .scatteringCards__card:nth-child(6) { animation-delay: .35s; animation-name: scatteringCards-moveCard6; }
+        .scatteringCards__card:nth-child(7) { animation-delay: .30s; animation-name: scatteringCards-moveCard7; }
+        .scatteringCards__card:nth-child(8) { animation-delay: .25s; animation-name: scatteringCards-moveCard8; }
+        .scatteringCards__card:nth-child(9) { animation-delay: .20s; animation-name: scatteringCards-moveCard9; }
+    
+        .scatteringCards__light {
+          fill: white;
+        }
+    
+        .scatteringCards__mid {
+          fill: #ddd;
+        }
+    
+        .scatteringCards__dark {
+          fill: #999;
+        }
+    
+        /* ==========================================================
+           Keyframe Definitions
+           ========================================================== */
+    
+        /*
+          Spatial Arrangement:
+            9 2 3
+            8 1 4
+            7 6 5
+        */
+    
+        @keyframes scatteringCards-moveCard1 {
+          40% { transform: translate(0, 0); }
+          65%, 100% { transform: translate(0, 0); }
+        }
+        @keyframes scatteringCards-moveCard2 {
+          40% { transform: translate(0, 0); }
+          65%, 100% { transform: translate(0, -20px); }
+        }
+        @keyframes scatteringCards-moveCard3 {
+          40% { transform: translate(0, 0); }
+          65%, 100% { transform: translate(25px, -20px); }
+        }
+        @keyframes scatteringCards-moveCard4 {
+          40% { transform: translate(0, 0); }
+          65%, 100% { transform: translate(25px, 0); }
+        }
+        @keyframes scatteringCards-moveCard5 {
+          40% { transform: translate(0, 0); }
+          65%, 100% { transform: translate(25px, 20px); }
+        }
+        @keyframes scatteringCards-moveCard6 {
+          40% { transform: translate(0, 0); }
+          65%, 100% { transform: translate(0, 20px); }
+        }
+        @keyframes scatteringCards-moveCard7 {
+          40% { transform: translate(0, 0); }
+          65%, 100% { transform: translate(-25px, 20px); }
+        }
+        @keyframes scatteringCards-moveCard8 {
+          40% { transform: translate(0, 0); }
+          65%, 100% { transform: translate(-25px, 0); }
+        }
+        @keyframes scatteringCards-moveCard9 {
+          40% { transform: translate(0, 0); }
+          65%, 100% { transform: translate(-25px, -20px); }
+        }
+      </style>
+    </div>
+  </div>
+
+  <footer class="attributions block">
+    <h2>Copyright Notice</h2>
+    <p>
+      I make no claims to ownership or authorship of the video game character
+      likenesses and other related concepts depicted in some of the above
+      designs/illustrations.  The aforementioned concepts remain the intellectual
+      property of their respective owners (i.e., <a
+      target="_blank" href="http://www.nintendo.com">Nintendo</a>, <a
+      target="_blank" href="http://www.sega.com">Sega</a>, <a
+      target="_blank" href="http://www.capcom.com">Capcom</a>, <a
+      target="_blank" href="http://www.sierra.com">Sierra Entertainment</a>, <a
+      target="_blank" href="http://www.idsoftware.com/">id Software</a>, <a
+      target="_blank" href="http://www.sony.com">Sony</a>, etc). If there is
+      any discrepancy with something posted, please <a
+      target="_blank" href="https://twitter.com/spoonchucks">contact me</a> so
+      I can take action. <strong>TL;DR, please don’t sue me!</strong>
+    </p>
+    <p>
+      Everything else is &copy;2013-2016 David Bazile.
+    </p>
+  </footer>
+</body>
+</html>

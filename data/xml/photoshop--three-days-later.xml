@@ -1,0 +1,13 @@
+<portfolio-item type="photoshop">
+  <name>Three Days Later...</name>
+  <tag>family</tag>
+  <circa>2013</circa>
+  <summary>
+    What inevitably happens whenever Mommy is away for a few days and
+    Dad's in charge of the food...
+  </summary>
+  <artifact
+    href="portfolio/photoshop/2013-three-days-later/three-days-later.png"
+    thumbnail="portfolio/photoshop/2013-three-days-later/three-days-later-thumbnail.png"
+  />
+</portfolio-item>

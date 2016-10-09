@@ -1,0 +1,16 @@
+<portfolio-item type="photoshop">
+  <name>Drawing Board</name>
+  <tag>desk</tag>
+  <tag>skeumorphism</tag>
+  <tag>bandwagon</tag>
+  <circa>2006</circa>
+  <summary>
+    Not immune to the skeumorphic bandwagon, I made this overseas
+    using things directly around me as inspiration. I was going for
+    a “Wind Waker” style of rendering.
+  </summary>
+  <artifact
+    href="portfolio/photoshop/2006-drawing-board/drawing-board.png"
+    thumbnail="portfolio/photoshop/2006-drawing-board/drawing-board-thumbnail.png"
+  />
+</portfolio-item>

@@ -1,0 +1,42 @@
+<portfolio-item type="ui">
+  <name>Sharp Shooters</name>
+  <tag>wolfenstein</tag>
+  <tag>gaming</tag>
+  <tag>rtcw</tag>
+  <circa>2002</circa>
+  <client>Sharp Shooters, RTCW Chapter</client>
+  <brand>portfolio/ui/2002-sharp-shooters/brand.png</brand>
+  <technologies>Photoshop, HTML, CSS, PHP</technologies>
+  <link artifact-index="0"/>
+  <summary>
+    A modest-sized PC gamers' guild community website.
+  </summary>
+  <narrative>
+    <h3>Background</h3>
+    <p>
+      A design I made for a <a target="_blank"
+      href="http://wolfenstein.wikia.com/wiki/Return_to_Castle_Wolfenstein">Return
+      to Castle Wolfenstein</a> gamers' group I was a member of. This was a
+      pretty straightforward layout with a minimal amount of PHP for server-side
+      includes for itemizing directories of thumbnails and screenshots.
+    </p>
+    <p>
+      I bumped into these guys back when I was averaging about 15 hours
+      a week of RTCW. I'd hang out on their server because it was
+      well-coordinated, organized and people actually contributed to the
+      match instead of just running around aimlessly. Impressed by my mad
+      medic skills and because I was there all the time anyway, they
+      asked me to join up. After I went to their website to register, I
+      saw what they had up there and offered to spiff it up for them.
+    </p>
+    <p>
+      I believe they went live with the redesign shortly after delivery.
+    </p>
+  </narrative>
+  <artifact
+    name="Prototype"
+    href="portfolio/ui/2002-sharp-shooters/prototype/"
+    thumbnail="portfolio/ui/2002-sharp-shooters/thumbnail-prototype.png"
+    description="Click to open a working prototype of the design."
+  />
+</portfolio-item>
