@@ -14,13 +14,28 @@
 
   function initialize() {
     console.debug('(portfolio:initialize) subscribing to hashchange events')
-    onHashChange()
     window.addEventListener('hashchange', onHashChange)
     asic.transitioner.beforeNext(teardown)
+    onHashChange()
+
+    /*
+      This is needed because the :target CSS pseudoselector apparently doesn't
+      recompute if entering a hashed URL from a history.pushState'd URL.  This
+      manifests itself when moving _away_ from portfolio to another route, then
+      going back in history.
+
+      Now all I need to figure out is how to avoid the stinkin' 15px "sink" when
+      bouncing the hash... >_<
+
+      Refer to https://bugs.webkit.org/show_bug.cgi?id=83490
+     */
+    if (location.hash) {
+      console.debug('(portfolio:initialize) bouncing hash')
+      location.replace(location.href)
+    }
   }
 
   function onHashChange() {
-    // Update the tiles
     var tiles = document.querySelector('.tiles')
     if (location.hash) {
       tiles.classList.add('tiles--hasActiveTile')
@@ -35,25 +50,6 @@
         }
         else {
           element.classList.remove('tiles__tile--isActive')
-        }
-      })
-
-    /*
-      This is needed because the :target CSS pseudoselector apparently doesn't
-      recompute if entering a hashed URL from a history.pushState'd URL.  This
-      manifests itself when moving _away_ from portfolio to another route, then
-      going back in history.
-
-      Refer to https://bugs.webkit.org/show_bug.cgi?id=83490
-     */
-    // Update the groups
-    atoa(document.querySelectorAll('.narrativeGroup'))
-      .forEach(function (element) {
-        if (element.id === location.hash.substr(1)) {
-          element.classList.add('narrativeGroup--isActive')
-        }
-        else {
-          element.classList.remove('narrativeGroup--isActive')
         }
       })
   }

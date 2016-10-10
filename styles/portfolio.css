@@ -171,10 +171,9 @@
 
   TL;DR, this is a mostly pragmatic hack. ¯\_(ツ)_/¯
  */
-.narrativeGroup:target,
-.narrativeGroup--isActive {
-  margin-top: calc((18vw + 4.6em) * -1);  /* Offset by the estimated height of the tiles */
-  padding-top: calc(18vw + 4.6em);
+.narrativeGroup:target {
+  margin-top: -18vw;
+  padding-top: 18vw;
 }
 
 .narrativeGroup__contents {
@@ -183,8 +182,7 @@
   transition: .7s cubic-bezier(.3,1.2,.32,1.23);
 }
 
-.narrativeGroup:target .narrativeGroup__contents,
-.narrativeGroup--isActive .narrativeGroup__contents {
+.narrativeGroup:target .narrativeGroup__contents {
   opacity: 1;
   transform: translateY(0);
 }
@@ -193,8 +191,7 @@
   display: none;
 }
 
-.narrativeGroup:target .narrative,
-.narrativeGroup--isActive .narrative {
+.narrativeGroup:target .narrative {
   display: flex;
 }
 
