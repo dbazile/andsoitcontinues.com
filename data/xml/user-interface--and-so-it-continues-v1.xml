@@ -9,10 +9,11 @@
   <brand>portfolio/ui/2013-andsoitcontinues/brand.png</brand>
   <link artifact-index="0"/>
   <summary>
-    A previous design of this site
+    A previous design of andsoitcontinues.com.
   </summary>
 
   <narrative>
+    <h3>Background</h3>
     <p>
       Here lies a previous design of this site. My original intent was to
       build a site without any frameworks or libraries—just vanilla HTML,

@@ -8,7 +8,7 @@
   <technologies>Photoshop, HTML, CSS, JavaScript</technologies>
   <link artifact-index="0"/>
   <summary>
-    A modest-sized PC gamers' guild community website I made for a friend.
+    A modest-sized PC gamers' guild website I made for a friend.
   </summary>
   <narrative>
     <h3>Background</h3>
@@ -33,6 +33,7 @@
       to pay), I never charged anything and it went nowhere.  Oddly enough, a
       squatter picked it the domain name within days after I let it expire...
     </p>
+    <link artifact-index="0"/>
   </narrative>
   <artifact
     name="Prototype"

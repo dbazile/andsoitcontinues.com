@@ -1,5 +1,6 @@
 <portfolio-item type="ui">
   <name>And So It Continues (v2.0)</name>
+  <category>Personal</category>
   <tag>asic</tag>
   <tag>personal</tag>
   <circa>2015</circa>
@@ -8,6 +9,10 @@
   <technologies>Illustrator, HTML, CSS, EmberJS</technologies>
   <link artifact-index="0"/>
   <summary>
+    A previous design of andsoitcontinues.com.
+  </summary>
+  <narrative>
+    <h3>Background</h3>
     <p>
       Here is the design used for the &ldquo;human version&rdquo; of this site
       from 2014&ndash;2015.  My intention for this over-engineered piece of work
@@ -18,14 +23,9 @@
       The original code has been bundled and archived into a <a target="_blank"
       href="https://github.com/dbazile/archive-asic-2015">GitHub repository</a>.
     </p>
-  </summary>
+  </narrative>
   <narrative>
-    <p>The main challenge designing the app was trying to meet the conflicting expectations of two very different personas:</p>
-    <ul>
-      <li><strong>A young “wired” couple with lots of smartphone experience</strong> who expects the app to meet the same level of fluidity and aesthetics as apps they’ve used in the past.  Automation and exploratory search are high priorities for this persona.</li>
-      <li><strong>A retiree with very little smartphone experience</strong> who expects an uncomplicated interface for a system whose use is now compulsory.  He will not want anything “magic” happening, which rules out automation and he will not have any desire to poke around the application “looking” for things.</li>
-    </ul>
-
+    <h3>Mockups</h3>
     <link artifact-index="1"/>
   </narrative>
   <artifact

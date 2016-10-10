@@ -11,7 +11,7 @@
   <summary>
     A simple design for a simple blog.
   </summary>
-  <narrative>
+  <narrative mural="portfolio/ui/2003-a-rabid-penguins-thoughts/mockup.png">
     <h3>Background</h3>
     <p>
       Blogs were exploding in popularity around the time a friend of a friend
@@ -21,6 +21,7 @@
       Unfortunately, all I've got left from this project is just the mockup as I
       don't believe I ever properly backed-up the prototype.
     </p>
+    <link artifact-index="0"/>
   </narrative>
   <artifact
     name="Mockup"

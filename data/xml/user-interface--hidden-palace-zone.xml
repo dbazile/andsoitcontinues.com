@@ -8,7 +8,7 @@
   <technologies>Photoshop, HTML, CSS, JavaScript (Vanilla)</technologies>
   <link artifact-index="0"/>
   <summary>
-    A design I threw together for a friend's fan-fiction website.
+    A videogame fan-fiction author's blog and gallery website.
   </summary>
   <narrative>
     <h3>Background</h3>
@@ -37,6 +37,7 @@
       wouldn't pop up on anyone's radar until a few years after I
       delivered this.
     </p>
+    <link artifact-index="0"/>
   </narrative>
   <artifact
     name="Prototype"

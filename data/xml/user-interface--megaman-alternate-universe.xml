@@ -13,14 +13,20 @@
     bulletin boards and fan-fiction, sprite, illustration and music
     repositories.
   </summary>
-  <narrative>
+  <narrative mural="portfolio/ui/2003-megaman-alternate-universe/mockup.png">
+    <h3>Background</h3>
     <p>
-      I got my start in web design building web pages for the various
-      fan-fiction writers, sketch/sprite artists, community forum
-      moderators, and the many other various creatives of the Mega Man
-      fan club Internet community. This is one of the last projects I
-      did for my old crew before I joined the military.
+      I got my start in web design/development building web pages for the myriad
+      creative types of the online Mega Man fan community: fan-fiction authors,
+      sprite artists, illustrators, self-appointed anime/game news
+      correspondents, community forum moderators, etc.  This is one of the last
+      projects I did for my old crew before I joined the military.
     </p>
+    <p>
+      Unfortunately, all I've got left from this project is just the mockup as I
+      don't believe I ever properly backed-up the prototype.
+    </p>
+    <link artifact-index="0"/>
   </narrative>
   <artifact
     name="Mockup"
