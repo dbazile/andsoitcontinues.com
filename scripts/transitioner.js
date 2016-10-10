@@ -161,6 +161,9 @@
     transitionTo(url)
     history.pushState(null, null, url)
 
+    // Record pathname
+    _currentPathname = location.pathname
+
     // Reset scroll position
     window.scrollTo(0, 0)
 
@@ -174,7 +177,8 @@
       return  // Discard hashchange eventing from portfolio navigation
     }
     _currentPathname = location.pathname
-    transitionTo(location.href)
+
+    transitionTo(location.href.replace(/#(.*)$/, ''))
   }
 
   function recordEncounter(url) {

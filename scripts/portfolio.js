@@ -19,7 +19,7 @@
   }
 
   function onHashChange() {
-    console.debug('(portfolio:onHashChange) event fired')
+    console.debug('(portfolio:onHashChange):', location.hash)
     var container = document.querySelector('.tiles')
     if (location.hash) {
       container.classList.add('tiles--hasActiveTile')
