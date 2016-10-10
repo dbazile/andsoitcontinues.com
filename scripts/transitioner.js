@@ -6,17 +6,17 @@
     {
       className: '__about__',
       pattern: new RegExp('^about.html$'),
-      placeholderUrl: '.placeholder-about.html',
+      placeholderUrl: 'about.loading.html',
     },
     {
       className: '__blog__',
       pattern: new RegExp('^(writing/[^/]+\.html|index.html)$'),
-      placeholderUrl: '.placeholder-blog.html',
+      placeholderUrl: 'blog.loading.html',
     },
     {
       className: '__portfolio__',
       pattern: new RegExp('portfolio/index.html$'),
-      placeholderUrl: '.placeholder-portfolio.html',
+      placeholderUrl: 'portfolio.loading.html',
     }
   ]
 
@@ -32,6 +32,7 @@
   // Bootstrapping
   //
 
+  _currentPathname = location.pathname
   scheduleInitialRevelation()
   recordEncounter(location.href)
   exposeQueueEventHooks()
@@ -169,6 +170,7 @@
 
   function onPopState() {
     if (location.pathname === _currentPathname) {
+      console.debug('(transitioner:onPopState) discarding hashchange')
       return  // Discard hashchange eventing from portfolio navigation
     }
     _currentPathname = location.pathname

@@ -24,7 +24,7 @@ def render_about(env, output_dir):
 
 def render_placeholders(env, output_dir):
     for route in ('about', 'blog', 'portfolio'):
-        filepath = path.relpath(path.join(output_dir, '.placeholder-{}.html'.format(route)))
+        filepath = path.relpath(path.join(output_dir, '{}.loading.html'.format(route)))
         try:
             template = env.get_template('_{}.loading.html'.format(route))
             log.debug('render_placeholders:Before render/write `{}`'.format(route))
