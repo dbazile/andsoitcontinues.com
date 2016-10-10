@@ -156,22 +156,45 @@
    UI Narratives
    ========================================================================== */
 
-.narrative-group {
+/*
+  The basic idea here is to apply a negative margin to raise the logical y-pos
+  of the active narrative group to the y-pos of the tiles and apply a positive
+  padding to force the visual y-pos back into the correct place.  That way, when
+  the browser jumps to the hashed element, the tiles are also visible.  This
+  technique also degrades nicely since it also works for folks who turn off
+  JavaScript.
+
+  As it turned out, trying to nail down the correct scroll point imperatively
+  via JS caused weird flashing in Safari and, since we key off of the
+  `hashchange` event, would let secondary clicks fall through and scrolling
+  would jump directly to the hashed element, hiding the tiles.
+
+  TL;DR, this is a mostly pragmatic hack. ¯\_(ツ)_/¯
+ */
+.narrativeGroup:target,
+.narrativeGroup--isActive {
+  margin-top: calc((18vw + 4.6em) * -1);  /* Offset by the estimated height of the tiles */
+  padding-top: calc(18vw + 4.6em);
+}
+
+.narrativeGroup__contents {
   opacity: 0;
   transform: translateY(3em);
   transition: .7s cubic-bezier(.3,1.2,.32,1.23);
 }
 
-.narrative-group .narrative {
-  display: none;
-}
-
-.narrative-group:target {
+.narrativeGroup:target .narrativeGroup__contents,
+.narrativeGroup--isActive .narrativeGroup__contents {
   opacity: 1;
   transform: translateY(0);
 }
 
-.narrative-group:target .narrative {
+.narrativeGroup .narrative {
+  display: none;
+}
+
+.narrativeGroup:target .narrative,
+.narrativeGroup--isActive .narrative {
   display: flex;
 }
 
@@ -225,10 +248,6 @@
 
 /* UI Narratives: Contents
    ========================================================================== */
-
-.narrative {
-  display: flex;
-}
 
 .narrative h3 {
   font-size: 2.5em;

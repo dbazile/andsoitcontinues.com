@@ -32,51 +32,54 @@
     </ul>
 
     {% for work in ui_works %}
-    <div id="{{work.id}}" class="narrative-group">
-      <div class="narrative narrative--heading">
-        <div class="narrative__column narrative__column--text">
-          <h3>
-            {{work.name}}
-            {% if work.category %}<small>{{work.category}}</small>{% endif %}
-          </h3>
-          <p>{{work.summary}}</p>
-        </div>
-        <div class="narrative__column narrative__column--text">
-          <div class="column__microdata column__microdata--circa">
-            <h4>Circa</h4>
-            <p>{{work.circa}}</p>
-          </div>
-          <div class="column__microdata column__microdata--url">
-            <h4>URL</h4>
-            <p><a target="_blank" href="{{work.artifacts[work.link.artifactIndex].href}}">View {{work.link.label or work.artifacts[work.link.artifactIndex].name or 'Wat'}}</a></p>
-          </div>
-          <div class="column__microdata column__microdata--technologies">
-            <h4>Technologies</h4>
-            <p>{{work.technologies}}</p>
-          </div>
-        </div>
-      </div>
-      {% for narrative_block in work.narratives %}
-      <div class="narrative narrative--artifact">
-        <div class="narrative__column narrative__column--text">
-          {{narrative_block.markup}}
+    <div id="{{work.id}}" class="narrativeGroup">
+      <div class="narrativeGroup__contents">
+        <div class="narrative narrative--heading">
+          <div class="narrative__column narrative__column--text">
+            <h3>
+              {{work.name}}
+              {% if work.category %}
+              <small>{{work.category}}</small>
+              {%- endif %}
 
-          <ul class="narrative__files">
-            {% for link in narrative_block.links %}
-            <li class="narrative__file"><a target="_blank" href="{{work.artifacts[link.artifactIndex].href}}"><img src="{{work.artifacts[link.artifactIndex].thumbnail}}" alt="thumbnail">{{link.label or work.artifacts[link.artifactIndex].name or 'Untitled Artifact'}}</a></li>
-            {% endfor %}
-          </ul>
+            </h3>
+            <p>{{work.summary}}</p>
+          </div>
+          <div class="narrative__column narrative__column--text">
+            <div class="column__microdata column__microdata--circa">
+              <h4>Circa</h4>
+              <p>{{work.circa}}</p>
+            </div>
+            <div class="column__microdata column__microdata--url">
+              <h4>URL</h4>
+              <p><a target="_blank" href="{{work.artifacts[work.link.artifactIndex].href}}">View {{work.link.label or work.artifacts[work.link.artifactIndex].name or 'Wat'}}</a></p>
+            </div>
+            <div class="column__microdata column__microdata--technologies">
+              <h4>Technologies</h4>
+              <p>{{work.technologies}}</p>
+            </div>
+          </div>
         </div>
-        <div class="narrative__column narrative__column--media">
-          <img class="narrative__mural" src="{{narrative_block.mural or 'images/placeholder.svg'}}" alt="narrative mural"/>
+        {% for narrative_block in work.narratives %}
+        <div class="narrative narrative--artifact">
+          <div class="narrative__column narrative__column--text">
+            {{narrative_block.markup}}
+
+            <ul class="narrative__files">
+              {% for link in narrative_block.links %}
+              <li class="narrative__file"><a target="_blank" href="{{work.artifacts[link.artifactIndex].href}}"><img src="{{work.artifacts[link.artifactIndex].thumbnail}}" alt="thumbnail">{{link.label or work.artifacts[link.artifactIndex].name or 'Untitled Artifact'}}</a></li>
+              {% endfor %}
+            </ul>
+          </div>
+          <div class="narrative__column narrative__column--media">
+            <img class="narrative__mural" src="{{narrative_block.mural or 'images/placeholder.svg'}}" alt="narrative mural"/>
+          </div>
         </div>
+        {% endfor %}
       </div>
-      {% endfor %}
     </div>
     {% endfor %}
   </section>
-
-  <script src="scripts/portfolio.js"></script>
 
   <section class="photoshoppery">
     <h2 class="portfolio__heading block">Random Photoshoppery</h2>
@@ -91,6 +94,8 @@
       {% endfor %}
     </ul>
   </section>
+
+  <script src="scripts/portfolio.js"></script>
 {% endblock %}
 
 {% block footer %}
