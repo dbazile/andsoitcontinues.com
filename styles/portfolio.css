@@ -46,23 +46,43 @@
 .__portfolio__ .preamble {
   height: 35vh;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 @media (max-width: 832px) {
   .__portfolio__ .preamble {
     padding-left: 1rem;
     padding-right: 1rem;
+    flex-wrap: wrap;
+  }
+  .preamble__skills {
+    min-width: 100%;
+    flex: 1;
+    text-align: center;
   }
 }
 
-.skills-pie-chart {
+.preamble__pieChart {
   width: 100%;
+}
+
+@media (max-width: 832px) {
+  .preamble__pieChart {
+    width: 70%;
+  }
 }
 
 .preamble__github {
   align-self: flex-end;
   text-align: right;
   margin-bottom: 2em;
+}
+
+@media (max-width: 832px) {
+  .preamble__github {
+    align-self: center;
+    text-align: center;
+  }
 }
 
 .github__link {
@@ -199,6 +219,7 @@
   background-color: #3A3B55;
   min-height: 70vh;
   display: flex;
+  flex-wrap: wrap;
 }
 
 .narrative + .narrative {
@@ -279,6 +300,7 @@
 .narrative__column {
   flex: 1;
   overflow: hidden;
+  min-width: 300px;
 }
 
 .narrative__column--media {
