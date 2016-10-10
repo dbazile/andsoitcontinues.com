@@ -272,6 +272,7 @@
   letter-spacing: -.03em;
   color: white;
   text-shadow: 0 1px rgba(0,0,0,.4);
+  line-height: 1em;
 }
 
 .narrative h3 small {
@@ -279,6 +280,7 @@
   font-size: .3em;
   opacity: .4;
   letter-spacing: normal;
+  line-height: 1em;
 }
 
 .column__microdata h4 {
