@@ -100,7 +100,9 @@
         return
       }
       fetchDom(route.placeholderUrl, function (dom) {
-        document.querySelector('.placeholders').appendChild(dom.body.firstChild)
+        var placeholder = dom.body.firstChild
+        document.importNode(placeholder, true)
+        document.querySelector('.placeholders').appendChild(placeholder)
       })
     })
   }
