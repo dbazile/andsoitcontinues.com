@@ -10,7 +10,7 @@
     },
     {
       className: '__blog__',
-      pattern: new RegExp('^(writing/[^/]+\.html|index.html)$'),
+      pattern: new RegExp('^(writing/[^/]+\.html|index.html|)$'),
       placeholderUrl: 'blog.loading.html',
     },
     {
