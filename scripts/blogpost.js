@@ -1,5 +1,4 @@
-(function () {
-  /* global hljs */
+(function (atoa, hljs) {
 
   'use strict'
 
@@ -15,4 +14,4 @@
       }
     })
 
-}())
+}(window.atoa, window.hljs))

@@ -1,4 +1,4 @@
-(function (asic) {
+(function (asic, atoa) {
 
   'use strict'
 
@@ -250,4 +250,4 @@
       setTimeout(hidePlaceholder, endTime - Date.now())
     })
   }
-}(window.asic))
+}(window.asic, window.atoa))

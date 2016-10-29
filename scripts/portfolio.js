@@ -1,4 +1,4 @@
-(function (asic) {
+(function (asic, atoa) {
 
   'use strict'
 
@@ -58,4 +58,4 @@
     console.debug('(portfolio:teardown) unsubscribing from hash change events')
     window.removeEventListener('hashchange', onHashChange)
   }
-}(window.asic))
+}(window.asic, window.atoa))
