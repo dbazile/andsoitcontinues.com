@@ -15,7 +15,7 @@
     },
     {
       className: '__portfolio__',
-      pattern: new RegExp('portfolio/index.html$'),
+      pattern: new RegExp('^portfolio/(index.html|)$'),
       placeholderUrl: 'portfolio.loading.html',
     }
   ]
