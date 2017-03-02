@@ -1,7 +1,16 @@
-Date:     2015-01-20
-Subject:  Usability Reflections (Series)
-Tags:     usability, ux, school, coursework
-Abstract: A multi-part series documenting what I'm learning about usability.  Contains a moderate amount of sophomoric conjecture, logical gymnastics and the occasional soapbox rant.
+---
+date:    2015-01-20
+subject: Usability Reflections (Series)
+tags:
+    - usability
+    - ux
+    - school
+    - coursework
+abstract: |
+    A multi-part series documenting what I'm learning about
+    usability.  Contains a moderate amount of sophomoric conjecture,
+    logical gymnastics and the occasional soapbox rant.
+---
 
 ## So, for the next few weeks, I'll be posting random UX-related things...
 

@@ -1,7 +1,15 @@
-Date:     2015-01-31
-Subject:  Usability Reflections: Screening and Tasking Test Candidates
-Tags:     usability, ux, school, coursework
-Abstract: This week's assignment involved conjuring up a number of screening questions and tasks for potential test candidates.
+---
+date:    2015-01-31
+subject: 'Usability Reflections: Screening and Tasking Test Candidates'
+tags:
+    - usability
+    - ux
+    - school
+    - coursework
+abstract: |
+    This week's assignment involved conjuring up a number of screening
+    questions and tasks for potential test candidates.
+---
 
 Ultimately, the goal was to use screening questions to narrow the selection pool down to a [manageable size](http://www.nngroup.com/articles/how-many-test-users/), then build a plan of what the selectees would [actually be doing](http://www.nngroup.com/articles/task-scenarios-usability-testing/).
 

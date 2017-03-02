@@ -1,7 +1,16 @@
-Date:     2016-05-30
-Subject:  Interaction Design Reflections: Wireframes
-Tags:     interaction design, ux, school, coursework
-Abstract: This week, we performed an iterative wireframe exercise in order to flesh out the navigation architecture for our imaginary mobile app.
+---
+date:    2016-05-30
+subject: 'Interaction Design Reflections: Wireframes'
+tags:
+    - interaction design
+    - ux
+    - school
+    - coursework
+abstract: |
+    This week, we performed an iterative wireframe exercise in order
+    to flesh out the navigation architecture for our imaginary mobile
+    app.
+---
 
 ## Sketch first, ask questions later
 

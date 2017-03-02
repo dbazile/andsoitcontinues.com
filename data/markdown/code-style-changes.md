@@ -1,7 +1,18 @@
-Date:     2015-09-01
-Subject:  Code Style Changes
-Tags:     craftsmanship, style, readable code, comments, javascript, es6
-Abstract: It appears that working with competent developers who actually get things done has had an observable effect on my coding style over the last year.
+---
+date:    2015-09-01
+subject: Code Style Changes
+tags:
+    - craftsmanship
+    - style
+    - readable code
+    - comments
+    - javascript
+    - es6
+abstract: |
+    It appears that working with competent developers who actually get
+    things done has had an observable effect on my coding style over
+    the last year.
+---
 
 ![pokemon evolution scene](/writing/attachments/evolving-code@2x.png)
 

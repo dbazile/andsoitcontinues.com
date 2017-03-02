@@ -1,7 +1,15 @@
-Date:     2015-02-15
-Subject:  Usability Reflections: Moderating Usability Tests
-Tags:     usability, ux, school, coursework
-Abstract: This week's assignment was to do a scripted usability test with a live human being for practice.
+---
+date:    2015-02-15
+subject: 'Usability Reflections: Moderating Usability Tests'
+tags:
+    - usability
+    - ux
+    - school
+    - coursework
+abstract: |
+    This week's assignment was to do a scripted usability test with a
+    live human being for practice.
+---
 
 So, this week I got to play test moderator and put an actual live person on the hot seat!
 

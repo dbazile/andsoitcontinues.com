@@ -1,7 +1,19 @@
-Date:     2013-08-15
-Subject:  Adventures in Dual Booting
-Tags:     debian, linux, dual boot, windows 7, grub
-Abstract: Performed a Windows 7 reinstall this weekend.  In the spirit of actually documenting these things so I'm not scrambling off into Google every time I have to do this, this post is a very unscientific description of how I was able to restore GRUB after the install.
+---
+date:    2013-08-15
+subject: Adventures in Dual Booting
+tags:
+    - debian
+    - linux
+    - dual boot
+    - windows 7
+    - grub
+abstract: |
+    Performed a Windows 7 reinstall this weekend.  In the spirit of
+    actually documenting these things so I'm not scrambling off into
+    Google every time I have to do this, this post is a very
+    unscientific description of how I was able to restore GRUB after
+    the install.
+---
 
 ## 1. Boot from Debian Install Disc
 

@@ -1,7 +1,12 @@
-Date:    2014-09-11
-Subject: Quote: An update to Adobe Flash Player is available
-Tags:    flash, it never ends, nightmare
-Type:    quote
+---
+date:    2014-09-11
+subject: 'Quote: An update to Adobe Flash Player is available'
+type:    quote
+tags:
+    - flash
+    - it never ends
+    - nightmare
+---
 
 	function nightmare(laptop)
 	{

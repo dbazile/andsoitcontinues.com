@@ -1,7 +1,13 @@
-Date:     2014-01-11
-Subject:  Changes for 2014
-Tags:     could you spare some change
-Abstract: Definitely definitely not a New Years Resolution list.  I've made a few changes to my workflow for this year.  This is my attempt at documenting those changes and their effects.
+---
+date:    2014-01-11
+subject: Changes for 2014
+tags:
+    - could you spare some change
+abstract: |
+    Definitely definitely not a New Years Resolution list.  I've made
+    a few changes to my workflow for this year.  This is my attempt at
+    documenting those changes and their effects.
+---
 
 > Somebody once asked could I spare some change for gas<br />
 > I need to get myself away from this place<br />

@@ -1,7 +1,18 @@
-Date:     2014-06-19
-Subject:  Objective-C Revisited
-Tags:     objective-c, ios, xcode
-Abstract: A period of downtime on my current project has freed some mental energy which I decided to use by learning Objective-C.  My first exposure to the language was several years ago after which I reeled in horror from its syntax, thinking the only reason people put up with it is for a chance to win the App Store lottery jackpot.
+---
+date:    2014-06-19
+subject: Objective-C Revisited
+tags:
+    - objective-c
+    - ios
+    - xcode
+abstract: |
+    A period of downtime on my current project has freed some mental
+    energy which I decided to use by learning Objective-C.  My first
+    exposure to the language was several years ago after which I
+    reeled in horror from its syntax, thinking the only reason people
+    put up with it is for a chance to win the App Store lottery
+    jackpot.
+---
 
 One of the perks of working for my company is that it's big enough to have partnerships with all sorts of other companies.  One of those partnerships hooks up employees with free access to hundreds of software engineering books.  Another hooks us up free access to various online programming courses.
 

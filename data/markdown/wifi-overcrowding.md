@@ -1,7 +1,17 @@
-Date:      2013-09-10
-Subject:   Wifi Overcrowding
-Tags:      wifi, troubleshooting, router
-Abstract:  Labor Day weekend was plagued by intermittent WiFi issues.  Streaming was effectively impossible as ping times were sky high and Netflix buffering was occurring once every two minutes.  The following is the historical log of events.  Names have been changed to protect the innocent.
+---
+date:    2013-09-10
+subject: Wifi Overcrowding
+tags:
+    - wifi
+    - troubleshooting
+    - router
+abstract: |
+    Labor Day weekend was plagued by intermittent WiFi issues.
+    Streaming was effectively impossible as ping times were sky high
+    and Netflix buffering was occurring once every two minutes.  The
+    following is the historical log of events.  Names have been
+    changed to protect the innocent.
+---
 
 Naturally, the first instinct was to assume it's all Comcast's fault.  After multiple speed tests and finally calling Comcast on Sunday to see if there was an issue on their end, I managed to narrow it down to network traffic on the router.  Ping times from my laptop to my modem's IP yielded a 3-digit ping time -- *Yikes*.  So now that I know that the issue lives on my LAN, I set out to fix the issue.
 

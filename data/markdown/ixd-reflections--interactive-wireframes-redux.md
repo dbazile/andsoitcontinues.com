@@ -1,7 +1,15 @@
-Date:     2016-06-13
-Subject:  Interaction Design Reflections: Interactive Prototypes (Redux)
-Tags:     interaction design, ux, school, coursework
-Abstract: This week, we refine the prototypes we built last week based on peer feedback.
+---
+date:    2016-06-13
+subject: 'Interaction Design Reflections: Interactive Prototypes (Redux)'
+tags:
+    - interaction design
+    - ux
+    - school
+    - coursework
+abstract: |
+    This week, we refine the prototypes we built last week based on
+    peer feedback.
+---
 
 ## Putting the "iterative" in "interactive"
 

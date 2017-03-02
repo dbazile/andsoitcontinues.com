@@ -1,7 +1,11 @@
-Date:    2013-12-20
-Subject: Quote: Teamwork and Maintainability
-Tags:    maintainability, teamwork
-Type:    quote
+---
+date:    2013-12-20
+subject: 'Quote: Teamwork and Maintainability'
+type:    quote
+tags:
+    - maintainability
+    - teamwork
+---
 
 An important part of working on any technical team is human parallelism -- the ability for multiple people to be able to work simultaneously on the same codebase. But it's also important for teams to be able to work asynchronously too -- I should be able to make changes to your code when you're away, and vice versa.
 

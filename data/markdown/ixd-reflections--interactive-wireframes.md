@@ -1,7 +1,16 @@
-Date:     2016-06-11
-Subject:  Interaction Design Reflections: Interactive Prototypes
-Tags:     interaction design, ux, school, coursework
-Abstract: This week involved building out a fully-interactive prototype of the project mobile app, showing off our designed user journeys and planned interactions.
+---
+date:    2016-06-11
+subject: 'Interaction Design Reflections: Interactive Prototypes'
+tags:
+    - interaction design
+    - ux
+    - school
+    - coursework
+abstract: |
+    This week involved building out a fully-interactive prototype of
+    the project mobile app, showing off our designed user journeys and
+    planned interactions.
+---
 
 ## Full disclosure: I actually finished this assignment last weekend
 

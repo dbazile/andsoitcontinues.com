@@ -1,7 +1,15 @@
-Date:     2013-09-26
-Subject:  serializer.py
-Tags:     portfolio, python
-Abstract: Written by me this afternoon, this script traverses a directory structure and strings all of the supported files together into a single plaintext file -- essentially, a compressionless archive.  Under normal circumstances, no one should ever need this...
+---
+date:    2013-09-26
+subject: serializer.py
+tags:
+    - portfolio
+    - python
+abstract: |
+    Written by me this afternoon, this script traverses a directory
+    structure and strings all of the supported files together into a
+    single plaintext file -- essentially, a compressionless archive.
+    Under normal circumstances, no one should ever need this...
+---
 
 ## Source
 

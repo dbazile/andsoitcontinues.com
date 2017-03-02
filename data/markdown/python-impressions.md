@@ -1,7 +1,16 @@
-Date:     2013-08-05
-Subject:  Python Impressions
-Tags:     python, php, complaining
-Abstract: Coming from PHP, I've found a few differences between the way I like doing things and [The Python Way](http://www.python.org/dev/peps/pep-0008/) that are seriously challenging my assumptions.  Some I like, some I don't, and some I'm just plain old conflicted about.
+---
+date:    2013-08-05
+subject: Python Impressions
+tags:
+    - python
+    - php
+    - complaining
+abstract: |
+    Coming from PHP, I've found a few differences between the way I
+    like doing things and [The Python Way](http://www.python.org/dev/peps/pep-0008/)
+    that are seriously challenging my assumptions.  Some I like, some
+    I don't, and some I'm just plain old conflicted about.
+---
 
 I'll skip the cheerleading session by just listing the negatives.
 

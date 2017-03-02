@@ -1,7 +1,17 @@
-Date:     2015-01-24
-Subject:  Usability Reflections: Summative vs. Formative Usability Testing
-Tags:     usability, ux, school, coursework
-Abstract: This week's assignment was to justify the suitability of using either a Summative or Formative Evaluation methodolody for conducting usability testing given a scenario where a project has already entered the development phase.
+---
+date:    2015-01-24
+subject: 'Usability Reflections: Summative vs. Formative Usability Testing'
+tags:
+    - usability
+    - ux
+    - school
+    - coursework
+abstract: |
+    This week's assignment was to justify the suitability of using
+    either a Summative or Formative Evaluation methodolody for
+    conducting usability testing given a scenario where a project has
+    already entered the development phase.
+---
 
 ## Summa-what?
 

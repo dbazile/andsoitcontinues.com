@@ -1,7 +1,15 @@
-Date:     2013-12-05
-Subject:  SOAP Opera
-Tags:     xml, php, document object model, soap
-Abstract: The following is an account of my adventures in manually parsing SOAP server responses without actually using SOAP.
+---
+date:    2013-12-05
+subject: SOAP Opera
+tags:
+    - xml
+    - php
+    - document object model
+    - soap
+abstract: |
+    The following is an account of my adventures in manually parsing
+    SOAP server responses without actually using SOAP.
+---
 
 > XML is like violence: if it doesn't solve your problem, you're not using enough of it.
 > <span class="quoth">xmlicious via <a href="http://thedailywtf.com/Comments/Oh,-XML.aspx#192304">thedailywtf</a></span>

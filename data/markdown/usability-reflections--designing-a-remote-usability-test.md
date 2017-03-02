@@ -1,7 +1,15 @@
-Date:     2015-03-22
-Subject:  Usability Reflections: Designing a Remote Usability Test
-Tags:     usability, ux, school, coursework
-Abstract: This week, we were tasked with designing an actual remote usability test with Loop11 and running real people through it.
+---
+date:    2015-03-22
+subject: 'Usability Reflections: Designing a Remote Usability Test'
+tags:
+    - usability
+    - ux
+    - school
+    - coursework
+abstract: |
+    This week, we were tasked with designing an actual remote
+    usability test with Loop11 and running real people through it.
+---
 
 ## What is Loop11?
 

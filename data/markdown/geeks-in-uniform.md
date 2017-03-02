@@ -1,8 +1,17 @@
-Date:     2014-06-26
-Subject:  Geeks in Uniform
-Tags:     automation, military, programming, visual basic for applications
-Abstract: I ran across a post on HN this morning titled <a href="http://vivin.net/2014/06/26/how-i-got-a-medal-for-writing-code/" class="external">How I got a medal from the Army for writing code</a>.  Being a veteran coder myself, this story naturally prompted both a warm-fuzzy feeling and this celebratory *me-too!* post.
-
+---
+date:    2014-06-26
+subject: Geeks in Uniform
+tags:
+    - automation
+    - military
+    - programming
+    - visual basic for applications
+abstract: |
+    I ran across a post on HN this morning titled <a href="http://vivin.net/2014/06/26/how-i-got-a-medal-for-writing-code/" class="external">
+    How I got a medal from the Army for writing code</a>.  Being a
+    veteran coder myself, this story naturally prompted both a
+    warm-fuzzy feeling and this celebratory *me-too!* post.
+---
 
 > Now as a programmer, I'm constantly looking for ways to make my job easy. I didn't want to sit and add qualifications, and print licenses one by one. I was too lazy for that, and worse, the whole thing was horribly inefficient. So I decided to figure out how to automate the process.
 

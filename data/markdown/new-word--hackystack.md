@@ -1,7 +1,13 @@
-Date:    2016-01-11
-Type:    quote
-Subject: Added a new word to my lexicon today
-Tags:    maintainability, teamwork, code quality, complaining
+---
+date:    2016-01-11
+subject: Added a new word to my lexicon today
+type:    quote
+tags:
+    - maintainability
+    - teamwork
+    - code quality
+    - complaining
+---
 
 ## hackystack |_'ha•kee•stak_|
 

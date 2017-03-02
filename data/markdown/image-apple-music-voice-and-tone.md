@@ -1,7 +1,11 @@
-Date:    2016-07-22
-Subject: Apple Music: Voice and Tone
-Tags:    content strategy, design
-Type:    image
-URL:     ../writing/attachments/apple-music-voice-and-tone.png
+---
+date:    2016-07-22
+subject: 'Apple Music: Voice and Tone'
+type:    image
+url:     ../writing/attachments/apple-music-voice-and-tone.png
+tags:
+    - content strategy
+    - design
+---
 
 Interesting manifestation of voice and tone from Apple Music (on iOS).

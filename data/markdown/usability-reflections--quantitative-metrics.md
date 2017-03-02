@@ -1,7 +1,15 @@
-Date:     2015-02-03
-Subject:  Usability Reflections: Quantitive Metrics
-Tags:     usability, ux, school, coursework
-Abstract: This week's assignment was to select a single Quantitative Usability Metric and evaluate its benefits and limitations.
+---
+date:    2015-02-03
+subject: 'Usability Reflections: Quantitive Metrics'
+tags:
+    - usability
+    - ux
+    - school
+    - coursework
+abstract: |
+    This week's assignment was to select a single Quantitative
+    Usability Metric and evaluate its benefits and limitations.
+---
 
 ## Definitions
 

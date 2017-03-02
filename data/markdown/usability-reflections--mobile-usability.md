@@ -1,7 +1,15 @@
-Date:     2015-04-11
-Subject:  Usability Reflections: Mobile Usability
-Tags:     usability, ux, school, coursework
-Abstract: I spend this week involved in purely scholastic endeavors: lots of reading about usability on mobile devices.
+---
+date:    2015-04-11
+subject: 'Usability Reflections: Mobile Usability'
+tags:
+    - usability
+    - ux
+    - school
+    - coursework
+abstract: |
+    I spend this week involved in purely scholastic endeavors: lots of
+    reading about usability on mobile devices.
+---
 
 Admittedly, it's hard for me to get excited about mobile design/development, particularly because there's such a slim opportunity for me to work on anything that'd come anywhere near a mobile device in my day job.  But I'd be remiss if I didn't at least attempt to learn something this week. :)
 

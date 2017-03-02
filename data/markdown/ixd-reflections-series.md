@@ -1,7 +1,15 @@
-Date:     2016-05-22
-Subject:  Interaction Design Reflections (Series)
-Tags:     interaction design, ux, school, coursework
-Abstract: A multi-part series documenting what I'm learning about interaction design.
+---
+date:    2016-05-22
+subject: Interaction Design Reflections (Series)
+tags:
+    - interaction design
+    - ux
+    - school
+    - coursework
+abstract: |
+    A multi-part series documenting what I'm learning about
+    interaction design.
+---
 
 ## It's that time again...
 

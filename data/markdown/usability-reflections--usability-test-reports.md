@@ -1,7 +1,15 @@
-Date:     2015-02-27
-Subject:  Usability Reflections: Usability Test Reports
-Tags:     usability, ux, school, coursework
-Abstract: This week's assignment was to watch the recording sessions of three other students and compile a final usability report.
+---
+date:    2015-02-27
+subject: 'Usability Reflections: Usability Test Reports'
+tags:
+    - usability
+    - ux
+    - school
+    - coursework
+abstract: |
+    This week's assignment was to watch the recording sessions of
+    three other students and compile a final usability report.
+---
 
 ## The Takeaway
 

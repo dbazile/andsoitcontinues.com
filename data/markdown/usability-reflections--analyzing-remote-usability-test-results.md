@@ -1,7 +1,15 @@
-Date:     2015-04-05
-Subject:  Usability Reflections: Analyzing Remote Usability Test Results
-Tags:     usability, ux, school, coursework
-Abstract: This week, we compile the results from the Loop11 test and generate a high-level report of the findings.
+---
+date:    2015-04-05
+subject: 'Usability Reflections: Analyzing Remote Usability Test Results'
+tags:
+    - usability
+    - ux
+    - school
+    - coursework
+abstract: |
+    This week, we compile the results from the Loop11 test and
+    generate a high-level report of the findings.
+---
 
 ## The Takeaway
 

@@ -1,7 +1,19 @@
-Date:     2015-12-03
-Subject:  Defending Function Hoisting in a Commit Message
-Tags:     javascript, style, readable code, hoisting, politics, eslint
-Abstract: I recently had to defend the disabling of code style enforcement to allow function hoisting.  Knowing that I wouldn't get away with such a unilateral change without a _very_ good reason, I wrote a lengthy justification in my commit message.
+---
+date:    2015-12-03
+subject: Defending Function Hoisting in a Commit Message
+tags:
+    - javascript
+    - style
+    - readable code
+    - hoisting
+    - politics
+    - eslint
+abstract: |
+    I recently had to defend the disabling of code style enforcement
+    to allow function hoisting.  Knowing that I wouldn't get away with
+    such a unilateral change without a _very_ good reason, I wrote a
+    lengthy justification in my commit message.
+---
 
 ## Background
 

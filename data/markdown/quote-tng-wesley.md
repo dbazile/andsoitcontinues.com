@@ -1,7 +1,11 @@
-Date:    2015-05-23
-Subject: Quote: A Day in the Life of Wesley Crusher aboard the U.S.S. Enterprise
-Tags:    such rude so meanness, star trek
-Type:    quote
+---
+date:    2015-05-23
+subject: 'Quote: A Day in the Life of Wesley Crusher aboard the U.S.S. Enterprise'
+type:    quote
+tags:
+    - such rude so meanness
+    - star trek
+---
 
 **Wesley:** "There’s a guy with a gun over there about to shoot&ndash;"
 

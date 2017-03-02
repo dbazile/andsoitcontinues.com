@@ -1,7 +1,15 @@
-Date:     2015-04-19
-Subject:  Usability Reflections: Mobile Usability Testing Logistics
-Tags:     usability, ux, school, coursework
-Abstract: This week, we wrote a proposal to customize a usability lab for mobile usability testing.
+---
+date:    2015-04-19
+subject: 'Usability Reflections: Mobile Usability Testing Logistics'
+tags:
+    - usability
+    - ux
+    - school
+    - coursework
+abstract: |
+    This week, we wrote a proposal to customize a usability lab for
+    mobile usability testing.
+---
 
 ## Credit where it's due
 

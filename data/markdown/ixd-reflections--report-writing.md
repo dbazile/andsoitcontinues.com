@@ -1,7 +1,15 @@
-Date:     2016-06-26
-Subject:  Interaction Design Reflections: Report Writing
-Tags:     interaction design, ux, school, coursework
-Abstract: This week, we write a mini-report describing our iterations of the prototype design from start to finish.
+---
+date:    2016-06-26
+subject: 'Interaction Design Reflections: Report Writing'
+tags:
+    - interaction design
+    - ux
+    - school
+    - coursework
+abstract: |
+    This week, we write a mini-report describing our iterations of the
+    prototype design from start to finish.
+---
 
 ## The Takeaway
 

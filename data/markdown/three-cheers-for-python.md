@@ -1,7 +1,15 @@
-Date:      2015-09-05
-Subject:   Three Cheers for Python
-Tags:      python, drinking the koolaid, code, github, rdf
-Abstract:  I am solidly a Python fan.  There, I said it.
+---
+date:    2015-09-05
+subject: Three Cheers for Python
+tags:
+    - python
+    - drinking the koolaid
+    - code
+    - github
+    - rdf
+abstract: |
+    I am solidly a Python fan.  There, I said it.
+---
 
 ## Conversion Complete
 

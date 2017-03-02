@@ -1,7 +1,16 @@
-Date:     2014-06-17
-Subject:  A Week With Ruby
-Tags:     ruby, development
-Abstract: I test-drove Ruby for a week and have recorded my results here, lest I forget in six months...  At the risk of incurring the wrath of Rubyists everywhere, I am publishing my completely superficial, unrelated-to-any-objective-metric-whatsoever assessment of the language.
+---
+date:    2014-06-17
+subject: A Week With Ruby
+tags:
+    - ruby
+    - development
+abstract: |
+    I test-drove Ruby for a week and have recorded my results here,
+    lest I forget in six months...  At the risk of incurring the
+    wrath of Rubyists everywhere, I am publishing my completely
+    superficial, unrelated-to-any-objective-metric-whatsoever
+    assessment of the language.
+---
 
 ## Things I like about Ruby
 

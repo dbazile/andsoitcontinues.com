@@ -1,7 +1,15 @@
-Date:     2016-05-22
-Subject:  Interaction Design Reflections: User Journeys
-Tags:     interaction design, ux, school, coursework
-Abstract: This week, we mapped out a user journey for an imaginary mobile app.
+---
+date:    2016-05-22
+subject: 'Interaction Design Reflections: User Journeys'
+tags:
+    - interaction design
+    - ux
+    - school
+    - coursework
+abstract: |
+    This week, we mapped out a user journey for an imaginary mobile
+    app.
+---
 
 ## Storyboards as a User Journey communication tool
 

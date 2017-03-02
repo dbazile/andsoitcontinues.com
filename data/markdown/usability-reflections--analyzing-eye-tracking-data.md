@@ -1,7 +1,14 @@
-Date:     2015-05-02
-Subject:  Usability Reflections: Analyzing Eye Tracking Data
-Tags:     usability, ux, school, coursework
-Abstract: The final post in the Usability Reflections series.
+---
+date:    2015-05-02
+subject: 'Usability Reflections: Analyzing Eye Tracking Data'
+tags:
+    - usability
+    - ux
+    - school
+    - coursework
+abstract: |
+    The final post in the Usability Reflections series.
+---
 
 This week's assignment was to watch a series of usability test recordings done by previous classes with an eye tracking setup.  It's one thing to look at [static images of heatmaps](http://www.nngroup.com/articles/f-shaped-pattern-reading-web-content/) of gaze patterns, but quite another to [see it in real-time](https://youtu.be/86vRjJCAYfU?t=35s).
 

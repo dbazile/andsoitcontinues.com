@@ -1,7 +1,15 @@
-Date:     2013-08-01
-Subject:  Slight Change of Course
-Tags:     blog, python, php, refactoring
-Abstract: So, the plan for converting my makeshift CMS, blog.php, over to Python has been shelved indefinitely.
+---
+date:    2013-08-01
+subject: Slight Change of Course
+tags:
+    - blog
+    - python
+    - php
+    - refactoring
+abstract: |
+    So, the plan for converting my makeshift CMS, blog.php, over to
+    Python has been shelved indefinitely.
+---
 
 From a technical standpoint, there's not much stopping me from rewriting the entire project in Python.  It might take me a few weeks and a whole mess of spit and duct tape, but I know I could do it.  But for the following reasons, I have concluded that it would be the equivalent of performing rote coding exercises instead of actual learning and might not be the best use of my already splintered free time.
 

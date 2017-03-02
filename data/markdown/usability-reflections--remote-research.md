@@ -1,7 +1,16 @@
-Date:     2015-03-15
-Subject:  Usability Reflections: Remote Research
-Tags:     usability, ux, school, coursework
-Abstract: This week's assignment was to evaluate two online remote research providers, determine the pros and cons and state which of the two we might be inclined to use and why.
+---
+date:    2015-03-15
+subject: 'Usability Reflections: Remote Research'
+tags:
+    - usability
+    - ux
+    - school
+    - coursework
+abstract: |
+    This week's assignment was to evaluate two online remote research
+    providers, determine the pros and cons and state which of the two
+    we might be inclined to use and why.
+---
 
 *Disclaimer: Although I did include my personal choice as to which service I'd use in my assignment submission, I've omitted that here since I don't know that an arm-chair assessment of either of the companies' services is fair.  I've just listed the apparent pros and cons based on my brief observations.*
 

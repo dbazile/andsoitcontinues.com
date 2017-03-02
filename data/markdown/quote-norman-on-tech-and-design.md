@@ -1,7 +1,11 @@
-Date:    2014-10-11
-Subject: Quote: Norman on Technology and Design
-Type:    quote
-Tags:    design, technology
+---
+date:    2014-10-11
+subject: 'Quote: Norman on Technology and Design'
+type:    quote
+tags:
+    - design
+    - technology
+---
 
 The same technology that simplifies life by providing more functions in each device also complicates life by making the device harder to learn, harder to use.  This is the paradox of technology and the challenge for the designer.
 

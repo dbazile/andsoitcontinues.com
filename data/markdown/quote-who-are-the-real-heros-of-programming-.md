@@ -1,7 +1,10 @@
-Date:    2013-09-25
-Subject: Quote: Who are the Real Heros of Programming?
-Tags:    humility
-Type:    quote
+---
+date:    2013-09-25
+subject: 'Quote: Who are the Real Heros of Programming?'
+type:    quote
+tags:
+    - humility
+---
 
 Who are the real heros of programming?
 

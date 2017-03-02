@@ -1,7 +1,16 @@
-Date:     2014-07-16
-Subject:  CentOS 7 and Me
-Tags:     linux, centos 7, iptables, system administration, systemd
-Abstract: Not every day do I get to use the word *discombobulation*, but when I do, it's epic.
+---
+date:    2014-07-16
+subject: CentOS 7 and Me
+tags:
+    - linux
+    - centos 7
+    - iptables
+    - system administration
+    - systemd
+abstract: |
+    Not every day do I get to use the word *discombobulation*, but
+    when I do, it's epic.
+---
 
 A few weeks ago, there was a small quiet celebration at my workstation when I read the headlines on HN that [CentOS 7 had been released](http://wiki.centos.org/Manuals/ReleaseNotes/CentOS7).  I dunno why, but whenever there's a new major release of a Linux distro, I get all excited to see what's included.
 

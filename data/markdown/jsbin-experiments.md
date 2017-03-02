@@ -1,7 +1,16 @@
-Date:     2015-04-12
-Subject:  JSBin Experiments
-Tags:     experimentation, animation, css, javascript, svg, jsbin
-Abstract: Posting a bunch of recent experiments and prototypes.
+---
+date:    2015-04-12
+subject: JSBin Experiments
+tags:
+    - experimentation
+    - animation
+    - css
+    - javascript
+    - svg
+    - jsbin
+abstract: |
+    Posting a bunch of recent experiments and prototypes.
+---
 
 I've been using [JSBin](http://www.jsbin.com) to do a lot of prototyping and experimentation recently.
 

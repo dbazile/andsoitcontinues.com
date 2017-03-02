@@ -1,10 +1,10 @@
-from datetime import datetime
 from glob import glob
 from logging import getLogger
 from os import path
 import re
 
-import markdown
+import yaml
+from markdown import markdown
 
 DATE_FORMAT_INPUT = '%Y-%m-%d'
 DEFAULT_TYPE = 'text'
@@ -12,6 +12,9 @@ TYPE_IMAGE = 'image'
 TYPE_QUOTE = 'quote'
 TYPE_LINK = 'link'
 TYPE_TEXT = 'text'
+
+PATTERN_MARKDOWN = re.compile("""^---\n(?P<meta>.*)\n---\n\n?(?P<content>.*)$""",
+                              re.MULTILINE | re.DOTALL)
 
 log = getLogger(__name__)
 
@@ -49,34 +52,33 @@ def render(env, markdown_dir, output_dir):
 #
 
 def _deserialize_post(filepath):
-    parser = markdown.Markdown(extensions=[
-        'markdown.extensions.meta',
-        'markdown.extensions.smarty',
-        'markdown.extensions.fenced_code'
-    ])
-
     log.debug('_deserialize_post:READ %s', filepath)
     with open(filepath) as fp:
-        serialized = fp.read()
+        groups = PATTERN_MARKDOWN.search(fp.read())
+        if not groups:
+            raise ValueError('missing metadata')
+
+    raw_meta = groups.group('meta')
+    raw_body = groups.group('content')
 
     post = {
         'id': _generate_id(filepath),
         'type': DEFAULT_TYPE,
-        'body': parser.convert(serialized),
+        'body': markdown(raw_body, [
+            'markdown.extensions.smarty',
+            'markdown.extensions.fenced_code',
+        ]),
     }
-    for key, value in parser.Meta.items():
-        if key in ('abstract', 'date', 'subject', 'tags', 'type', 'url'):
-            value = value.pop()
 
-            # Normalize meta properties
-            if key == 'tags':
-                value = [s.strip() for s in value.split(',')]
-            elif key == 'abstract':
-                value = markdown.markdown(value, extensions=['markdown.extensions.smarty'])
-            elif key == 'date':
-                value = datetime.strptime(value, DATE_FORMAT_INPUT)
+    for key, value in yaml.load(raw_meta).items():
+        key = key.lower()
+        if key not in ('abstract', 'date', 'subject', 'tags', 'type', 'url'):
+            return
 
-            post[key] = value
+        if key == 'abstract':
+            value = markdown(value, extensions=['markdown.extensions.smarty'])
+
+        post[key] = value
     _validate(post)
 
     # Special Case: Quotes and images need abstract to mirror body

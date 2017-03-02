@@ -1,7 +1,19 @@
-Date:     2014-02-16
-Subject:  Setting up PHPUnit and NetBeans 7.4
-Tags:     phpunit, netbeans, unit testing, test driven development
-Abstract: The last time I attempted to configure NetBeans to use PHPUnit is what drove me to write [Tester.php](https://github.com/dbazile/Tester.php).  Second time's the charm!  In this post, I document the steps I took to successfully install PHPUnit 3.7 and configure NetBeans 7.3 and 7.4 to be able to run the tests and use the Skeleton Generator.
+---
+date:    2014-02-16
+subject: Setting up PHPUnit and NetBeans 7.4
+tags:
+    - phpunit
+    - netbeans
+    - unit testing
+    - test driven development
+abstract: |
+    The last time I attempted to configure NetBeans to use PHPUnit is
+    what drove me to write [Tester.php](https://github.com/dbazile/Tester.php).
+    Second time's the charm!  In this post, I document the steps I
+    took to successfully install PHPUnit 3.7 and configure NetBeans
+    7.3 and 7.4 to be able to run the tests and use the Skeleton
+    Generator.
+---
 
 ## Instructions
 
