@@ -5,5 +5,8 @@ python:
 
 cache: pip
 
+git:
+  depth: 1
+
 script:
   - python -m renderer
