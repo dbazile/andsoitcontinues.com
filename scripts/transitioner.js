@@ -6,17 +6,17 @@
     {
       className: '__about__',
       pattern: new RegExp('^about.html$'),
-      placeholderUrl: 'about.loading.html',
+      placeholderUrl: '_about_loading.html',
     },
     {
       className: '__blog__',
       pattern: new RegExp('^(writing/[^/]+\.html|index.html|)$'),
-      placeholderUrl: 'blog.loading.html',
+      placeholderUrl: '_blog_loading.html',
     },
     {
       className: '__portfolio__',
       pattern: new RegExp('^portfolio/(index.html|)$'),
-      placeholderUrl: 'portfolio.loading.html',
+      placeholderUrl: '_portfolio_loading.html',
     }
   ]
 
