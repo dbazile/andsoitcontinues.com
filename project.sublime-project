@@ -2,12 +2,7 @@
 	"build_systems":
 	[
 		{
-			"cmd":
-			[
-				"/usr/local/bin/python3",
-				"-m",
-				"renderer"
-			],
+			"shell_cmd": "/usr/bin/env python3 -m renderer",
 			"env":
 			{
 				"LANG": "en_US.UTF-8"
@@ -19,7 +14,7 @@
 			"file_regex": "^[ ]*File \"(...*?)\", line ([0-9]*)",
 			"name": "Anaconda Python Builder",
 			"selector": "source.python",
-			"shell_cmd": "\"/Library/Frameworks/Python.framework/Versions/3.5/bin/python3\" -u \"$file\""
+			"shell_cmd": "\"/Library/Frameworks/Python.framework/Versions/3.6/bin/python3\" -u \"$file\""
 		}
 	],
 	"folders":
