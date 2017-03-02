@@ -11,14 +11,14 @@ def render(env, output_dir):
 
 
 def render_about(env, output_dir):
+    filepath = path.relpath(path.join(output_dir, 'about.html'))
     try:
-        filepath = path.relpath(path.join(output_dir, 'about.html'))
         template = env.get_template('_about.jinja2')
         with open(filepath, 'w') as fp:
             fp.write(template.render())
             log.info('OK {}'.format(filepath))
     except Exception as err:
-        log.fatal('Could not process {}:'.format(filepath), err)
+        log.fatal('Could not process %s: %s', filepath, err)
         raise err
 
 
@@ -32,13 +32,13 @@ def render_placeholders(env, output_dir):
                 fp.write(template.render())
                 log.info('OK {}'.format(path.basename(filepath)))
         except Exception as err:
-            log.fatal('Could not process {}:'.format(filepath), err)
+            log.fatal('Could not process %s:', filepath, err)
             raise err
 
 
 def render_search(env, output_dir):
+    filepath = path.relpath(path.join(output_dir, 'search.html'))
     try:
-        filepath = path.relpath(path.join(output_dir, 'search.html'))
         template = env.get_template('_search.jinja2')
         with open(filepath, 'w') as fp:
             fp.write(template.render())

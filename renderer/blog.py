@@ -28,20 +28,21 @@ def render(env, markdown_dir, output_dir):
             posts.append(post)
         except ValidationError as err:
             failures.append(filepath)
-            log.error('Failed on {}: {}'.format(filepath, err))
+            log.error('Failed on %s: %s', filepath, err)
         except Exception as err:
-            log.fatal('Could not process `{}`\n\t{}: {}'.format(filepath, err.__class__.__name__, err))
-            raise err
+            log.fatal('Could not process `%s`\n\t%s: %s',
+                      filepath, err.__class__.__name__, err)
+            raise
 
     posts = sorted(posts, reverse=True, key=lambda p: p['date'])
     _render_index(env, posts, output_dir)
 
     # Report card
     if failures:
-        log.warn('*** {} failures: {}'.format(len(failures), ', '.join(failures)))
+        log.warning('*** %s failures: %s', len(failures), ', '.join(failures))
 
 
-################################################################################
+###############################################################################
 
 #
 # Internals
@@ -54,7 +55,7 @@ def _deserialize_post(filepath):
         'markdown.extensions.fenced_code'
     ])
 
-    log.debug('_deserialize_post:READ {}'.format(filepath))
+    log.debug('_deserialize_post:READ %s', filepath)
     with open(filepath) as fp:
         serialized = fp.read()
 
@@ -105,10 +106,10 @@ def _render_post(env, post: dict, output_dir):
 
     # Write file
     filepath = path.relpath(path.join(output_dir, 'writing/{0}.html'.format(post['id'])))
-    log.debug('_render_post:Before write `{}`'.format(filepath))
+    log.debug('_render_post:Before write `%s`', filepath)
     with open(filepath, 'w') as fp:
         fp.write(template.render(**context))
-    log.info('OK {0}'.format(filepath))
+    log.info('OK %s', filepath)
 
 
 def _render_index(env, posts, output_dir):
@@ -123,9 +124,9 @@ def _render_index(env, posts, output_dir):
 
     filepath = path.relpath(path.join(output_dir, 'index.html'))
     with open(filepath, 'w') as fp:
-        log.debug('_render_index:Before write `{}`'.format(filepath))
+        log.debug('_render_index:Before write `%s`', filepath)
         fp.write(template.render(posts=contexts))
-    log.info('OK {}'.format(filepath))
+    log.info('OK %s', filepath)
 
 
 def _validate(post):
