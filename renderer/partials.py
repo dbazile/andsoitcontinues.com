@@ -13,7 +13,7 @@ def render(env, output_dir):
 def render_about(env, output_dir):
     try:
         filepath = path.relpath(path.join(output_dir, 'about.html'))
-        template = env.get_template('_about.html')
+        template = env.get_template('_about.jinja2')
         with open(filepath, 'w') as fp:
             fp.write(template.render())
             log.info('OK {}'.format(filepath))
@@ -26,7 +26,7 @@ def render_placeholders(env, output_dir):
     for route in ('about', 'blog', 'portfolio'):
         filepath = path.relpath(path.join(output_dir, '{}.loading.html'.format(route)))
         try:
-            template = env.get_template('_{}.loading.html'.format(route))
+            template = env.get_template('_{}.loading.jinja2'.format(route))
             log.debug('render_placeholders:Before render/write `{}`'.format(route))
             with open(filepath, 'w') as fp:
                 fp.write(template.render())
@@ -39,7 +39,7 @@ def render_placeholders(env, output_dir):
 def render_search(env, output_dir):
     try:
         filepath = path.relpath(path.join(output_dir, 'search.html'))
-        template = env.get_template('_search.html')
+        template = env.get_template('_search.jinja2')
         with open(filepath, 'w') as fp:
             fp.write(template.render())
             log.info('OK {}'.format(filepath))

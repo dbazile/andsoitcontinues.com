@@ -1,11 +1,11 @@
-{% extends "layout.html" %}
+{% extends "layout.jinja2" %}
 
 {% set route = '__portfolio__' %}
 {% set title = 'Portfolio | ASIC' %}
 {% set basehref = '../' %}
 
 {% set placeholder %}
-  {% include "_portfolio.loading.html" %}
+  {% include "_portfolio.loading.jinja2" %}
 {% endset %}
 
 {% block body %}

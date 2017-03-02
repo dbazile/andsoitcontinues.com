@@ -91,7 +91,7 @@ def _generate_id(filepath):
 
 
 def _render_post(env, post: dict, output_dir):
-    template = env.get_template('_blog.post.html')
+    template = env.get_template('_blog.post.jinja2')
 
     context = post.copy()
 
@@ -112,7 +112,7 @@ def _render_post(env, post: dict, output_dir):
 
 
 def _render_index(env, posts, output_dir):
-    template = env.get_template('_blog.index.html')
+    template = env.get_template('_blog.index.jinja2')
 
     contexts = []
     for post in posts:

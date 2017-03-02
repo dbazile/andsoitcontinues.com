@@ -1,10 +1,10 @@
-{% extends "layout.html" %}
+{% extends "layout.jinja2" %}
 
 {% set route = '__about__' %}
 {% set title = 'David Bazile | ASIC' %}
 
 {% set placeholder %}
-  {% include "_about.loading.html" %}
+  {% include "_about.loading.jinja2" %}
 {% endset %}
 
 {% block body %}
