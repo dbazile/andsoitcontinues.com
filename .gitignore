@@ -2,3 +2,10 @@ __pycache__
 *.pyc
 .idea
 project.sublime-workspace
+index.html
+about.html
+_about_loading.html
+_blog_loading.html
+_portfolio_loading.html
+portfolio/index.html
+writing/*.html
