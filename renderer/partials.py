@@ -7,6 +7,7 @@ log = logging.getLogger(__name__)
 
 def render(env, output_dir):
     render_about(env, output_dir)
+    render_error_pages(env, output_dir)
     render_placeholders(env, output_dir)
     render_search(env, output_dir)
 
@@ -15,6 +16,12 @@ def render_about(env, output_dir):
     _render(env,
             template='_about.jinja2',
             output=os.path.join(output_dir, 'about.html'))
+
+
+def render_error_pages(env, output_dir):
+    _render(env,
+            template='_404.jinja2',
+            output=os.path.join(output_dir, '404.html'))
 
 
 def render_placeholders(env, output_dir):
