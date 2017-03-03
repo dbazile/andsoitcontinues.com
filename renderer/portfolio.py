@@ -1,8 +1,8 @@
 import glob
+import logging
+import os
 import re
 import sys
-from logging import getLogger
-from os import path
 import xml.etree.ElementTree as etree
 
 DTD_PREAMBLE = """\
@@ -23,15 +23,15 @@ DTD_PREAMBLE = """\
 TYPE_PHOTOSHOP = 'photoshop'
 TYPE_UI = 'ui'
 
-log = getLogger(__name__)
+log = logging.getLogger(__name__)
 
 
 def render(env, xml_dir, output_dir):
     creative_works = []
     failures = []
 
-    for filepath in glob.glob(path.join(xml_dir, '*.xml')):
-        filepath = path.relpath(filepath)
+    for filepath in glob.glob(os.path.join(xml_dir, '*.xml')):
+        filepath = os.path.relpath(filepath)
         try:
             creative_work = _deserialize_creative_work(filepath)
             creative_works.append(creative_work)
@@ -248,7 +248,7 @@ def _prepare_xml(filepath):
 def _render_index(env, creative_works, output_dir):
     template = env.get_template('_portfolio.index.jinja2')
 
-    filepath = path.relpath(path.join(output_dir, 'portfolio/index.html'))
+    filepath = os.path.relpath(os.path.join(output_dir, 'portfolio/index.html'))
 
     ui_works = list(filter(lambda d: d['type'] == TYPE_UI, creative_works))
     photoshop_works = list(filter(lambda d: d['type'] == TYPE_PHOTOSHOP, creative_works))

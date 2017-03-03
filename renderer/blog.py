@@ -1,6 +1,6 @@
-from glob import glob
-from logging import getLogger
-from os import path
+import glob
+import logging
+import os
 import re
 
 import yaml
@@ -13,18 +13,18 @@ TYPE_QUOTE = 'quote'
 TYPE_LINK = 'link'
 TYPE_TEXT = 'text'
 
-PATTERN_MARKDOWN = re.compile("""^---\n(?P<meta>.*)\n---\n\n?(?P<content>.*)$""",
+PATTERN_MARKDOWN = re.compile("""^---\n(?P<meta>.*)\n---\n\n?(?P<body>.*)$""",
                               re.MULTILINE | re.DOTALL)
 
-log = getLogger(__name__)
+log = logging.getLogger(__name__)
 
 
 def render(env, markdown_dir, output_dir):
     posts = []
     failures = []
 
-    for filepath in glob(path.join(markdown_dir, '*.md')):
-        filepath = path.relpath(filepath)
+    for filepath in glob.glob(os.path.join(markdown_dir, '*.md')):
+        filepath = os.path.relpath(filepath)
         try:
             post = _deserialize_post(filepath)
             _render_post(env, post, output_dir)
@@ -54,12 +54,11 @@ def render(env, markdown_dir, output_dir):
 def _deserialize_post(filepath):
     log.debug('_deserialize_post:READ %s', filepath)
     with open(filepath) as fp:
-        groups = PATTERN_MARKDOWN.search(fp.read())
-        if not groups:
-            raise ValueError('missing metadata')
+        matches = PATTERN_MARKDOWN.search(fp.read())
+    if not matches:
+        raise ValueError('missing metadata')
 
-    raw_meta = groups.group('meta')
-    raw_body = groups.group('content')
+    raw_meta, raw_body = matches.groups()
 
     post = {
         'id': _generate_id(filepath),
@@ -89,7 +88,7 @@ def _deserialize_post(filepath):
 
 
 def _generate_id(filepath):
-    basename, _ = path.splitext(path.basename(filepath))
+    basename, _ = os.path.splitext(os.path.basename(filepath))
     return re.sub(r'\W+', '_', basename)
 
 
@@ -107,7 +106,7 @@ def _render_post(env, post: dict, output_dir):
         context['body'] = '<a href="{0}">{0}</a>'.format(context['url'])
 
     # Write file
-    filepath = path.relpath(path.join(output_dir, 'writing/{0}.html'.format(post['id'])))
+    filepath = os.path.relpath(os.path.join(output_dir, 'writing/{0}.html'.format(post['id'])))
     log.debug('_render_post:Before write `%s`', filepath)
     with open(filepath, 'w') as fp:
         fp.write(template.render(**context))
@@ -124,7 +123,7 @@ def _render_index(env, posts, output_dir):
             context['url'] = 'writing/{0}.html'.format(post['id'])
         contexts.append(context)
 
-    filepath = path.relpath(path.join(output_dir, 'index.html'))
+    filepath = os.path.relpath(os.path.join(output_dir, 'index.html'))
     with open(filepath, 'w') as fp:
         log.debug('_render_index:Before write `%s`', filepath)
         fp.write(template.render(posts=contexts))
