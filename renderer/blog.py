@@ -19,6 +19,14 @@ PATTERN_MARKDOWN = re.compile("""^---\n(?P<meta>.*)\n---\n\n?(?P<body>.*)$""",
 log = logging.getLogger(__name__)
 
 
+def clean(output_dir):
+    filepaths = glob.glob(os.path.join(output_dir, 'writing/*.html'))
+    filepaths.append(os.path.join(output_dir, 'index.html'))
+    for filepath in filepaths:
+        log.info('clean %s', os.path.relpath(filepath))
+        os.unlink(filepath)
+
+
 def render(env, markdown_dir, output_dir):
     posts = []
     failures = []

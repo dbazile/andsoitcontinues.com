@@ -5,6 +5,12 @@ import os
 log = logging.getLogger(__name__)
 
 
+def clean(output_dir):
+    for filepath in glob.glob(os.path.join(output_dir, '*.html')):
+        log.info('clean %s', os.path.relpath(filepath))
+        os.unlink(filepath)
+
+
 def render(env, output_dir):
     render_about(env, output_dir)
     render_error_pages(env, output_dir)
