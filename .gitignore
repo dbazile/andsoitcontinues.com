@@ -6,6 +6,8 @@ project.sublime-workspace
 # Rendered files
 web/index.html
 web/about.html
+web/404.html
+web/search.html
 web/_about_loading.html
 web/_blog_loading.html
 web/_portfolio_loading.html
