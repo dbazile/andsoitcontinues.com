@@ -90,12 +90,10 @@ h4 {
 }
 
 h5 {
-  text-transform: uppercase;
   font-size: 1em;
 }
 
 h6 {
-  text-transform: uppercase;
   font-size: 1em;
 }
 
@@ -105,7 +103,7 @@ p {
 
 pre,
 code {
-  font-family: "Anonymous Pro";
+  font-family: "Source Code Pro";
 }
 
 pre code,
@@ -136,7 +134,7 @@ html {
 
 .__blog__ {
   background-color: white;
-  color: #555;
+  color: #333;
 }
 
 .__portfolio__ {

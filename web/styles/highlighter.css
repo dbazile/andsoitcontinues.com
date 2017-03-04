@@ -4,7 +4,6 @@
 
 pre {
   overflow-x: auto;
-  border: 10px solid #303030; /*@syntax-background-color*/
   line-height: 1.17em;
   word-wrap: normal;
   background-color: #303030; /*@syntax-background-color*/
@@ -16,24 +15,6 @@ code {
   color: inherit;
 }
 
-/*
-  @syntax-text-color: #ccc;
-  @syntax-background-color: #303030;
-
-  @syntax-language-attribute-color: #fcd;
-  @syntax-language-class-color: white;
-  @syntax-language-comment-color: #555;
-  @syntax-language-constant-color: #66D9EF;
-  @syntax-language-function-color: #6f7;
-  @syntax-language-keyword-color: #c6f;
-  @syntax-language-keyword-modifier-color: #de9bff;
-  @syntax-language-number-color: #fe00ff;
-  @syntax-language-string-color: #ffa13d;
-  @syntax-language-parameter-color: #cad;
-  @syntax-language-warning-color: #ff0;
-  @syntax-language-tag-punctuation: #888;
-*/
-
 /* =========================================================================
    Languages
    ========================================================================= */
@@ -44,7 +25,7 @@ code {
 
 .hljs-regexp,
 .hljs-string {
-  color: #ffa13d; /*@syntax-language-string-color*/
+  color: #7a8; /*@syntax-language-string-color*/
 }
 
 .hljs-string .hljs-subst {
@@ -59,7 +40,7 @@ code {
 }
 
 .hljs-number {
-  color: #fe00ff; /*@syntax-language-number-color*/
+  color: #f69; /*@syntax-language-number-color*/
 }
 
 .hljs-built_in,
@@ -67,7 +48,7 @@ code {
 .hljs-preprocessor,
 .hljs-class .hljs-title,
 .hljs-variable {
-  color: white; /*@syntax-language-class-color*/
+  color: #ccc; /*@syntax-text-color*/
 }
 
 .hljs-built_in {
@@ -82,28 +63,26 @@ code {
 .hljs-literal,
 .hljs-keyword,
 .hljs-title {
-  color: #c6f; /*@syntax-language-keyword-color*/
+  color: #aba3cc; /*@syntax-language-keyword-color*/
 }
 
 .hljs-tag .hljs-name {
-  color: #f7b;
+  color: #aba3cc; /*@syntax-language-keyword-color*/
 }
 
 .hljs-params {
-  color: #cad; /*@syntax-language-parameter-color*/
-}
-
-.hljs-params {
+  color: #ccc; /*@syntax-text-color*/
   font-style: italic;
 }
 
 .hljs-function .hljs-title {
-  color: #6f7; /*@syntax-language-function-color*/
+  color: #ccc; /*@syntax-text-color*/
+  font-weight: bold;
 }
 
 .hljs-meta,
 .hljs-symbol {
-  color: #66D9EF; /*@syntax-language-constant-color*/
+  color: #ccc; /*@syntax-text-color*/
 }
 
 /* Languages: CSS
@@ -115,20 +94,21 @@ code {
 
 .hljs-selector-attr,
 .hljs-selector-pseudo {
-  color: white; /*@syntax-language-class-color*/
+  color: #ccc; /*@syntax-text-color*/
 }
 
 .hljs-selector-tag {
-  color: #c6f; /*@syntax-language-keyword-color*/
+  color: #aba3cc; /*@syntax-language-keyword-color*/
 }
 
 .css .hljs-function {
-  color: #6f7; /*@syntax-language-function-color*/
+  color: #ccc; /*@syntax-text-color*/
+  font-weight: bold;
 }
 
 .hljs-selector-id,
 .hljs-selector-class {
-  color: #66D9EF; /*@syntax-language-constant-color*/
+  color: #aba3cc; /*@syntax-language-keyword-color*/
 }
 
 /* Languages: Diff
@@ -144,7 +124,7 @@ code {
 
 /* Header */
 .diff .hljs-comment {
-  color: white; /*@syntax-language-class-color*/
+  color: #ccc; /*@syntax-text-color*/
   font-weight: bold;
 }
 
@@ -160,23 +140,15 @@ code {
    ========================================================================= */
 
 .json .hljs-attr {
-  color: #66D9EF; /*@syntax-language-constant-color*/
+  color: #ccc; /*@syntax-text-color*/
   font-weight: bold;
 }
 
-/* Languages: Objective-C
+/* Languages: PHP
    ========================================================================= */
 
-.objectivec .hljs-variable {
-  color: #de9bff; /*@syntax-language-keyword-modifier-color*/
-}
-
-/* Languages: Python
-   ========================================================================= */
-
-/* Decorators */
-.python .hljs-meta {
-  color: #66D9EF; /*@syntax-language-constant-color*/
+.php .hljs-meta {
+  color: #777; /*@syntax-language-attribute-color*/
 }
 
 /* Languages: XML
@@ -190,11 +162,11 @@ code {
 
 .xml .hljs-tag {
   /* '<' '/' and '>' */
-  color: #888; /*@syntax-language-tag-punctuation*/
+  color: #ccc; /*@syntax-text-color*/
 }
 
 .xml .hljs-attr {
-  color: #fcd; /*@syntax-language-attribute-color*/
+  color: #777; /*@syntax-language-attribute-color*/
 }
 
 /* Languages: XCode
@@ -208,14 +180,14 @@ code {
 }
 
 .swift .hljs-type {
-  color: #66D9EF; /*@syntax-language-constant-color*/
+  color: #aba3cc; /*@syntax-language-keyword-color*/
 }
 
 .swift .hljs-class .hljs-keyword {
-  color: #c6f; /*@syntax-language-keyword-color*/
+  color: #aba3cc; /*@syntax-language-keyword-color*/
 }
 
 .swift .hljs-class .hljs-title {
-  color: #de9bff; /*@syntax-language-keyword-modifier-color*/
+  color: #aba3cc; /*@syntax-language-keyword-color*/
 }
 
