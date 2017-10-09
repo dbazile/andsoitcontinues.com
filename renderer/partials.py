@@ -32,7 +32,7 @@ def render_error_pages(env, output_dir):
 
 def render_placeholders(env, output_dir):
     for route in ('about', 'blog', 'portfolio'):
-        filepath = os.path.join(output_dir, '_{}_loading.html'.format(route))
+        filepath = os.path.join(output_dir, '.{}.html'.format(route))
         try:
             template = env.get_template('_{}.loading.jinja2'.format(route))
             log.debug('render_placeholders:Before render/write `{}`'.format(route))
