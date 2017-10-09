@@ -1,4 +1,4 @@
-(function (asic, atoa) {
+(function (bazile, atoa) {
 
   'use strict'
 
@@ -71,7 +71,7 @@
   }
 
   function exposeQueueEventHooks() {
-    asic.transitioner = Object.freeze({
+    bazile.transitioner = Object.freeze({
       beforeNext: function (fn) {
         _queueBeforeNext.push(fn)
       }
@@ -250,4 +250,4 @@
       setTimeout(hidePlaceholder, endTime - Date.now())
     })
   }
-}(window.asic, window.atoa))
+}(window.bazile, window.atoa))

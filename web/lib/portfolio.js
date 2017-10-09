@@ -1,4 +1,4 @@
-(function (asic, atoa) {
+(function (bazile, atoa) {
 
   'use strict'
 
@@ -15,7 +15,7 @@
   function initialize() {
     console.debug('(portfolio:initialize) subscribing to hashchange events')
     window.addEventListener('hashchange', onHashChange)
-    asic.transitioner.beforeNext(teardown)
+    bazile.transitioner.beforeNext(teardown)
     onHashChange()
 
     /*
@@ -58,4 +58,4 @@
     console.debug('(portfolio:teardown) unsubscribing from hash change events')
     window.removeEventListener('hashchange', onHashChange)
   }
-}(window.asic, window.atoa))
+}(window.bazile, window.atoa))

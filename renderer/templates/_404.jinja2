@@ -1,107 +1,155 @@
 <!doctype html>
 <html lang="en-us">
-	<head>
-		<title>404 | ASIC</title>
-		<meta charset="utf-8"/>
-		<meta name="viewport" content="width=device-width, initial-scale=0.7, minimum-scale=0.7" />
-		<style type="text/css">
-			* {
-				margin: 0;
-			}
+<head>
+    <title>Not Found | bazile.org</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=0.7, minimum-scale=0.7" />
+    <style type="text/css">
+        * {
+            margin: 0;
+        }
 
-			body {
-				background-color: rgb(  0,   0,   0);
-				           color: rgb(255, 255, 255);
-				            font: 11px Verdana, sans-serif;
-			}
+        html {
+            display: flex;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            justify-content: center;
+            align-items: center;
+            font-family: -apple-system-body, BlinkMacSystemFont, 'Helvetica Neue', Segoe UI, sans-serif;
+            font-size: 16px;
+            background-color: #222;
+            color: white;
+            cursor: default;
+        }
 
-			a {
-				          color: #0c0;
-				text-decoration: none;
-				        display: inline-block;
-				        padding: 10px;
-				         border: 2px solid;
-				  border-radius: 4px;
-				      font-size: 1.1em;
-				    font-weight: bold;
-			}
+        main {
+            text-align: center;
+        }
 
-			a:hover {
-				       color: #0d7;
-				border-color: #0d7;
-			}
+        svg {
+            width: 10em;
+            height: 10em;
+        }
 
-			#frame {
-				position: absolute;
-				    left: 0px;
-				     top: 0px;
-				   width: 100%;
-				  height: 100%;
-			}
+        h1 {
+            margin: .5em 0 2em;
+            font-weight: lighter;
+            font-size: 3em;
+        }
 
-			#contents {
-				position: absolute;
-				    left: 20%;
-				     top: 40%;
-				   width: 60%;
-			}
+        p {
+            color: #999;
+        }
 
-			h1 {
-				font-family: Helvetica, Arial, sans-serif;
-				font-weight: 100;
-				  font-size: 3em;
-			}
+        .links {
+            margin-top: 1em;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
 
-			h2 {
-				  font-size: 1em;
-				font-weight: normal;
-				line-height: 1.5em;
-				     margin: .7em 0 1em 0;
-				      color: rgb(150, 130, 130);
-			}
+        .link {
+            padding: .5em .7em;
+            border-radius: 2px;
+            text-decoration: none;
+            outline: none;
+            text-shadow: 1px 1px rgba(0,0,0,.15);
+            box-shadow: 0 5px rgba(0,0,0,.07);
+        }
 
-			svg {
-				position: absolute;
-				    left: -115px;
-				     top: -15px;
-			}
+        .link + .link {
+            margin-left: 1em;
+        }
 
-			circle {
-				transition: all ease 0.5s;
-			}
+        .link--blog {
+            background-color: #333;
+            color: #777;
+        }
 
-		</style>
-	</head>
-	<body>
-		<div id="frame">
-			<div id="contents">
-				<svg width="100" height="100">
-					<circle cx="50" cy="50" r="50" style="fill:#789;"/>
-					<circle cx="50" cy="50" r="46" style="fill:#000;"/>
-					<circle cx="50" cy="50" r="40" style="fill:#500;"/>
-					<circle cx="50" cy="50" r="30" style="fill:#d00;"/>
-					<circle cx="50" cy="50" r="15" style="fill:#a00;"/>
-					<circle cx="50" cy="50" r="10" style="fill:#f80;"/>
-				</svg>
-				<h1>I can't let you do that, Dave</h1>
-				<h2>Seriously though, <code id="uri"></code> can't be found.</h2>
-				<p><a href="/index.html">&lt; Return to Blog</a></p>
-			</div>
-		</div>
-		<script type="text/javascript">
-			(function() {
-				document.querySelector("#uri").textContent = location.pathname;
-				var circles = document.querySelectorAll("circle");
+        .link--search {
+            color: white;
+            background-color: #e91e63;
+        }
 
-				window.setInterval(function() {
-					var currentOpacity;
+        circle:nth-child(1) {
+            fill: #789;
+        }
 
-					for (var n=3, N=circles.length; n<N; n++) {
-						currentOpacity = parseFloat(circles[n].style.opacity);
-						circles[n].style.opacity = (currentOpacity < 1) ? 1 : 0.25;
-					}
-				}, 750);
-			})();
-		</script>
-	</body>
+        circle:nth-child(2) {
+            fill: #000;
+        }
+
+        circle:nth-child(3) {
+            fill: #500;
+        }
+
+        circle:nth-child(4) {
+            fill: #d00;
+        }
+
+        circle:nth-child(5) {
+            fill: #a00;
+        }
+
+        circle:nth-child(6) {
+            fill: #f80;
+        }
+
+        circle:nth-child(n + 3) {
+            transform-origin: 50px 50px;
+            animation: blinking-bulb infinite alternate 1s ease;
+        }
+
+        @keyframes blinking-bulb {
+            0%, 75% {
+                opacity: .5;
+                transform: scale(1.0);
+            }
+            100% {
+                opacity: 1;
+                transform: scale(1.05);
+            }
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <svg viewBox="0 0 100 100">
+            <circle cx="50" cy="50" r="50" />
+            <circle cx="50" cy="50" r="47" />
+            <circle cx="50" cy="50" r="40" />
+            <circle cx="50" cy="50" r="30" />
+            <circle cx="50" cy="50" r="15" />
+            <circle cx="50" cy="50" r="10" />
+        </svg>
+
+        <h1>I can't let you do that, Dave</h1>
+
+        <p>Seriously though, <code id="uri"></code> doesn't exist or moved.</p>
+
+        <div class="links">
+            <a class="link link--blog" href="/index.html">&lt; Return to Blog</a>
+            <a class="link link--search" href="/search.html">Search for &ldquo;<code></code>&rdquo; &gt;</a>
+        </div>
+    </main>
+    <script>
+        (function () {
+            const uri = location.pathname
+            const basename = uri
+                .split('/')
+                .pop()
+                .replace(/(?:\?.*)?$/, '')
+                .split('.')
+                .slice(0, -1)
+                .join('')
+                .toLowerCase()
+                .replace(/[^a-z0-9]+/g, ' ')
+
+            document.querySelector("#uri").textContent = uri
+            document.querySelector(".link--search").search = basename
+            document.querySelector(".link--search code").textContent = basename
+        }())
+    </script>
+</body>
 </html>
