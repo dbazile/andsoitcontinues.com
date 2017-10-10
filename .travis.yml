@@ -10,4 +10,4 @@ script:
   - set -e
   - python -m renderer
   - git rev-parse HEAD > web/fingerprint.txt
-  - aws s3 sync web/ s3://andsoitcontinues.com/ --delete
+  - aws s3 sync web/ s3://bazile.www/ --delete
