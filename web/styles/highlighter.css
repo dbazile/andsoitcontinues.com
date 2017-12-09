@@ -6,7 +6,7 @@ pre {
   overflow-x: auto;
   line-height: 1.17em;
   word-wrap: normal;
-  background-color: #303030; /*@syntax-background-color*/
+  background-color: #444; /*@syntax-background-color*/
   color: #ccc; /*@syntax-text-color*/
 }
 
