@@ -107,13 +107,9 @@ code {
 }
 
 pre code,
-p code {
-  font-size: .9em;
-}
-
-p code {
-  color: black;
-  font-size: .9em;
+p code,
+li code {
+  font-size: .8em;
 }
 
 a {
