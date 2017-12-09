@@ -508,13 +508,13 @@
 
 .post__content thead th {
   padding: .75em .75em .2em;
-  border-bottom: 1px solid #ddd;
+  border-bottom: 1px solid #bbb;
   text-align: left;
 }
 
 .post__content tbody th {
   padding: .5em .75em;
-  color: #bbb;
+  color: #999;
 }
 
 .post__content tbody th:first-child:not(:only-child) {
@@ -524,8 +524,8 @@
 .post__content tbody th.group {
   text-transform: uppercase;
   background-color: #555;
+  letter-spacing: .15em;
   color: #999;
-  font-size: .8em;
 }
 
 .post__content tbody td {

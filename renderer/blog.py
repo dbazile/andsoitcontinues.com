@@ -74,6 +74,8 @@ def _deserialize_post(filepath):
         'body': markdown(raw_body, [
             'markdown.extensions.smarty',
             'markdown.extensions.fenced_code',
+            'markdown.extensions.tables',
+            'markdown.extensions.toc',
         ]),
     }
 
