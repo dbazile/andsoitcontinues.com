@@ -2,6 +2,10 @@
    Layout
    ========================================================================== */
 
+html {
+  overflow-y: scroll;
+}
+
 body {
   margin: 0;
   box-sizing: border-box;
@@ -352,7 +356,8 @@ footer {
   transform: translateY(1em);
 }
 
-.__showPlaceholder__ {
+.__showPlaceholder__ body {
+  max-height: 100vh;
   overflow: hidden;
 }
 
