@@ -177,6 +177,10 @@
   color: inherit;
 }
 
+.postPreview__content {
+  cursor: initial;
+}
+
 .postPreview__abstract :first-child {
   margin-top: 0;
 }
@@ -272,7 +276,9 @@
    Post
    ========================================================================= */
 
-.post {}
+.post {
+  cursor: initial;
+}
 
 /* Post: Header
    ========================================================================= */
