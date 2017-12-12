@@ -375,7 +375,8 @@
   padding: 0 calc(((100% - 800px) / 2) + 20px);
 }
 
-.post__content table p {
+.post__content table p,
+.post__content table ul {
   padding: 0;
   max-width: 35em;
 }
