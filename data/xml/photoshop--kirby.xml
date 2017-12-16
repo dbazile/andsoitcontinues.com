@@ -1,0 +1,16 @@
+<portfolio-item type="photoshop">
+  <name>Kirby (I'm Hit!)</name>
+  <tag>kirby</tag>
+  <tag>gaming</tag>
+  <tag>nintendo</tag>
+  <circa>2017</circa>
+  <summary>
+    In Kirby Super Star, whenever Kirby loses a life, this is the avatar shown
+    in the status bar while the "oh no you lost" music is playing.  I always
+    thought it was funny because Kirby's all "go on without me..."
+  </summary>
+  <artifact
+    href="portfolio/photoshop/2017-kirby__im_hit/kirby__im_hit.png"
+    thumbnail="portfolio/photoshop/2017-kirby__im_hit/kirby__im_hit-thumbnail.png"
+  />
+</portfolio-item>
