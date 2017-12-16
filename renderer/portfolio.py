@@ -252,7 +252,7 @@ def _prepare_xml(filepath):
 
 
 def _render_index(env, creative_works, output_dir):
-    template = env.get_template('_portfolio.index.jinja2')
+    template = env.get_template('portfolio.jinja2')
 
     filepath = os.path.relpath(os.path.join(output_dir, 'portfolio/index.html'))
 

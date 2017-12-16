@@ -1,10 +1,10 @@
-{% extends "layout.jinja2" %}
+{% extends "_layout.jinja2" %}
 
 {% set route = '__about__' %}
 {% set title = 'David Bazile | bazile.org' %}
 
 {% set placeholder %}
-  {% include "_about.loading.jinja2" %}
+  {% include "about__loading.jinja2" %}
 {% endset %}
 
 {% block body %}

@@ -1,11 +1,11 @@
-{% extends "layout.jinja2" %}
+{% extends "_layout.jinja2" %}
 
 {% set route = '__portfolio__' %}
 {% set title = 'Portfolio | bazile.org' %}
 {% set basehref = '../' %}
 
 {% set placeholder %}
-  {% include "_portfolio.loading.jinja2" %}
+  {% include "portfolio__loading.jinja2" %}
 {% endset %}
 
 {% block body %}
