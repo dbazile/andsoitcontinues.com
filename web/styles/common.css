@@ -112,7 +112,8 @@ code {
 
 pre code,
 p code,
-li code {
+li code,
+table code {
   font-size: .8em;
 }
 
