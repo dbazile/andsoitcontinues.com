@@ -255,7 +255,7 @@ EC2 instances:
 | `myproj-ui`              | <ul><li>`$target`</li><li>`$version`</li></ul> | |
 | `myproj-microservice-a`  | <ul><li>`$target`</li><li>`$version`</li></ul> | |
 | `myproj-microservice-b`  | <ul><li>`$target`</li><li>`$version`</li></ul> | |
-| __`myproj-release`__     | <ul><li>`$target`</li><li>`$api_version`</li><li>`$ui_version`</li><li>`$msa_version`</li><li>`$msb_version`</li></ul> | <p>Triggers and waits for each of the above builds and optionally flip some arbitrary switch at the end of it all (maybe set and push some git tags to the repos?).</p><p>**Given the same set of parameters, the build system should be capable of deploying an exact replica each .**</p> |
+| __`myproj-release`__     | <ul><li>`$target`</li><li>`$api_version`</li><li>`$ui_version`</li><li>`$msa_version`</li><li>`$msb_version`</li></ul> | <p>Triggers and waits for each of the above builds and optionally flip some arbitrary switch at the end of it all (maybe set and push some git tags to the repos?).</p><p>**Given the same set of parameters, the pipeline should be capable of deploying an exact replica each subsequent run.**</p> |
 
 
 
@@ -271,3 +271,9 @@ up-front complexity of deploying containers to production should drop
 significantly in the future.  As such, my next area of research is use cases
 and design considerations for using Kubernetes, Mesos or some other container
 orchestration platform in production.
+
+
+
+## Credits
+
+Thanks to James, Marge, Patrick and Travis for providing feedback for this post.
