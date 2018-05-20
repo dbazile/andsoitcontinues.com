@@ -4,6 +4,7 @@ subject: A Nicer MFA Workflow with awscli
 tags:
     - awscli
     - mfa
+    - python
 abstract: |
     This utility tries to make the multifactor authentication (MFA) login
     workflow with awscli a little more user-friendly.
