@@ -284,7 +284,7 @@
    ========================================================================= */
 
 .post__timestamp {
-  margin: 5em 0 2em;
+  margin: 5em 0 1.5em;
   font-family: "Hammersmith One";
   font-size: .8em;
 }
@@ -298,7 +298,7 @@
 }
 
 .post__title {
-  font-size: 3.5em;
+  font-size: 2.5em;
   line-height: 1em;
   overflow: visible;
 }
@@ -370,7 +370,8 @@
 .post__content h6,
 .post__content pre,
 .post__content ul,
-.post__content ol {
+.post__content ol,
+.post__content .codeblockname {
   margin: 1.5rem 0 .5rem;
   padding: 0 calc(((100% - 800px) / 2) + 20px);
 }
@@ -396,7 +397,8 @@
   .post__content h6,
   .post__content pre,
   .post__content ul,
-  .post__content ol {
+  .post__content ol,
+  .post__content .codeblockname {
     padding-left: 1rem;
     padding-right: 1rem;
   }
@@ -480,11 +482,27 @@
 /* Content: Code
    ========================================================================= */
 
+.post__content .codeblockname {
+  margin-bottom: 0;
+  padding-top: .75em;
+  padding-bottom: .75em;
+  font-family: "Fira Mono", monospace;
+  font-size: .8em;
+  font-weight: bold;
+  background-color: #ddd;
+}
+
 .post__content pre {
   margin: 1.3em 0;
   overflow-x: auto;
   padding-top: 2em;
   padding-bottom: 2em;
+}
+
+.post__content .codeblockname + pre {
+  border-top: 0;
+  margin-top: 0;
+  padding-top: 1em;
 }
 
 /* Images
