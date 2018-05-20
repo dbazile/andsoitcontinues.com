@@ -2,7 +2,7 @@
 	"build_systems":
 	[
 		{
-			"shell_cmd": "/usr/bin/env python3 -m renderer",
+			"shell_cmd": "/usr/bin/env python3 -u -m renderer",
 			"env":
 			{
 				"LANG": "en_US.UTF-8"
