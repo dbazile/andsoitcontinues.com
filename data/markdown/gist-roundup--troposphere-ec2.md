@@ -79,7 +79,7 @@ def create_instance():
 
             echo END
             date '+%Y-%m-%d %H:%M:%S'
-        ''')).lstrip()),
+        ''').lstrip())),
     )
 
 
