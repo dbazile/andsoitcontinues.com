@@ -8,8 +8,7 @@ tags:
     - nightmare
 ---
 
-	function nightmare(laptop)
-	{
+	function nightmare(laptop) {
 		laptop.wakeFromSleep();
 		alert("An update to Adobe Flash Player is available.");
 		laptop.updateFlash();

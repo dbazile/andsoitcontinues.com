@@ -46,7 +46,7 @@ As a realist, I understand that to other "normal" developers, there is probably 
 
 Python also presents a challenge to me when structuring modules.  I like structuring my PHP with one class per file, namespaces to group like items and provide deconfliction and, if necessary, use of classes by referencing their fully qualified names thusly:
 
-##### ./blog/models/Story.php
+<div class="codeblockname">./blog/models/Story.php</div>
 
 ```php
 namespace blog\models;
@@ -57,7 +57,7 @@ class Story {
 }
 ```
 
-##### ./blog/helpers/PermalinkHelper.php
+<div class="codeblockname">./blog/helpers/PermalinkHelper.php</div>
 
 ```php
 namespace blog\helpers;
@@ -69,7 +69,7 @@ class Helper {
 }
 ```
 
-##### ./blog/index.php
+<div class="codeblockname">./blog/index.php</div>
 
 ```php
 require 'models/Story.php';
@@ -83,7 +83,7 @@ $permalink = new blog\helpers\PermalinkHelper();
 
 In Python, I haven't found the sweet spot yet.  With keeping the exact same number of files, it would look like this:
 
-##### ./blog/models/Story.py
+<div class="codeblockname">./blog/models/Story.py</div>
 
 ```python
 class Story:
@@ -93,7 +93,7 @@ class Story:
         self.content = None
 ```
 
-##### ./blog/helpers/PermalinkHelper.py
+<div class="codeblockname">./blog/helpers/PermalinkHelper.py</div>
 
 ```python
 class PermalinkHelper:
@@ -102,7 +102,7 @@ class PermalinkHelper:
         return 'something.html'
 ```
 
-##### ./blog/main.py
+<div class="codeblockname">./blog/main.py</div>
 
 ```python
 import models.Story.Story
@@ -115,6 +115,6 @@ permalink = helpers.PermalinkHelper.PermalinkHelper()
 To me this is hideous.  I am aware of `from models import Story` but say I don't want `Story` in the main file's global namespace?  If I just wanted to be able to refer to the class by what I believe should be its fully qualified name (models.Story), I'd have to do one of the following:
 
 + Add an intermediate step of defining an `__init__.py` file inside of the **models** folder with `from Story import Story`
-+ Create a `models.py` in the root folder and put *every single class I want nested directly under models in there*.  (Disclaimer: I haven't tried to import asterisk from asterisk).
++ Create a `models.py` in the root folder and put *every single class I want nested directly under models in there*.
 
 I'm sure that with further research, I will find an architecture that agrees with my delicate sensibilities.  The quest goes on!
