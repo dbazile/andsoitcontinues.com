@@ -73,5 +73,5 @@ But considering the functionality packed into it, I'm inclined to just live with
 
 ## Attachments
 
-[<img src="../writing/attachments/coursework-IxD-Wireframes-icon.png" alt="PDF" style="width: 100px !important; box-shadow: none !important; border-radius: 0 !important;"/>](//coursework.andsoitcontinues.com/61095-interaction-design-app-wireframes/deliverable.pdf)
+[<img src="../writing/attachments/coursework-IxD-Wireframes-icon.png" alt="PDF" style="margin: 0; width: 100px !important; box-shadow: none !important; border-radius: 0 !important;"/>](/writing/attachments/61095-interaction-design-app-wireframes.pdf)
 

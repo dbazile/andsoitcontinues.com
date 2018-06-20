@@ -55,5 +55,5 @@ Still not convinced that I did it exactly right.  Guess I'll find out when the g
 ## Attachments
 
 
-[<img src="../writing/attachments/coursework-UserJourney-icon.png" alt="PDF" style="width: 100px !important; box-shadow: none !important; border-radius: 0 !important;"/>](//coursework.andsoitcontinues.com/61095-interaction-design-storyboard/deliverable.pdf)
+[<img src="../writing/attachments/coursework-UserJourney-icon.png" alt="PDF" style="margin: 0; width: 100px !important; box-shadow: none !important; border-radius: 0 !important;"/>](/writing/attachments/61095-interaction-design-storyboard.pdf)
 
