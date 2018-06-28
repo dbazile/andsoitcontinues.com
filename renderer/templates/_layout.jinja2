@@ -24,9 +24,9 @@
     <nav class="navigation">
       <svg viewBox="0 0 760 150" preserveAspectRatio="xMidYMin">
         <line x1="-3000" y1="140" x2="3000" y2="140" />
-        {% for href, label in (('index.html', 'blog'), ('portfolio/index.html', 'portfolio'), ('about.html', 'about')) %}
+        {% for href, section, label in (('index.html', 'blog', 'writing'), ('about.html', 'about', 'about me')) %}
         <g class="navigation__item" transform="translate({{75 * loop.index0}}, 112), rotate(-45)">
-          <a class="navigation__link navigation__link--{{label}}" xlink:href="{{href}}">
+          <a class="navigation__link navigation__link--{{section}}" xlink:href="{{href}}">
             <circle cx="0" cy="40" r="6" />
             <path d="M0,40 l0,-40 l300,0 l0,40 z" />
             <text x="4" y="30">{{label}}</text>
