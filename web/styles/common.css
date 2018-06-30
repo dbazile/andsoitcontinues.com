@@ -46,7 +46,7 @@ main {
    Typography
    ========================================================================== */
 
-body {
+html {
   font-family: "Abhaya Libre";
   font-size: 19px;
 }
@@ -71,7 +71,7 @@ h4 {
 h5,
 h6 {
   font-family: "Abhaya Libre";
-  font-weight: 700;
+  font-weight: normal;
 }
 
 h1 {
@@ -152,6 +152,7 @@ html {
 .navigation svg {
   width: 100%;
   height: 150px;
+  margin-bottom: 1em;
 }
 
 .navigation line {
@@ -184,6 +185,12 @@ html {
   transition:
     font-size .2s ease-in-out,
     fill-opacity .1s linear;
+}
+
+@media (max-width: 832px) {
+  .navigation text {
+    font-size: 30px !important;
+  }
 }
 
 .navigation__brand path {

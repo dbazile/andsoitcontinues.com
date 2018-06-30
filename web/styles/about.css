@@ -73,7 +73,7 @@
 
 @media (max-width: 832px) {
   .__about__ h1 small {
-    font-size: .5em;
+    font-size: .4em;
   }
 }
 
@@ -99,8 +99,6 @@
 .__about__ .aboutMe,
 .__about__ .aboutThisSite {
   background-color: white;
-  padding-top: 2em;
-  padding-bottom: 2em;
 }
 
 /* Sections: Pictograms

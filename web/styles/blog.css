@@ -43,7 +43,6 @@
   padding-top: 2em;
   padding-bottom: 2em;
   text-align: center;
-  font-size: .9em;
 }
 
 .posts .preamble h1 {
@@ -58,6 +57,12 @@
   opacity: .5;
 }
 
+@media (max-width: 832px) {
+  .posts .preamble p {
+    padding: 0;
+  }
+}
+
 .posts__previews {
   list-style: none;
   margin: 2em 0;
@@ -67,9 +72,9 @@
 .posts__graph {
   position: absolute;
   top: 0;
-  left: 100px;
+  left: 5.7em;
   bottom: 0;
-  width: 10px;
+  width: .5em;
   font-family: "Hammersmith One";
   color: #888;
 }
@@ -79,12 +84,11 @@
   content: '';
   display: inline-block;
   position: absolute;
-  top: .5em;
+  top: .6em;
   left: 0;
   width: 0;
   height: 0;
-  border: 5px solid #ddd;
-  box-shadow: 0 0 0 10px white;
+  border: .3em solid #ddd;
   border-radius: 50%;
 }
 .posts__gap .posts__graph:before {
@@ -92,15 +96,21 @@
 }
 
 /* edge */
-.posts__graph {
-  background-image:
-  linear-gradient(
-    to right,
-    transparent 3px,
-    #ddd 3px,
-    #ddd 6px,
-    transparent 6px
-  );
+.posts__graph:after {
+  content: '';
+  position: absolute;
+  top: 1.75em;
+  left: calc(50% - 2px);
+  bottom: 0;
+  width: 3px;
+  background-color: #ddd;
+}
+
+@media (max-width: 832px) {
+  .posts__graph:after {
+    width: 2px;
+  left: calc(50% - 1px);
+  }
 }
 
 .posts__gap {
@@ -136,7 +146,7 @@
 
 .postPreview {
   position: relative;
-  padding-left: 150px;
+  padding-left: 7.5em;
   padding-bottom: 2em;
   overflow-y: hidden;
 }
@@ -146,9 +156,9 @@
 
 .postPreview__timestamp {
   position: absolute;
-  top: .3em;
+  top: .45em;
   left: 0;
-  width: 90px;
+  width: 6em;
   display: flex;
   justify-content: space-between;
   font-family: "Hammersmith One";
@@ -229,8 +239,17 @@
   margin: .5em 0 0;
   padding: 0 .75em;
   border-left: 3px solid;
-  font: italic 1.6rem "Cormorant Garamond";
+  font: italic 1.5rem "Cormorant Garamond";
   color: #777;
+}
+
+@media (max-width: 832px) {
+  .postPreview--quote blockquote {
+    border: none;
+    padding: .5em;
+    background-color: #f8f8f8;
+    font-size: 1.2em;
+  }
 }
 
 .postPreview--quote blockquote p {
@@ -287,6 +306,12 @@
   margin: 5em 0 1.5em;
   font-family: "Hammersmith One";
   font-size: .8em;
+}
+
+@media (max-width: 832px) {
+  .post__timestamp {
+    margin-top: 0;
+  }
 }
 
 .post__monthAndDate {
@@ -409,10 +434,6 @@
   }
 }
 
-.post__content p {
-  font-size: 1.1em;
-}
-
 .post__content ol,
 .post__content ul {
   font-size: 1.3rem;
@@ -502,6 +523,19 @@
   overflow-x: auto;
   padding-top: 2em;
   padding-bottom: 2em;
+}
+
+@media (max-device-width: 600px) {
+  .post__content pre code {
+    line-height: 1.4em;
+
+    /*
+     * Not sure what the deal is with this... maybe some kind of font
+     * resolution autosniffing craziness Google's doing if it detects
+     * Retina?
+     */
+    font-size: .6em;
+  }
 }
 
 .post__content .codeblockname + pre {
