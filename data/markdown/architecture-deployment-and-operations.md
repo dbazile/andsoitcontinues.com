@@ -7,8 +7,6 @@ tags:
     - deployments
     - development
     - CI/CD
-    - GIS
-    - geospatial
 abstract: |
     A baseline application development and deployment model based on lessons
     learned from the last two years of building, extending and deploying apps
