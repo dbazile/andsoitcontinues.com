@@ -2,7 +2,7 @@
 date:    2016-08-07
 subject: Principle of Least Surprise
 type:    image
-url:     ../writing/attachments/ford-focus-door-locks.jpg
+url:     /writing/attachments/ford-focus-door-locks.jpg
 tags:
     - industrial design
     - ux

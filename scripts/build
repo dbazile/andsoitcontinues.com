@@ -2,4 +2,4 @@
 
 cd "$(dirname $(dirname $0))"
 
-python3 -m renderer
+python3 -m renderer "$@"

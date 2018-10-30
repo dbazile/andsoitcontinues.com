@@ -2,29 +2,28 @@
 	"build_systems":
 	[
 		{
-			"shell_cmd": "/usr/bin/env python3 -u -m renderer",
 			"env":
 			{
 				"LANG": "en_US.UTF-8"
 			},
 			"name": "Render",
+			"selector": "source",
+			"shell_cmd": "/usr/bin/env python3 -u -m renderer",
 			"working_dir": "$project_path"
-		},
-		{
-			"file_regex": "^[ ]*File \"(...*?)\", line ([0-9]*)",
-			"name": "Anaconda Python Builder",
-			"selector": "source.python",
-			"shell_cmd": "\"/Library/Frameworks/Python.framework/Versions/3.6/bin/python3\" -u \"$file\""
 		}
 	],
 	"folders":
 	[
 		{
-			"path": ".",
 			"binary_file_patterns":
 			[
 				"web/*.html"
-			]
+			],
+			"path": "."
 		}
-	]
+	],
+	"settings":
+	{
+		"python_interpreter": "/usr/bin/python3"
+	}
 }

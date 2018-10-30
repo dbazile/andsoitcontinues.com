@@ -23,12 +23,12 @@ DTD_PREAMBLE = """\
 TYPE_PHOTOSHOP = 'photoshop'
 TYPE_UI = 'ui'
 
-log = logging.getLogger(__name__)
+LOG = logging.getLogger(__name__)
 
 
 def clean(output_dir):
     for filepath in glob.glob(os.path.join(output_dir, 'portfolio/*.html')):
-        log.info('clean %s', os.path.relpath(filepath))
+        LOG.info('clean %s', filepath)
         os.unlink(filepath)
 
 
@@ -37,16 +37,15 @@ def render(env, xml_dir, output_dir):
     failures = []
 
     for filepath in glob.glob(os.path.join(xml_dir, '*.xml')):
-        filepath = os.path.relpath(filepath)
         try:
             creative_work = _deserialize_creative_work(filepath)
             creative_works.append(creative_work)
         except ExtractionError as err:
-            log.error('Failed on {}\n    {}'.format(filepath, err))
+            LOG.error('Failed on {}\n    {}'.format(filepath, err))
             _dump_node(err.node)
             failures.append(filepath)
         except Exception as err:
-            log.fatal('Could not process `{}`\n\t{}: {}'.format(filepath, err.__class__.__name__, err))
+            LOG.fatal('Could not process `{}`\n\t{}: {}'.format(filepath, err.__class__.__name__, err))
             raise err
 
     creative_works = sorted(creative_works, reverse=True, key=lambda d: d['circa'])
@@ -54,7 +53,7 @@ def render(env, xml_dir, output_dir):
 
     # Report card
     if failures:
-        log.warn('*** {} failures: {}'.format(len(failures), ', '.join(failures)))
+        LOG.warn('*** {} failures: {}'.format(len(failures), ', '.join(failures)))
 
 
 ################################################################################
@@ -78,10 +77,10 @@ def _deserialize_creative_work(filepath):
         else:
             raise ExtractionError('Invalid `type` "{}"'.format(work_type), document)
 
-        log.info('OK {}'.format(filepath))
+        LOG.info('wrote {}'.format(filepath))
         return record
     except etree.ParseError as err:
-        log.fatal(err)
+        LOG.fatal(err)
         _dump_xml(xml)
         raise err
 
@@ -246,7 +245,7 @@ def _generate_ui_work(e: etree.Element):
 
 
 def _prepare_xml(filepath):
-    log.debug('READ `{0}`'.format(filepath))
+    LOG.debug('READ `{0}`'.format(filepath))
     with open(filepath) as fp:
         return DTD_PREAMBLE + fp.read()
 
@@ -254,7 +253,7 @@ def _prepare_xml(filepath):
 def _render_index(env, creative_works, output_dir):
     template = env.get_template('portfolio.jinja2')
 
-    filepath = os.path.relpath(os.path.join(output_dir, 'portfolio/index.html'))
+    filepath = os.path.join(output_dir, 'portfolio/index.html')
 
     ui_works = list(filter(lambda d: d['type'] == TYPE_UI, creative_works))
     photoshop_works = list(filter(lambda d: d['type'] == TYPE_PHOTOSHOP, creative_works))
@@ -263,7 +262,7 @@ def _render_index(env, creative_works, output_dir):
             ui_works=ui_works,
             photoshop_works=photoshop_works,
         ))
-        log.info('OK {}'.format(filepath))
+        LOG.info('wrote {}'.format(filepath))
 
 
 def _validate_photoshop_work(record: dict):

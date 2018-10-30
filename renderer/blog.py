@@ -6,24 +6,28 @@ import re
 import yaml
 from markdown import markdown
 
-DATE_FORMAT_INPUT = '%Y-%m-%d'
+
 DEFAULT_TYPE = 'text'
 TYPE_IMAGE = 'image'
 TYPE_QUOTE = 'quote'
 TYPE_LINK = 'link'
 TYPE_TEXT = 'text'
 
-PATTERN_MARKDOWN = re.compile("""^---\n(?P<meta>.*)\n---\n\n?(?P<body>.*)$""",
+FILEPATH        = 'writing/{date:%Y}/{id}.html'
+LEGACY_FILEPATH = 'writing/{id}.html'
+
+PATTERN_MARKDOWN = re.compile('''^---\n(?P<meta>.*)\n---\n\n?(?P<body>.*)$''',
                               re.MULTILINE | re.DOTALL)
 
-log = logging.getLogger(__name__)
+LOG = logging.getLogger(__name__)
 
 
 def clean(output_dir):
     filepaths = glob.glob(os.path.join(output_dir, 'writing/*.html'))
-    filepaths.append(os.path.join(output_dir, 'index.html'))
+    filepaths.extend(glob.glob(os.path.join(output_dir, 'index.html')))
+    filepaths.extend(glob.glob(os.path.join(output_dir, 'writing/2???/*.html')))
     for filepath in filepaths:
-        log.info('clean %s', os.path.relpath(filepath))
+        LOG.info('clean %s', filepath)
         os.unlink(filepath)
 
 
@@ -32,16 +36,15 @@ def render(env, markdown_dir, output_dir):
     failures = []
 
     for filepath in glob.glob(os.path.join(markdown_dir, '*.md')):
-        filepath = os.path.relpath(filepath)
         try:
             post = _deserialize_post(filepath)
             _render_post(env, post, output_dir)
             posts.append(post)
         except ValidationError as err:
             failures.append(filepath)
-            log.error('Failed on %s: %s', filepath, err)
+            LOG.error('Failed on %s: %s', filepath, err)
         except Exception as err:
-            log.fatal('Could not process `%s`\n\t%s: %s',
+            LOG.fatal('Could not process `%s`\n\t%s: %s',
                       filepath, err.__class__.__name__, err)
             raise
 
@@ -50,7 +53,7 @@ def render(env, markdown_dir, output_dir):
 
     # Report card
     if failures:
-        log.warning('*** %s failures: %s', len(failures), ', '.join(failures))
+        LOG.warning('*** %s failures: %s', len(failures), ', '.join(failures))
 
 
 ###############################################################################
@@ -60,7 +63,8 @@ def render(env, markdown_dir, output_dir):
 #
 
 def _deserialize_post(filepath):
-    log.debug('_deserialize_post:READ %s', filepath)
+    LOG.debug('READ %s', filepath)
+
     with open(filepath) as fp:
         matches = PATTERN_MARKDOWN.search(fp.read())
     if not matches:
@@ -115,12 +119,30 @@ def _render_post(env, post: dict, output_dir):
     elif context['type'] == TYPE_LINK:
         context['body'] = '<a href="{0}">{0}</a>'.format(context['url'])
 
-    # Write file
-    filepath = os.path.relpath(os.path.join(output_dir, 'writing/{0}.html'.format(post['id'])))
-    log.debug('_render_post:Before write `%s`', filepath)
+    filepath = os.path.join(output_dir, FILEPATH.format(**post))
+
+    # Ensure parent dir
+    parent_dir = os.path.dirname(filepath)
+    if not os.path.exists(parent_dir):
+        LOG.debug('Creating parent dir `%s`', parent_dir)
+        os.makedirs(parent_dir)
+
+    LOG.debug('Before write `%s`', filepath)
     with open(filepath, 'w') as fp:
         fp.write(template.render(**context))
-    log.info('OK %s', filepath)
+
+    # HACK HACK HACK HACK HACK HACK HACK HACK HACK HACK HACK HACK HACK
+    # Copy output to unqualified path to avoid breaking old links
+    legacy_filepath = os.path.join(output_dir, LEGACY_FILEPATH.format(**post))
+    LOG.debug('Copy to unqualified location `%s`', legacy_filepath)
+    with open(legacy_filepath, 'w') as fp:
+        fp.write(template.render(**context).replace(
+            '<head>',
+            '<head>\n\n  <meta http-equiv="refresh" content="0; url=/{}" />\n'.format(FILEPATH.format(**post)),
+        ))
+    # HACK HACK HACK HACK HACK HACK HACK HACK HACK HACK HACK HACK HACK
+
+    LOG.info('wrote %s', filepath)
 
 
 def _render_index(env, posts, output_dir):
@@ -130,14 +152,14 @@ def _render_index(env, posts, output_dir):
     for post in posts:
         context = post.copy()
         if context['type'] in (TYPE_TEXT, TYPE_QUOTE):
-            context['url'] = 'writing/{0}.html'.format(post['id'])
+            context['url'] = FILEPATH.format(**post)
         contexts.append(context)
 
-    filepath = os.path.relpath(os.path.join(output_dir, 'index.html'))
+    filepath = os.path.join(output_dir, 'index.html')
     with open(filepath, 'w') as fp:
-        log.debug('_render_index:Before write `%s`', filepath)
+        LOG.debug('Before write `%s`', filepath)
         fp.write(template.render(posts=contexts))
-    log.info('OK %s', filepath)
+    LOG.info('wrote %s', filepath)
 
 
 def _validate(post):

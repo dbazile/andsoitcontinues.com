@@ -1,22 +1,21 @@
-<!doctype html>
+<!DOCTYPE HTML>
 <html lang="en-us" class="{{route or '__blog__'}}">
 <head>
   <meta charset="utf-8"/>
   <title>{{title or 'bazile.org'}}</title>
-  <meta name="description" content="{{meta or 'On the road to technical mastery, this is my laboratory, my record of lessons learned and my portfolio.'}}"/>
+  <meta name="description" content="{{meta or 'Lessons learned and other 3/4-baked ideas.'}}"/>
   <meta name="viewport" content="width=device-width, initial-scale=0.7, minimum-scale=0.7"/>
-  <base href="{{basehref or './'}}"/>
-  <link rel="icon" href="images/favicon.png"/>
-  <link rel="apple-touch-icon" href="images/favicon.png"/>
-  <link rel="stylesheet" type="text/css" href="styles/common.css"/>
-  <link rel="stylesheet" type="text/css" href="styles/blog.css"/>
-  <link rel="stylesheet" type="text/css" href="styles/highlighter.css"/>
-  <link rel="stylesheet" type="text/css" href="styles/portfolio.css"/>
-  <link rel="stylesheet" type="text/css" href="styles/about.css"/>
-  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Hammersmith+One|Abhaya+Libre:400,700|Cormorant+Garamond:400i,700i|Fira+Mono:400,700">
-  <script src="lib/libhljs.js"></script>
-  <script src="lib/utils.js"></script>
-  <script src="lib/transitioner.js"></script>
+  <link rel="icon" href="/images/favicon.png"/>
+  <link rel="apple-touch-icon" href="/images/favicon.png"/>
+  <link rel="stylesheet" type="text/css" href="/styles/common.css"/>
+  <link rel="stylesheet" type="text/css" href="/styles/blog.css"/>
+  <link rel="stylesheet" type="text/css" href="/styles/highlighter.css"/>
+  <link rel="stylesheet" type="text/css" href="/styles/portfolio.css"/>
+  <link rel="stylesheet" type="text/css" href="/styles/about.css"/>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Hammersmith+One|Abhaya+Libre:400,700|Cormorant+Garamond:400i,700i|Fira+Mono:400,700">
+  <script src="/lib/libhljs.js"></script>
+  <script src="/lib/utils.js"></script>
+  <script src="/lib/transitioner.js"></script>
 </head>
 <body>
 
@@ -24,7 +23,7 @@
     <nav class="navigation">
       <svg viewBox="0 0 760 150" preserveAspectRatio="xMidYMin">
         <line x1="-3000" y1="140" x2="3000" y2="140" />
-        {% for href, section, label in (('index.html', 'blog', 'writing'), ('about.html', 'about', 'about me')) %}
+        {% for href, section, label in (('/index.html', 'blog', 'writing'), ('/about.html', 'about', 'about me')) %}
         <g class="navigation__item" transform="translate({{75 * loop.index0}}, 112), rotate(-45)">
           <a class="navigation__link navigation__link--{{section}}" xlink:href="{{href}}">
             <circle cx="0" cy="40" r="6" />
@@ -33,7 +32,7 @@
           </a>
         </g>
         {% endfor %}
-        <a class="navigation__brand navigation__link" xlink:href="index.html">
+        <a class="navigation__brand navigation__link" xlink:href="/index.html">
           <g transform="translate(685, 88) scale(0.75)">
             <rect x="-5" y="-5" width="110" height="70" rx="20" />
             <path d="M48.361541,21.4785721 C49.5995624,21.5647052 52.1865138,21.7221366 53.9601115,21.6740356 L52.7250151,35.2830673 L48.7168154,34.0165864 L47.97067,36.1591957 L54.76234,38.4911427 L56.2416532,21.8947542 L57.9443369,28.0567191 L56.2924646,27.7733329 L55.8643707,29.0485707 L60.430706,29.8987287 L58.0285547,19.9783949 C62.1511986,17.3864329 68.192391,12.6797593 68.192391,12.6797593 C68.192391,12.6797593 64.9901324,10.7787296 61.806536,10.9837257 C58.9806297,11.1656962 52.0689189,16.6492921 50.5519,17.8788506 L50.5374543,17.7703046 C50.6653863,17.077182 50.5665284,16.4247429 50.2250378,15.8363752 C49.1332375,13.9551876 45.9305152,11.4314407 44.5135743,11.3355759 C44.4945643,11.334307 44.4749747,11.3336148 44.4539941,11.3336148 C43.6009781,11.3336148 41.1825344,12.5308286 39.3707881,13.5561548 C37.4499662,14.6430837 35.1918325,16.1100109 34.6144615,16.9671412 C34.1605031,17.641132 33.9258553,18.7543548 33.8607381,19.9111827 L30.4668926,20.3565091 L30.7660048,22.6040592 L33.9446517,22.1869703 C34.045398,22.9291024 34.2159195,23.5569088 34.4379235,23.9250089 C34.5277085,24.0738979 34.6239117,24.2151597 34.7263432,24.3486939 L32.4778126,25.2235273 L33.3107631,27.3343624 L37.0801073,25.8678276 C37.4901032,25.9683767 37.9307201,26.0193832 38.3991914,26.0193832 C40.2057215,26.0193832 42.4209667,25.2666544 44.8056792,23.8424107 C45.9882177,23.1360711 47.004069,22.4090892 47.8395519,21.6816619 L48.361541,21.4785721 Z" />
@@ -60,9 +59,9 @@
   {% block footer %}
   <footer class="footer footer--standard block">
     <div class="footer__links">
-      <a class="footer__link" href="https://github.com/dbazile" target="_blank" rel="nofollow"><img src="images/github-icon.svg" alt="My GitHub profile"/></a>
-      <a class="footer__link" href="https://twitter.com/spoonchucks" target="_blank" rel="nofollow"><img src="images/twitter-icon.svg" alt="My Twitter profile"/></a>
-      <a class="footer__link" href="https://instagram.com/spoonchucks" target="_blank" rel="nofollow"><img src="images/instagram-icon.svg" alt="My Instagram profile"/></a>
+      <a class="footer__link" href="https://github.com/dbazile" target="_blank" rel="nofollow"><img src="/images/github-icon.svg" alt="My GitHub profile"/></a>
+      <a class="footer__link" href="https://twitter.com/spoonchucks" target="_blank" rel="nofollow"><img src="/images/twitter-icon.svg" alt="My Twitter profile"/></a>
+      <a class="footer__link" href="https://instagram.com/spoonchucks" target="_blank" rel="nofollow"><img src="/images/instagram-icon.svg" alt="My Instagram profile"/></a>
     </div>
     <p class="footer__copyright">&copy;2013-2018 David Bazile</p>
   </footer>

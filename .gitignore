@@ -3,6 +3,9 @@ __pycache__
 .idea
 project.sublime-workspace
 
+*.swo
+*.swp
+
 # Rendered files
 web/index.html
 web/about.html
@@ -13,3 +16,4 @@ web/.blog.html
 web/.portfolio.html
 web/portfolio/index.html
 web/writing/*.html
+web/writing/2???/

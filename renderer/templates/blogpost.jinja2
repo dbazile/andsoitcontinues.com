@@ -2,7 +2,6 @@
 
 {% set title = subject + ' | bazile.org' %}
 {% set meta = abstract|striptags %}
-{% set basehref = '../' %}
 
 {% set placeholder %}
   {% include "blog__loading.jinja2" %}
@@ -29,11 +28,11 @@
       <h6>Tagged</h6>
       <ul>
         {% for tag in tags %}
-        <li><a href="search.html?tagged={{tag}}">{{tag}}</a></li>
+        <li><a href="/search.html?tagged={{tag}}">{{tag}}</a></li>
         {% endfor %}
       </ul>
     </section>
   </article>
 
-  <script src="lib/blogpost.js"></script>
+  <script src="/lib/blogpost.js"></script>
 {% endblock %}

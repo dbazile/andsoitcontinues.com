@@ -1,30 +1,48 @@
+import argparse
 import datetime
 import logging
 import os
-import sys
 
 from jinja2 import Environment, FileSystemLoader
 
 from renderer import blog, partials, portfolio
 
-ROOT         = os.path.dirname(os.path.dirname(__file__))
-WEB_ROOT     = os.path.join(ROOT, 'web')
-MARKDOWN_DIR = os.path.join(ROOT, 'data/markdown')
-XML_DIR      = os.path.join(ROOT, 'data/xml')
-TEMPLATE_DIR = os.path.join(ROOT, 'renderer/templates')
 
+WEB_ROOT     = 'web'
+MARKDOWN_DIR = 'data/markdown'
+XML_DIR      = 'data/xml'
+TEMPLATE_DIR = 'renderer/templates'
+
+
+# Collect script params
+parser = argparse.ArgumentParser()
+parser.add_argument('--debug', action='store_true')
+parser.add_argument('--clean', action='store_true')
+options = parser.parse_args()
+
+
+# Enter workspace
+os.chdir(os.path.dirname(os.path.dirname(__file__)))
+
+
+# Configure logging
 logging.basicConfig(
-    level=logging.DEBUG if '-d' in sys.argv else logging.INFO,
+    format='[%(name)s:%(funcName)30s] %(levelname)-5s - %(message)s' if options.debug else '[%(name)s] %(message)s',
+    level=logging.DEBUG if options.debug else logging.INFO,
 )
 
+
+# Prepare Jinja2
 env = Environment(
     loader=FileSystemLoader(TEMPLATE_DIR),
     lstrip_blocks=True,
     trim_blocks=True,
 )
-
 env.filters['format_datetime'] = datetime.datetime.strftime
-if 'clean' in sys.argv:
+
+
+# Execute
+if options.clean:
     blog.clean(WEB_ROOT)
     portfolio.clean(WEB_ROOT)
     partials.clean(WEB_ROOT)

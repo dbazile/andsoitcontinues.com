@@ -5,20 +5,22 @@
   var ROUTES = [
     {
       className: '__about__',
-      pattern: new RegExp('^about.html$'),
-      placeholderUrl: '.about.html',
+      pattern: new RegExp('^/?about.html$'),
+      placeholderUrl: '/.about.html',
     },
     {
       className: '__blog__',
-      pattern: new RegExp('^(writing/[^/]+\.html|index.html|)$'),
-      placeholderUrl: '.blog.html',
+      pattern: new RegExp('^/?((writing/(\\d{4}/)?[^/]+\.html)|index.html|)$'),
+      placeholderUrl: '/.blog.html',
     },
     {
       className: '__portfolio__',
-      pattern: new RegExp('^portfolio/(index.html|)$'),
-      placeholderUrl: '.portfolio.html',
+      pattern: new RegExp('^/?portfolio/(index.html|)$'),
+      placeholderUrl: '/.portfolio.html',
     }
   ]
+
+  var OWN_HOST = location.href.substring(0, location.href.indexOf(location.pathname))
 
   var PLACEHOLDER_DURATION = 2000
   var NS_XLINK = 'http://www.w3.org/1999/xlink'
@@ -115,9 +117,8 @@
   }
 
   function getRoute(url) {
-    var href = url.replace(document.baseURI, '')
     return ROUTES.filter(function (route) {
-      return route.pattern.test(href)
+      return route.pattern.test(url)
     }).pop()
   }
 
@@ -137,7 +138,7 @@
     // Fill
     atoa(context.querySelectorAll('script'))
       .forEach(function (script) {
-        if (script.src.indexOf(document.baseURI) !== 0) {
+        if (script.src.indexOf(OWN_HOST) !== 0) {
           console.warn('(transitioner:importScripts) discarding untrusted block:', script)
           return
         }
@@ -158,8 +159,7 @@
       return  // Don't click-jack attempts to open new tabs
     }
 
-    var href = this.getAttribute('href') || this.getAttributeNS(NS_XLINK, 'href')
-    var url = document.baseURI + href
+    var url = this.getAttribute('href') || this.getAttributeNS(NS_XLINK, 'href')
     transitionTo(url)
     history.pushState(null, null, url)
 
@@ -180,7 +180,7 @@
     }
     _currentPathname = location.pathname
 
-    transitionTo(location.href.replace(/#(.*)$/, ''))
+    transitionTo(location.pathname + location.search)
   }
 
   function recordEncounter(url) {
@@ -203,13 +203,14 @@
   }
 
   function transitionTo(url) {
+    console.debug('(transitioner:transitionTo) look up route `%s`', url)
     var route = getRoute(url)
     if (!route) {
       console.warn('(transitioner:transitionTo) no route to `%s`', url)
       return
     }
 
-    console.debug('(transitioner:transitionTo) ===> `%s`', url.replace(document.baseURI, ''))
+    console.debug('(transitioner:transitionTo) ===> `%s`', url)
 
     flushBeforeNextQueue()
 

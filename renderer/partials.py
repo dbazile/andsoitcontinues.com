@@ -2,12 +2,12 @@ import glob
 import logging
 import os
 
-log = logging.getLogger(__name__)
+LOG = logging.getLogger(__name__)
 
 
 def clean(output_dir):
     for filepath in glob.glob(os.path.join(output_dir, '*.html')):
-        log.info('clean %s', os.path.relpath(filepath))
+        LOG.info('clean %s', filepath)
         os.unlink(filepath)
 
 
@@ -35,12 +35,12 @@ def render_loading_placeholders(env, output_dir):
         filepath = os.path.join(output_dir, '.{}.html'.format(route))
         try:
             template = env.get_template('{}__loading.jinja2'.format(route))
-            log.debug('render_loading_placeholders:Before render/write `{}`'.format(route))
+            LOG.debug('Before render/write `{}`'.format(route))
             with open(filepath, 'w') as fp:
                 fp.write(template.render())
-                log.info('OK {}'.format(os.path.basename(filepath)))
+                LOG.info('wrote %s', filepath)
         except Exception as err:
-            log.fatal('Could not process %s:', filepath, err)
+            LOG.fatal('Could not process %s:', filepath, err)
             raise err
 
 
@@ -57,12 +57,11 @@ def render_search(env, output_dir):
 #
 
 def _render(env, *, template: str, output: str):
-    filepath = os.path.relpath(output)
     try:
         template = env.get_template(template)
-        with open(filepath, 'w') as fp:
+        with open(output, 'w') as fp:
             fp.write(template.render())
-            log.info('OK {}'.format(filepath))
+            LOG.info('wrote {}'.format(output))
     except Exception as err:
-        log.fatal('Could not process %s: %s', filepath, err)
+        LOG.fatal('Could not process %s: %s', output, err)
         raise err
