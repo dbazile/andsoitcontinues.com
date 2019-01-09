@@ -9,7 +9,7 @@ tags:
     - widevine
 abstract: |
     I accidentally discovered how to get Firefox on Fedora to play Hulu
-    and Amazon Prime Videos and I'm finally Chrome-free again. 🎉.
+    and Amazon Prime Videos and I'm finally Chrome-free again. &#127881;.
 ---
 
 ## TL;DR
@@ -76,11 +76,11 @@ warnings.
 
 Sure enough, there it was (I added linebreaks for readability):
 
-    Jan  8 20:24:11 kefka python3[2408]: SELinux is preventing plugin-containe from execute access on the file /home/david/.mozilla/firefox/2vq1cdx1.default/gmp-widevinecdm/4.10.1196.0/libwidevinecdm.so.
+    Jan  8 20:24:11 kefka python3[2408]: SELinux is preventing plugin-containe from execute access on the file /home/david/.mozilla/firefox/xxxxxxxx.default/gmp-widevinecdm/4.10.1196.0/libwidevinecdm.so.
 
     *****  Plugin restorecon (57.3 confidence) suggests   ************************
 
-    If you want to fix the label. 
+    If you want to fix the label.
     /home/david/.mozilla/firefox/xxxxxxxx.default/gmp-widevinecdm/4.10.1196.0/libwidevinecdm.so default label should be mozilla_home_t.
     Then you can run restorecon. The access attempt may have been stopped due to insufficient permissions to access a parent directory in which case try to change the following command accordingly.
     Do
@@ -107,12 +107,12 @@ Oh, the problem this whole time was a misconfigured SELinux context. :|
 
 ### How did the context change?
 
-Here's my hunch.  Last year, I handed down my old Thinkpad to my eldest
-child after migrating a bunch of stuff from my home directory via SCP.
-The `~/.mozilla` tree apparently inherited the context of `/home/david`
-(i.e., `user_home_t`) instead of the correct one (i.e., `mozilla_home_t`)
-which I assume would have been set during the normal user
-onboarding/postinstall process.
+Here's my hunch.  Last year, I handed down my old Thinkpad to my
+eldest child after migrating a bunch of stuff from my home directory
+via SCP. The `~/.mozilla` tree apparently inherited the context of
+`/home/david` (i.e., `user_home_t`) instead of the correct one (i.e.,
+`mozilla_home_t`) which I assume would have been set during the normal
+user onboarding/postinstall process.
 
 To see the **correct** default context for the `~/.mozilla` tree, run:
 
@@ -123,13 +123,13 @@ To see the **correct** default context for the `~/.mozilla` tree, run:
 To see what yours is actually set to, run:
 
     $ find ~/.mozilla -name '*widevine*.so' -exec ls -lZ {} \;
-    
-    -rwx------. 1 david david unconfined_u:object_r:mozilla_home_t:s0 6998236 Dec 30 14:38 /home/david/.mozilla/firefox/2vq1cdx1.default/gmp-widevinecdm/4.10.1196.0/libwidevinecdm.so
 
-If it's set to the wrong value, set to something other than
-`mozilla_home_t`, such as `user_home_t` like mine was, SELinux is going
-to restrict Firefox from loading the plugin and you're gonna get the
-same ambiguous error I got in the screenshot above.
+    -rwx------. 1 david david unconfined_u:object_r:mozilla_home_t:s0 6998236 Dec 30 14:38 /home/david/.mozilla/firefox/xxxxxxxx.default/gmp-widevinecdm/4.10.1196.0/libwidevinecdm.so
+
+If it's set to anything other than `mozilla_home_t` (such as
+`user_home_t` like mine was), SELinux is going to restrict Firefox
+from loading the plugin and you're gonna get the same ambiguous error
+I got in the screenshot above.
 
 
 ## See a problem?
