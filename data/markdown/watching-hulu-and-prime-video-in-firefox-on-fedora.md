@@ -39,10 +39,7 @@ The following worked on my Fedora 28/29 daily driver:
         gstreamer1-plugins-good \
         gstreamer1-libav
 
-    # maybe
-    sudo dnf install openh264 mozilla-openh264
-
-    # maybe maybe (read below for more details on if you need this)
+    # maybe (read below for more details on if you need this)
     restorecon -R -v ~/.mozilla
 ```
 
