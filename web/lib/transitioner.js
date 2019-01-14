@@ -22,7 +22,7 @@
 
   var OWN_HOST = location.href.substring(0, location.href.indexOf(location.pathname))
 
-  var PLACEHOLDER_DURATION = 2000
+  var PLACEHOLDER_DURATION = location.hostname.match(/^(localhost|127\.0\.0\.1)$/) ? 0 : 2000
   var NS_XLINK = 'http://www.w3.org/1999/xlink'
   var SHOW_PLACEHOLDER = '__showPlaceholder__'
 

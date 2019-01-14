@@ -18,6 +18,7 @@ TEMPLATE_DIR = 'renderer/templates'
 parser = argparse.ArgumentParser()
 parser.add_argument('--debug', action='store_true')
 parser.add_argument('--clean', action='store_true')
+parser.add_argument('--watch', action='store_true')
 options = parser.parse_args()
 
 
@@ -27,7 +28,8 @@ os.chdir(os.path.dirname(os.path.dirname(__file__)))
 
 # Configure logging
 logging.basicConfig(
-    format='[%(name)s:%(funcName)30s] %(levelname)-5s - %(message)s' if options.debug else '[%(name)s] %(message)s',
+    datefmt='%H:%M:%S',
+    format='%(asctime)s [%(name)s:%(funcName)s] %(levelname)-5s - %(message)s' if options.debug else '[%(name)s] %(message)s',
     level=logging.DEBUG if options.debug else logging.INFO,
 )
 
@@ -46,6 +48,9 @@ if options.clean:
     blog.clean(WEB_ROOT)
     portfolio.clean(WEB_ROOT)
     partials.clean(WEB_ROOT)
+
+if options.watch:
+    blog.watch(env, MARKDOWN_DIR, WEB_ROOT)
 else:
     blog.render(env, MARKDOWN_DIR, WEB_ROOT)
     portfolio.render(env, XML_DIR, WEB_ROOT)
