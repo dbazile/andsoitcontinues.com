@@ -19,13 +19,13 @@ Based on the feedback I got from my peer group last week, I noted and attempted 
 
 __TL;DR__, I'll spare you the boring details and offer the link to the updated version up front:
 
-[![new and improved(?)](../writing/attachments/screenshot-interactive-wireframe.png)](https://davidbazile.proto.io/share/?id=65379e6f-6bbb-4c26-a598-d704d4690ced&v=4)
+[![new and improved(?)](/writing/attachments/screenshot-interactive-wireframe.png)](https://davidbazile.proto.io/share/?id=65379e6f-6bbb-4c26-a598-d704d4690ced&v=4)
 
 
 ### Users need more information regarding auto-refill (how often does it occur, how much is refilled, is there a balance trigger, etc)
 
 <img
-    src="../writing/attachments/coursework-ixd-prototype-autorefill-animation.gif"
+    src="/writing/attachments/coursework-ixd-prototype-autorefill-animation.gif"
     alt="fix for auto-refill ambiguity"
     style="width: 200px; float: right; margin: 0 0 1em 1em;"/> I addressed this by adding a more descriptive label to the toggle button that reveals a trigger balance field beneath it:
 
@@ -36,7 +36,7 @@ My intent here was to keep the "simple" path clean for the non-technical persona
 ### Users have no way to view a list of things they've "favorited"
 
 <img
-    src="../writing/attachments/coursework-ixd-prototype-favorites-animation.gif"
+    src="/writing/attachments/coursework-ixd-prototype-favorites-animation.gif"
     alt="fix for missing favorites list"
     style="width: 200px; float: left; margin: 0 1em 1em 0;"/> This I solved by just adding another screen since it'd be pretty hard to piggy back this onto something else.
 

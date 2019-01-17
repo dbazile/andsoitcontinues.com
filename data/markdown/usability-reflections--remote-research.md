@@ -36,7 +36,7 @@ Ethnio has a well-defined and well-communicated product offering, shows you exac
 
 Digging around on their website, I found a super-clever use of CSS to make a scalable curly brace representation:
 
-[<img src="../writing/attachments/curly-brace-in-css-thumbnail.png"/>](../writing/attachments/curly-brace-in-css.png)
+[<img src="/writing/attachments/curly-brace-in-css-thumbnail.png"/>](/writing/attachments/curly-brace-in-css.png)
 
 
 ### [Amazon Mechanical Turk](http://www.mturk.com)

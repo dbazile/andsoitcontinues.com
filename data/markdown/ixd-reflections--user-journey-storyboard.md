@@ -15,7 +15,7 @@ abstract: |
 
 A User Journey is a way to tell a story from beginning to end for some goal a user has with relation to an application.  The key to using a Storyboard to do this is showing progression with _some_ degree of context and indicate subject's emotion along the way.
 
-![step](../writing/attachments/storyboard-step.svg)
+![step](/writing/attachments/storyboard-step.svg)
 
 
 ## The Takeaway
@@ -28,7 +28,7 @@ Deliberate storyboarding is completely new to me, so naturally I ran into a few 
 
 So I've been ultra-busy at work in recent weeks cleaning up some technical debt (that I'm entirely responsible for) __and__ not fall too far behind sprint commitments.  I didn't get a chance to look at the assignment list until Friday night.
 
-![proto.io](../writing/attachments/proto-dot-io.png)
+![proto.io](/writing/attachments/proto-dot-io.png)
 
 > Behold, [a new thing to learn](https://proto.io)!
 
@@ -55,5 +55,5 @@ Still not convinced that I did it exactly right.  Guess I'll find out when the g
 ## Attachments
 
 
-[<img src="../writing/attachments/coursework-UserJourney-icon.png" alt="PDF" style="margin: 0; width: 100px !important; box-shadow: none !important; border-radius: 0 !important;"/>](/writing/attachments/61095-interaction-design-storyboard.pdf)
+[<img src="/writing/attachments/coursework-UserJourney-icon.png" alt="PDF" style="margin: 0; width: 100px !important; box-shadow: none !important; border-radius: 0 !important;"/>](/writing/attachments/61095-interaction-design-storyboard.pdf)
 
