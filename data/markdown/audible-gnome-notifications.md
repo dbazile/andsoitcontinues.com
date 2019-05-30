@@ -17,7 +17,7 @@ abstract: |
 Should work out of the box without needing to install any additional
 dependencies (tested on CentOS 7 and Fedora 29, 30):
 
-  ./gaudible.py --filter test --filter calendar
+    ./gaudible.py --filter firefox --filter calendar --filter calendar-legacy
 
 
 ## Source ([@dbazile/gaudible](https://github.com/dbazile/gaudible))
