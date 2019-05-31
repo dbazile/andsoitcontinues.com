@@ -460,9 +460,8 @@
 
 .post__content blockquote {
   opacity: .8;
-  font-size: 1.2em;
   margin-top: 1.2em;
-  font: italic 1.6rem "Cormorant Garamond";
+  font-style: italic;
   color: #777;
 }
 
