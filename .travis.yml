@@ -9,5 +9,5 @@ git:
 script:
   - set -e
   - python -m renderer
-  - git rev-parse HEAD > web/fingerprint.txt
-  - aws s3 sync web/ s3://bazile.www/ --delete
+  - git rev-parse HEAD > public/fingerprint.txt
+  - aws s3 sync public/ s3://bazile.www/ --delete
