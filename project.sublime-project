@@ -17,7 +17,7 @@
 		{
 			"binary_file_patterns":
 			[
-				"web/*.html"
+				"public/*.html"
 			],
 			"path": "."
 		}
