@@ -34,7 +34,7 @@ This is a purely subjective argument but I dislike this style.  To me it looks l
 
 In the weeks leading up to the ES2015 spec being finalized, I started seeing this kind of code popping up all over the web in tutorials and "first looks" and it drove me batty:
 
-![goddammitwhy?!](/writing/attachments/goddammitwhy@2x.png)
+![goddammitwhy?!](/public/writing/attachments/goddammitwhy@2x.png)
 
 Maybe it's my own background---I cut my teeth on PHP, moving onto Java before I _really_ started focusing on JavaScript.  PHP and Java are pretty darn clear about what constitutes a function/method.  Granted you _could_ do this, but then you should have someone take your keyboard away:
 
@@ -74,7 +74,7 @@ function _doSomeSpecificThing(inputA) { ... }
 Knowing that I've written other modules in the codebase that follow this pattern, I opened up one of my larger modules.  To my absolute horror, I saw that what was once a thing of (relative) beauty was turned __completely upside down__.  Helper methods dominate the module---I had to scroll down for several hundred lines before I found the external API.
 
 <img
-    src="/writing/attachments/upsidedownland@1x.png"
+    src="/public/writing/attachments/upsidedownland@1x.png"
     style="display: block; width: 350px; margin: 0 auto;"/>
 
 Needing to get a feature implemented and not wanting to have to lose momentum by stopping to research, then politick for hours just to get that rule squashed, I just dropped an `/* eslint no-use-before-define: [2, "nofunc"] */` override at the top of the file and kept working.

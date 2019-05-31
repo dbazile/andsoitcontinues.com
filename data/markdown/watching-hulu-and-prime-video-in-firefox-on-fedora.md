@@ -54,7 +54,7 @@ this video" when clicked.
 So I installed the `gstreamer-*` packages via RPM Fusion which
 worked for the Twitter "GIFs" but not Amazon or Hulu:
 
-![screenshot of the crash](/writing/attachments/widevine_plugin_crashed.png)
+![screenshot of the crash](/public/writing/attachments/widevine_plugin_crashed.png)
 
 To deal with this, I started running Chrome (which I use only for
 Flash holdouts; looking at you Rosetta Stone) to stream and Firefox

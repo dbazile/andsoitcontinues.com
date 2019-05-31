@@ -32,4 +32,4 @@ A number of failures were due to users clicking on URLs belonging to Google's ad
 
 ## Attachments
 
-[<img src="/writing/attachments/coursework-RemoteTestingReport-icon.png" alt="PDF" style="width: 200px !important; box-shadow: none !important; border-radius: 0 !important;"/>](/writing/attachments/coursework-RemoteTestingReport.pdf)
+[<img src="/public/writing/attachments/coursework-RemoteTestingReport-icon.png" alt="PDF" style="width: 200px !important; box-shadow: none !important; border-radius: 0 !important;"/>](/public/writing/attachments/coursework-RemoteTestingReport.pdf)

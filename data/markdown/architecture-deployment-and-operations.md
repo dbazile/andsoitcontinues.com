@@ -67,7 +67,7 @@ with a more generic one that fixes some projects while hosing the others that
 had come to rely on the nonstandard behavior, starting the cycle all over
 again.
 
-[![A Vicious Cycle](/writing/attachments/vicious-cycle.png)](http://www.smbc-comics.com/comic/a-vicious-cycle)
+[![A Vicious Cycle](/public/writing/attachments/vicious-cycle.png)](http://www.smbc-comics.com/comic/a-vicious-cycle)
 
 #### Installing "sciency" dependencies (e.g., GDAL, scipy, numpy, etc) can be hard to get right and harder to repeat
 

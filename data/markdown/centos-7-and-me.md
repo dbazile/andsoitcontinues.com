@@ -56,7 +56,7 @@ Imagine my surprise when I get this cryptic response from `/sbin/service`:
 
 It took a good amount of Google-fu to get enough info on systemd to proceed with what I wanted to do, but ultimately I have chosen to embrace this opportunity to "explore the frontier".  I very much like the status data it provides for running services, such as listing the hierarchy of process IDs and the log tail (thus proving yet again that I'm a sucker for anything with fancy text formatting):
 
-<img src="/writing/attachments/systemd_status.png" class="figure center" />
+<img src="/public/writing/attachments/systemd_status.png" class="figure center" />
 
 One thing I don't like is the very cumbersome command name `systemctl`.  Typing that leads to a ton of time-wasting typos, so I set the following alias in my .profile:
 
@@ -83,7 +83,7 @@ The `/sbin/ifconfig` command comes in the `net-tools` package, which is not inst
 
 After installing ifconfig, it's time to look at the machine's assigned IP.  The interface name has a completely different naming convention:
 
-<img src="/writing/attachments/ifconfig_interface_name.png" class="figure center" />
+<img src="/public/writing/attachments/ifconfig_interface_name.png" class="figure center" />
 
 As for the reason why the interface names have lost their brevity, [CentOS has posted the following reason in their FAQ](http://wiki.centos.org/FAQ/CentOS7#head-62d45421abea0220e3038796e3dd5315906fa493), emphasis mine:
 

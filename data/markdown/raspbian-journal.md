@@ -20,7 +20,7 @@ abstract: |
 
 ## Fixing Keyboard Annoyances
 
-![keyboard and receiver](/writing/attachments/k375s.png)
+![keyboard and receiver](/public/writing/attachments/k375s.png)
 
 My Logitech K375s via the unifying receiver works properly except but
 some of the keys were all a-poopy, i.e.:

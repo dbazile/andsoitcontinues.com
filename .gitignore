@@ -7,13 +7,13 @@ project.sublime-workspace
 *.swp
 
 # Rendered files
-web/index.html
-web/about.html
-web/404.html
-web/search.html
-web/.about.html
-web/.blog.html
-web/.portfolio.html
-web/portfolio/index.html
-web/writing/*.html
-web/writing/2???/
+/public/index.html
+/public/about.html
+/public/404.html
+/public/search.html
+/public/.about.html
+/public/.blog.html
+/public/.portfolio.html
+/public/portfolio/index.html
+/public/writing/*.html
+/public/writing/2???/

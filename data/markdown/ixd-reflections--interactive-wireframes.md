@@ -16,7 +16,7 @@ abstract: |
 
 This is what I spent last weekend doing (and incidentally how I got more familiar with proto.io)&mdash;<strike>[gold-plating](http://c2.com/cgi/wiki?GoldPlating)</strike>, err, _crafting_ the entire interactive wireframe.  Which is probably a good thing, considering the hair-fire mid-sprint demo dropped on me at work this week.
 
-[![such golden much plated](/writing/attachments/screenshot-interactive-wireframe.png)](https://davidbazile.proto.io/share/?id=65379e6f-6bbb-4c26-a598-d704d4690ced&v=3)
+[![such golden much plated](/public/writing/attachments/screenshot-interactive-wireframe.png)](https://davidbazile.proto.io/share/?id=65379e6f-6bbb-4c26-a598-d704d4690ced&v=3)
 
 
 ## The Takeaway
@@ -34,4 +34,4 @@ As if _I_ know what _I'm_ talking about, ha.  Plus, I know how defensive I can b
 
 It's also weird because the critiquing for this assignment may appear retaliatory (feedback is async; you can view someone's feedback before giving your own).  It kinda makes me hold back a bit more if I'm reviewing someone who dinged me on some things, lest it look as if I'm trying to get even.
 
-![ADORBS](/writing/attachments/vengeance.jpg)
+![ADORBS](/public/writing/attachments/vengeance.jpg)

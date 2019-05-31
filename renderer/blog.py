@@ -4,7 +4,9 @@ import os
 import re
 import time
 
-import markdown
+from markdown import Markdown
+from markdown.preprocessors import Preprocessor
+
 import yaml
 
 
@@ -17,6 +19,7 @@ TYPE_TEXT = 'text'
 FILEPATH        = 'writing/{date:%Y}/{id}.html'
 LEGACY_FILEPATH = 'writing/{id}.html'
 
+PATTERN_EXTERNAL = re.compile(r'^(https?:)//')
 PATTERN_MARKDOWN = re.compile(r'^---\n(?P<meta>.*)\n---\n\n?(?P<body>.*)$',
                               re.MULTILINE | re.DOTALL)
 
@@ -36,9 +39,11 @@ def render(env, markdown_dir, output_dir):
     posts = []
     failures = []
 
+    pubdir = '/' + os.path.basename(output_dir) + '/'
+
     for filepath in _globmds(markdown_dir):
         try:
-            post = _deserialize_post(filepath)
+            post = _deserialize_post(filepath, pubdir)
             _render_post(env, post, output_dir)
             posts.append(post)
         except ValidationError as err:
@@ -124,7 +129,7 @@ def watch(env, markdown_dir, output_dir, interval_s=0.75, debounce_s=.3):
 # Internals
 #
 
-def _deserialize_post(filepath):
+def _deserialize_post(filepath, pubdir):
     LOG.debug('READ %s', filepath)
 
     with open(filepath) as fp:
@@ -135,15 +140,19 @@ def _deserialize_post(filepath):
 
     raw_meta, raw_body = matches.groups()
 
+    m = Markdown(extensions=[
+        'markdown.extensions.smarty',
+        'markdown.extensions.fenced_code',
+        'markdown.extensions.tables',
+        'markdown.extensions.toc',
+    ])
+
+    m.preprocessors.register(LocalPathResolver(pubdir), 'local-path-resolver', 0)
+
     post = {
         'id': _generate_id(filepath),
         'type': DEFAULT_TYPE,
-        'body': markdown.markdown(raw_body, [
-            'markdown.extensions.smarty',
-            'markdown.extensions.fenced_code',
-            'markdown.extensions.tables',
-            'markdown.extensions.toc',
-        ]),
+        'body': m.convert(raw_body),
     }
 
     meta = yaml.load(raw_meta)
@@ -156,7 +165,7 @@ def _deserialize_post(filepath):
             return
 
         if key == 'abstract':
-            value = markdown.markdown(value, ['markdown.extensions.smarty'])
+            value = Markdown(extensions=['markdown.extensions.smarty']).convert(value)
 
         post[key] = value
 
@@ -165,6 +174,10 @@ def _deserialize_post(filepath):
     # Special Case: Quotes and images need abstract to mirror body
     if post['type'] in ('quote', 'image'):
         post['abstract'] = post['body']
+
+    # Special Case: Image URLs may point to a repo-relative path
+    if post['type'] == 'image':
+        post['url'] = _resolve_local(post['url'], pubdir)
 
     return post
 
@@ -234,6 +247,25 @@ def _render_index(env, posts, output_dir):
     LOG.info('wrote %s', filepath)
 
 
+def _resolve_local(raw_path: str, pubdir: str):
+    if PATTERN_EXTERNAL.match(raw_path):
+        LOG.debug('Skip non-local: %s', raw_path)
+        return raw_path
+
+    # Rewrite public path
+    resolved_path = re.sub('^' + re.escape(pubdir), '/', raw_path)
+
+    # Discard rewrite if file can't be resolved
+    abs_path = os.curdir + raw_path
+    if not os.path.exists(abs_path):
+        LOG.warn('Found reference to nonexistent local: %s', abs_path)
+        return raw_path
+
+    LOG.debug('Resolve local: %s -> %s', raw_path, resolved_path)
+
+    return resolved_path
+
+
 def _sort_posts(posts):
     return sorted(posts, reverse=True, key=lambda post: post['date'])
 
@@ -248,6 +280,40 @@ def _validate(post):
     if post.get('type') in ('image', 'link'):
         if 'url' not in post:
             raise ValidationError('missing `{}`'.format('url'), post)
+
+
+#
+# Markdown Processors
+#
+
+
+class LocalPathResolver(Preprocessor):
+    def __init__(self, pubdir, **kwargs):
+        super().__init__(**kwargs)
+        self.pattern = re.compile(r'((?:"{0}[^"]+")|(?:\({0}[^)]+\)))'.format(re.escape(pubdir)))
+        self.pubdir = pubdir
+
+    def run(self, lines: list):
+        new_lines = []
+
+        for i, line in enumerate(lines, 1):
+            LOG.debug('Examine line %s: %s', i, line)
+
+            for m in self.pattern.finditer(line):
+                local = m.group()[1:-1]
+
+                LOG.debug('Resolving local path: %s', local)
+
+                new_local = _resolve_local(local, self.pubdir)
+
+                # Apply the change
+                line = re.sub(re.escape(local), new_local, line, 1)
+
+                LOG.debug('Changed line %s: %s', i, line)
+
+            new_lines.append(line)
+
+        return new_lines
 
 
 #

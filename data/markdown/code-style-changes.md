@@ -14,7 +14,7 @@ abstract: |
     the last year.
 ---
 
-![pokemon evolution scene](/writing/attachments/evolving-code@2x.png)
+![pokemon evolution scene](/public/writing/attachments/evolving-code@2x.png)
 
 ## Learning from my own mistakes, coworkers' feedback and from reading other people's code
 
@@ -83,7 +83,7 @@ And when it _didn't_ look that way, I'd meticulously reformat the entire source 
 But the thing is, I think the four space indentations were a crutch I was relying on to cover up some bad habits, e.g., deferring refactor of gigantic functions, omitting curly braces, etc.  In reality, those gigantic functions should have been refactored and being _"easier to read"_ served as an excuse not to refactor.  And I've since gotten into the habit of putting curly braces _everywhere_.
 
 <img
-    src="/writing/attachments/drowning-in-curly-braces@1x.png"
+    src="/public/writing/attachments/drowning-in-curly-braces@1x.png"
     style="display: block; width: 200px; margin: 0 auto;"/>
 
 #### As for the _spaces vs. tabs_ thing...

@@ -41,7 +41,7 @@ That said, I think this is one of those things that gets easier once you have so
 
 ## Attachments
 
-[<img src="/writing/attachments/coursework-ScreenerAndTasks-icon.png" alt="PDF" style="width: 100px !important; box-shadow: none !important; border-radius: 0 !important;"/>](/writing/attachments/coursework-ScreenerAndTasks.pdf)
+[<img src="/public/writing/attachments/coursework-ScreenerAndTasks-icon.png" alt="PDF" style="width: 100px !important; box-shadow: none !important; border-radius: 0 !important;"/>](/public/writing/attachments/coursework-ScreenerAndTasks.pdf)
 
 
 ## Resources

@@ -21,7 +21,7 @@ The text reading prescribes collecting the notes on the day of testing, but wait
 
 ## Attachments
 
-[<img src="/writing/attachments/coursework-UsabilityTestReport-icon.png" alt="PDF" style="width: 100px !important; box-shadow: none !important; border-radius: 0 !important;"/>](/writing/attachments/coursework-UsabilityTestReport.pdf)
+[<img src="/public/writing/attachments/coursework-UsabilityTestReport-icon.png" alt="PDF" style="width: 100px !important; box-shadow: none !important; border-radius: 0 !important;"/>](/public/writing/attachments/coursework-UsabilityTestReport.pdf)
 
 
 

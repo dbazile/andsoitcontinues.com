@@ -13,7 +13,7 @@ abstract: |
 
 ## It's that time again...
 
-![Astronaut Dog](/writing/attachments/i_have_no_idea_what_im_doing3.gif)
+![Astronaut Dog](/public/writing/attachments/i_have_no_idea_what_im_doing3.gif)
 
 I'm currently working towards a masters degree in User Experience Design.  They called an audible and introduced a brand new Interaction Design Fundamentals course which I, of course, jumped all over.  One of the requirements is that whole "reflective journal" thing.
 

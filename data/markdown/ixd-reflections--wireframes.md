@@ -16,7 +16,7 @@ abstract: |
 
 We did sketches with plain old pen and paper, then posted them to a student group forum for peer review.
 
-[![ehrmagerd dat handwriting](/writing/attachments/coursework-wireframe-chickenscratch.jpg)](../static/uxd_coursework/61095-interaction-design-app-wireframes/Sketches Round 1/)
+[![ehrmagerd dat handwriting](/public/writing/attachments/coursework-wireframe-chickenscratch.jpg)](../static/uxd_coursework/61095-interaction-design-app-wireframes/Sketches Round 1/)
 
 Despite my atrocious chickenscratch, I received generally positive feedback with a few suggestions identifying conceptual problems related to the lower navigation bar.
 
@@ -47,7 +47,7 @@ I fixed this one by restructuring the architecture around three key areas: _Home
 
 Because last week led up to a holiday, the schedule was relatively light&mdash;I was actually able to play around with proto.io this time.  As it turns out, it's pretty frickin sweet.  Who knew?
 
-[![proto.io example](/writing/attachments/proto-dot-io-example.gif)](https://proto.io/en/demos/)
+[![proto.io example](/public/writing/attachments/proto-dot-io-example.gif)](https://proto.io/en/demos/)
 
 > My crappy screenshots that don't really do it justice...
 
@@ -73,5 +73,5 @@ But considering the functionality packed into it, I'm inclined to just live with
 
 ## Attachments
 
-[<img src="/writing/attachments/coursework-IxD-Wireframes-icon.png" alt="PDF" style="margin: 0; width: 100px !important; box-shadow: none !important; border-radius: 0 !important;"/>](/writing/attachments/61095-interaction-design-app-wireframes.pdf)
+[<img src="/public/writing/attachments/coursework-IxD-Wireframes-icon.png" alt="PDF" style="margin: 0; width: 100px !important; box-shadow: none !important; border-radius: 0 !important;"/>](/public/writing/attachments/61095-interaction-design-app-wireframes.pdf)
 

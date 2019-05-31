@@ -8,7 +8,7 @@ from jinja2 import Environment, FileSystemLoader
 from renderer import blog, partials, portfolio
 
 
-WEB_ROOT     = 'web'
+WEB_ROOT     = 'public'
 MARKDOWN_DIR = 'data/markdown'
 XML_DIR      = 'data/xml'
 TEMPLATE_DIR = 'renderer/templates'
@@ -18,6 +18,7 @@ TEMPLATE_DIR = 'renderer/templates'
 parser = argparse.ArgumentParser()
 parser.add_argument('--debug', action='store_true')
 parser.add_argument('--clean', action='store_true')
+parser.add_argument('--clean-only', action='store_true')
 parser.add_argument('--watch', action='store_true')
 options = parser.parse_args()
 
@@ -29,8 +30,8 @@ os.chdir(os.path.dirname(os.path.dirname(__file__)))
 # Configure logging
 logging.basicConfig(
     datefmt='%H:%M:%S',
-    format='%(asctime)s [%(name)s:%(funcName)s] %(levelname)-5s - %(message)s' if options.debug else '[%(name)s] %(message)s',
-    level=logging.DEBUG if options.debug else logging.INFO,
+    format='%(asctime)s [%(name)s:%(funcName)s] %(levelname)-7s - %(message)s' if options.debug else '[%(name)-18s] %(levelname)s : %(message)s',
+    level='DEBUG' if options.debug else 'INFO',
 )
 
 
@@ -44,10 +45,13 @@ env.filters['format_datetime'] = datetime.datetime.strftime
 
 
 # Execute
-if options.clean:
+if options.clean or options.clean_only:
     blog.clean(WEB_ROOT)
     portfolio.clean(WEB_ROOT)
     partials.clean(WEB_ROOT)
+
+    if options.clean_only:
+        exit()
 
 if options.watch:
     blog.watch(env, MARKDOWN_DIR, WEB_ROOT)
