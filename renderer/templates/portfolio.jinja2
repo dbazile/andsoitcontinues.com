@@ -2,7 +2,6 @@
 
 {% set route = '__portfolio__' %}
 {% set title = 'Portfolio | bazile.org' %}
-{% set basehref = '../' %}
 
 {% set placeholder %}
   {% include "portfolio__loading.jinja2" %}
@@ -12,13 +11,13 @@
   <section class="preamble block columns">
     <div class="preamble__skills column">
       <h1>David Bazile</h1>
-      <img class="preamble__pieChart" src="images/skills-pie-chart.svg" alt="A breakdown of my skills"/>
+      <img class="preamble__pieChart" src="/images/skills-pie-chart.svg" alt="A breakdown of my skills"/>
     </div>
     <div class="preamble__github column">
       <h3>Looking for code?</h3>
       <p>All that stuff is over at GitHub.</p>
       <a class="github__link" href="https://github.com/dbazile" target="_blank">
-        <img class="github__icon" src="images/github-icon.svg" alt="Go to my GitHub profile" />
+        <img class="github__icon" src="/images/github-icon.svg" alt="Go to my GitHub profile" />
       </a>
     </div>
   </section>
@@ -27,7 +26,7 @@
     <h2 class="portfolio__heading block">User Interface</h2>
     <ul class="tiles">
       {% for work in ui_works %}
-      <li class="tiles__tile"><a href="portfolio/index.html#{{work.id}}"><img src="{{work.brand}}" alt="{{work.name}}"/></a></li>
+      <li class="tiles__tile"><a href="/portfolio/index.html#{{work.id}}"><img src="/{{work.brand}}" alt="{{work.name}}"/></a></li>
       {% endfor %}
     </ul>
 
@@ -52,7 +51,7 @@
             </div>
             <div class="column__microdata column__microdata--url">
               <h4>URL</h4>
-              <p><a target="_blank" href="{{work.artifacts[work.link.artifactIndex].href}}">View {{work.link.label or work.artifacts[work.link.artifactIndex].name or 'Wat'}}</a></p>
+              <p><a target="_blank" href="/{{work.artifacts[work.link.artifactIndex].href}}">View {{work.link.label or work.artifacts[work.link.artifactIndex].name or 'Wat'}}</a></p>
             </div>
             <div class="column__microdata column__microdata--technologies">
               <h4>Technologies</h4>
@@ -67,12 +66,12 @@
 
             <ul class="narrative__files">
               {% for link in narrative_block.links %}
-              <li class="narrative__file"><a target="_blank" href="{{work.artifacts[link.artifactIndex].href}}"><img src="{{work.artifacts[link.artifactIndex].thumbnail}}" alt="thumbnail">{{link.label or work.artifacts[link.artifactIndex].name or 'Untitled Artifact'}}</a></li>
+              <li class="narrative__file"><a target="_blank" href="/{{work.artifacts[link.artifactIndex].href}}"><img src="/{{work.artifacts[link.artifactIndex].thumbnail}}" alt="thumbnail">{{link.label or work.artifacts[link.artifactIndex].name or 'Untitled Artifact'}}</a></li>
               {% endfor %}
             </ul>
           </div>
           <div class="narrative__column narrative__column--media">
-            <img class="narrative__mural" src="{{narrative_block.mural or 'images/placeholder.svg'}}" alt="narrative mural"/>
+            <img class="narrative__mural" src="/{{narrative_block.mural or 'images/placeholder.svg'}}" alt="narrative mural"/>
           </div>
         </div>
         {% endfor %}
@@ -86,7 +85,7 @@
     <ul class="photoshoppery__artifacts">
       {% for work in photoshop_works %}
       <li id="{{work.id}}" class="photoshoppery__entry">
-        <a target="_blank" href="{{work.artifact.href}}"><img src="{{work.artifact.thumbnail}}" alt="thumbnail"/></a>
+        <a target="_blank" href="/{{work.artifact.href}}"><img src="/{{work.artifact.thumbnail}}" alt="thumbnail"/></a>
         <h2 class="photoshoppery__title">{{work.name}}</h2>
         <div class="photoshoppery__circa">{{work.circa}}</div>
         <div class="photoshoppery__background">{{work.summary}}</div>
@@ -95,7 +94,7 @@
     </ul>
   </section>
 
-  <script src="lib/portfolio.js"></script>
+  <script src="/lib/portfolio.js"></script>
 {% endblock %}
 
 {% block footer %}
