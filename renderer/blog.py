@@ -72,6 +72,8 @@ def watch(env, markdown_dir, output_dir, interval_s=0.75, debounce_s=.3):
              interval_s,
              debounce_s)
 
+    pubdir = '/' + os.path.basename(output_dir) + '/'
+
     mtimes = {}
     for filepath in _globmds(markdown_dir):
         mtime = os.stat(filepath).st_mtime
@@ -98,7 +100,7 @@ def watch(env, markdown_dir, output_dir, interval_s=0.75, debounce_s=.3):
             time.sleep(debounce_s)
 
             try:
-                post = _deserialize_post(filepath)
+                post = _deserialize_post(filepath, pubdir)
                 _render_post(env, post, output_dir)
                 something_changed = True
             except Exception as e:
@@ -108,7 +110,7 @@ def watch(env, markdown_dir, output_dir, interval_s=0.75, debounce_s=.3):
         # Re-render index if needed
         if something_changed:
             try:
-                posts = [_deserialize_post(s) for s in _globmds(markdown_dir)]
+                posts = [_deserialize_post(s, pubdir) for s in _globmds(markdown_dir)]
                 _render_index(env, _sort_posts(posts), output_dir)
             except Exception as e:
                 LOG.error('Could not render index %s: %s', filepath, e)
