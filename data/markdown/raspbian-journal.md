@@ -64,32 +64,35 @@ EOT
 I'm using the above-pictured [TP-Link TL-WN7222N v3](
 https://www.tp-link.com/us/home-networking/usb-adapter/tl-wn722n/) USB
 Wi-Fi adapter which is capable of entering "monitor" mode.  To
-actually _put_ it into monitor mode though, you need [a specialized `rtl8188eu` driver](
-https://github.com/aircrack-ng/rtl8188eus).  After compiling,
-I manually tested and confirmed that it was working:
+actually _put_ it into monitor mode though, you need [a specialized
+`rtl8188eu` driver](https://github.com/aircrack-ng/rtl8188eus).
+After compiling, I manually tested and confirmed that it was working:
 
     $ sudo insmod /lib/modules/4.19.66-v7++/kernel/drivers/net/wireless/8188eu.ko
     $ sudo iwconfig wlan1 mode monitor
 
-...and then I rebooted. :)
-
-When the machine came back up, I reran the same `iwconfig` command
-which gave this error:
+After rebooting, that same `iwconfig` command gave this error:
 
     Error for wireless request "Set Mode" (8B06) :
         SET failed on device wlan1 ; Operation not supported.
 
-Apparently the reboot reordered my WLAN devices (maybe because
-`8188eu` occurs before both the on-board Wi-Fi's `brcmfmac` driver and
-the default `r8188eu` driver in lexical order?).
+Apparently the reboot reordered my `wlan*` devices: `wlan0` (onboard)
+became `wlan1` and `wlan1` (USB) became `wlan0`. I'm assuming this is
+because the new `8188eu` driver occurs before both the on-board's
+`brcmfmac` and the default TP-Link's `r8188eu` in lexical order?
 
-I ended up adding this [udev rule](https://linux.die.net/man/7/udev)
-to pin the device ID to something predictable:
+I added this [udev rule](https://linux.die.net/man/7/udev) to pin the
+device ID to something predictable:
 
 ```bash
 sudo tee /etc/udev/rules.d/tplink_wlan.rules <<< \
     'SUBSYSTEM=="net", ATTRS{idVendor}=="2357", ATTRS{idProduct}=="010c", NAME="tplink"'
 ```
+
+To make sure the rule worked, I ran (note, `wlan0` is what the TP-Link
+was mapped to at the time):
+
+    $ sudo udevadm test /sys/class/net/wlan0
 
 To get the values to specify in `ATTRS{...}`, I used `lsusb`:
 
