@@ -1,5 +1,5 @@
 ---
-date:    2019-10-07
+date:    2019-10-17
 subject: End of an Era?
 tags:
     - planet
