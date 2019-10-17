@@ -7,7 +7,7 @@ tags:
     - landsat-viewer
 abstract: |
     May have to decommission Landsat Viewer because it looks like Planet.com doesn't
-    offer ~~freeloader~~ enthusiast use of their APIs anymore. :(
+    offer ~freeloader~ enthusiast use of their APIs anymore. :(
 ---
 
 Yesterday I wanted to see how a major road construction project near my commute
