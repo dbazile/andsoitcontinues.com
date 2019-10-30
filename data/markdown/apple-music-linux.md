@@ -13,7 +13,6 @@ abstract: |
 ### [https://beta.music.apple.com](https://beta.music.apple.com)
 
 > How the heck did this stay under my radar for an entire month?
->
 > <span class="quoth">Me, this morning</span>
 
 I was a long-time Apple Music customer since back when I first started
