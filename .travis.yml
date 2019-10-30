@@ -6,6 +6,8 @@ cache: pip
 git:
   depth: 1
 
+if: branch = master
+
 script:
   - set -e
   - python -m renderer
