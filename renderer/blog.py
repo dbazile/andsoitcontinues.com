@@ -5,6 +5,7 @@ import re
 import time
 
 from markdown import Markdown
+from markdown.inlinepatterns import SimpleTagInlineProcessor
 from markdown.preprocessors import Preprocessor
 
 import yaml
@@ -150,6 +151,7 @@ def _deserialize_post(filepath, pubdir):
     ])
 
     m.preprocessors.register(LocalPathResolver(pubdir), 'local-path-resolver', 0)
+    m.inlinePatterns.register(SimpleTagInlineProcessor('(~~([^~]+)~~)', 'del'), 'strikeout', 0)
 
     post = {
         'id': _generate_id(filepath),
@@ -157,7 +159,7 @@ def _deserialize_post(filepath, pubdir):
         'body': m.convert(raw_body),
     }
 
-    meta = yaml.load(raw_meta)
+    meta = yaml.safe_load(raw_meta)
     if not meta:
         raise ValidationError('YAML header is malformed')
 
@@ -167,7 +169,7 @@ def _deserialize_post(filepath, pubdir):
             return
 
         if key == 'abstract':
-            value = Markdown(extensions=['markdown.extensions.smarty']).convert(value)
+            value = m.convert(value)
 
         post[key] = value
 
