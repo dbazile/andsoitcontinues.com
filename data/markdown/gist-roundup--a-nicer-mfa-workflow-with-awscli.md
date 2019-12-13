@@ -133,6 +133,52 @@ because honestly, I find it hard to believe that [this is _all_ Amazon has to
 say on the matter](https://aws.amazon.com/premiumsupport/knowledge-center/authenticate-mfa-cli/).
 
 
+## A little extra something-something (added 2019-12-12)
+
+I found myself needing snippets of the actual IAM pieces to enforce MFA in the
+first place, so I'm adding this bit in case I'm on the hook for implementing it
+again.
+
+*Note: Change the contents of `Action` to whichever API permissions you need or
+just use `"*"` if you want to live dangerously. 🤖*
+
+```bash
+aws iam create-policy \
+    --policy-name 'CliAccess-RequireMFA' \
+    --policy-document '{
+        "Version": "2012-10-17",
+        "Statement": [
+            {
+                "Effect": "Allow",
+                "Action": [
+                    "cloudformation:*",
+                    "ec2:*",
+                    "s3:*"
+                ],
+                "Resource": "*",
+                "Condition": {
+                    "Bool": {
+                        "aws:MultiFactorAuthPresent": "true"
+                    }
+                }
+            }
+        ]
+    }'
+
+aws iam create-group \
+    --group-name CliAccess-RequireMFA
+
+aws iam attach-group-policy \
+    --group-name CliAccess-RequireMFA \
+    --policy-arn POLICY_ARN
+```
+
+Create a new user, add them to **CliAccess-RequireMFA**, then generate an
+access key.  To test that MFA is enforced, use `aws s3 ls` use that user's
+access key _without_ an STS token which should give you an *Access Denied*
+error.
+
+
 ## Comments?
 
 Is there an out-of-the-box way to do this already?  Leave a comment on [the
