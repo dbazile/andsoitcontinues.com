@@ -135,6 +135,26 @@ Let me know via [GitHub issue](https://github.com/dbazile/bazile.org/issues/new)
 or hit me up on the Twitters [@spoonchucks](https://twitter.com/spoonchucks).
 
 
+## Update for Fedora 31 (2020-01-07)
+
+This week, I reinstalled one of our family machines with Fedora 31 and
+the necessary package list  seems to have been pared _way_ down.
+
+Note: I was able to verify our H.264-encoded videos can play using these new
+commands but I did not check Hulu or Prime streaming since that's not
+a machine I want logged into those services.
+
+Anyway, the new commands are:
+
+```
+    sudo dnf install \
+        https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-31.noarch.rpm \
+        https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-31.noarch.rpm
+
+    sudo dnf groupinstall multimedia
+```
+
+
 ## References:
 
 1. [RPM Fusion Configuration Instructions](https://rpmfusion.org/Configuration)
