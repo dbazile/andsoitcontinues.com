@@ -62,43 +62,30 @@ h6 {
 
 h1,
 h2,
-h3,
-h4 {
+h3 {
   font-family: "Hammersmith One";
   font-weight: normal;
 }
 
+h4,
 h5,
 h6 {
   font-family: "Abhaya Libre";
-  font-weight: normal;
+  font-weight: bold;
+  font-size: 1em;
 }
 
 h1 {
   margin: 0;
-  font-size: 3em;
+  font-size: 1.75em;
 }
 
 h2 {
-  font-size: 2em;
+  font-size: 1.5em;
 }
 
 h3 {
   font-size: 1.3em;
-}
-
-h4 {
-  font-size: 1em;
-  font-weight: bold;
-  letter-spacing: .07em;
-}
-
-h5 {
-  font-size: 1em;
-}
-
-h6 {
-  font-size: 1em;
 }
 
 p {
