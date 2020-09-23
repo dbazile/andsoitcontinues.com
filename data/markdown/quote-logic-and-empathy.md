@@ -1,6 +1,6 @@
 ---
 date:    2020-09-23
-subject: 'Quote: Logic vs. Empathy"
+subject: 'Quote: Logic vs. Empathy'
 type:    quote
 tags:
     - life
