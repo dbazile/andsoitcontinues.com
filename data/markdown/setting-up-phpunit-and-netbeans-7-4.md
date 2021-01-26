@@ -172,8 +172,7 @@ In the *Project Explorer*, right click on the file you just generated a test for
 
 
 ## And that's all, folks!
-
-Reach out to me <a href="http://www.twitter.com/spoonchucks" target="_twitter">@spoonchucks</a> if there are any errors.
+Reach out to me [@dbazile](https://github.com/dbazile/bazile.org/issues/new?title=setting-up-phpunit-and-netbeans-7-4) if there are any errors.
 
 _(Updated 2015-09-10): Thanks to @minxian\_li for pointing out the errors I had in my `phpunit.bat` and `phpunit-skelgen.bat` scripts._
 

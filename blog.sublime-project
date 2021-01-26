@@ -23,7 +23,12 @@
 		{
 			"binary_file_patterns":
 			[
-				"public/*.html"
+				"*.map",
+				"public/*.html",
+				"public/portfolio/ui/2016-lunch-money-buddy/Proto.io Wireframes/*",
+				"public/portfolio/ui/2015-andsoitcontinues/prototype/assets/*",
+				"vendor*.css",
+				"vendor*.js",
 			],
 			"path": "."
 		}

@@ -115,5 +115,4 @@ the mouse and think how much of a nightmare a whole system made by
 Razer would be.
 
 *Change my mind:*
-[@dbazile](https://github.com/dbazile/bazile.org/issues/new?title=YOU%20ARE%20WRONG%20SIR) or
-[@spoonchucks](https://twitter.com/messages/compose?recipient_id=366279859&text=YOU%20ARE%20WRONG%20SIR)
+[@dbazile](https://github.com/dbazile/bazile.org/issues/new?title=YOU%20ARE%20WRONG%20SIR)

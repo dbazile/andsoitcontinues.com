@@ -131,8 +131,7 @@ I got in the screenshot above.
 
 ## See a problem?
 
-Let me know via [GitHub issue](https://github.com/dbazile/bazile.org/issues/new)
-or hit me up on the Twitters [@spoonchucks](https://twitter.com/spoonchucks).
+Let me know via [GitHub issue](https://github.com/dbazile/bazile.org/issues/new).
 
 
 ## Update for Fedora 31 (2020-01-07)
