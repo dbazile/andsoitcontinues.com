@@ -502,10 +502,11 @@ catastrophic happens. And by that time, the original developers have
 likely left the organization so nobody knows where the bodies are buried
 anymore.
 
-I'm reminded of an article written by an egineering manager named
-Marianne Bellotti that really drove home for me the idea of slowing down
-and being more deliberate about things:
+I'm reminded of an article titled
 [All the best engineering advice I stole from non-technical people](https://bellmar.medium.com/all-the-best-engineering-advice-i-stole-from-non-technical-people-eb7f90ca2f5f)
+written by an engineering manager named Marianne Bellotti that really
+drove home for me the idea of slowing down and being more deliberate
+about things:
 
 The first of two relevant anecdotes from her article speaks to a risk
 of not slowing down for organizations:
@@ -629,7 +630,7 @@ there will be trolls. Trolls will always be a thing but small
 communities that aren't underneath the crushing hand of Big Tech is the
 way you fix this.
 
-Just realized how much of a
+Wow, I just realized how much of a
 ["Reject Humanity; Return to Monke"](https://duckduckgo.com/?q=reject+humanity+return+to+monke&iar=images)
 vibe this gives off... 🤔
 
@@ -680,13 +681,13 @@ and respecting of boundaries.
 
 ## References
 
-- Security Magazine. "Why People are 'Password Walking'". 2018.
-  [www.securitymagazine.com/articles/89049-why-people-are-password-walking](https://www.securitymagazine.com/articles/89049-why-people-are-password-walking).
 - Bellotti, Marianne. "All the best engineering advice I stole from non-technical people". 2019.
   [bellmar.medium.com/all-the-best-engineering-advice-i-stole-from-non-technical-people-eb7f90ca2f5f](https://bellmar.medium.com/all-the-best-engineering-advice-i-stole-from-non-technical-people-eb7f90ca2f5f).
 - Dietrich, Erik. "How Developers Stop Learning: Rise of the Expert Beginner". 2014.
   [daedtech.com/how-developers-stop-learning-rise-of-the-expert-beginner](https://daedtech.com/how-developers-stop-learning-rise-of-the-expert-beginner/).
 - Fisher, James. "How to make a full-wdith iframe with a fixed aspect ratio". 2017.
   [jameshfisher.com/2017/08/30/how-do-i-make-a-full-width-iframe/](https://jameshfisher.com/2017/08/30/how-do-i-make-a-full-width-iframe/).
+- Security Magazine. "Why People are 'Password Walking'". 2018.
+  [www.securitymagazine.com/articles/89049-why-people-are-password-walking](https://www.securitymagazine.com/articles/89049-why-people-are-password-walking).
 - Taneja, Hemant. "Move Fast and Break Things". _Harvard Business Review,_ 2019.
   [hbr.org/2019/01/the-era-of-move-fast-and-break-things-is-over](https://hbr.org/2019/01/the-era-of-move-fast-and-break-things-is-over).
