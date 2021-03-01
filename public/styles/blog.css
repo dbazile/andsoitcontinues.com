@@ -396,6 +396,7 @@
 .post__content pre,
 .post__content ul,
 .post__content ol,
+.post__content figure,
 .post__content .codeblockname {
   margin: 1.5rem 0 .5rem;
   padding: 0 calc(((100% - 800px) / 2) + 20px);
@@ -428,6 +429,7 @@
   .post__content pre,
   .post__content ul,
   .post__content ol,
+  .post__content figure,
   .post__content .codeblockname {
     padding-left: 1rem;
     padding-right: 1rem;
@@ -459,20 +461,35 @@
    ========================================================================= */
 
 .post__content blockquote {
-  opacity: .8;
+  position: relative;
   margin-top: 1.2em;
   font-style: italic;
-  color: #777;
+  color: #999;
+}
+
+.post__content blockquote::before {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  display: block;
+  width: 5px;
+  content: '';
+  background-size: 5px 5px;
+  background-image: linear-gradient(
+    45deg,
+    transparent   0%  45%,
+    #ccc         45%  55%,
+    transparent  55% 100%
+  );
 }
 
 .post__content blockquote > * {
-  padding: 1em 20% 1em 1em;
-  border-left: 4px solid;
-  margin: 0;
+  padding: 0 20% 0 1em;
+  margin: 0 0 0 0;
 }
 
 .post__content blockquote > * + * {
-  padding-top: 0;
+  margin-top: 1em;
 }
 
 .post__content blockquote .quoth {
@@ -551,6 +568,18 @@
   border-radius: .25em;
   display: block;
   margin: 0 auto;
+}
+
+.post__content figure {
+  text-align: center;
+}
+
+.post__content figcaption {
+  padding: 5px 10%;
+  text-align: center;
+  font-size: .9em;
+  font-style: italic;
+  color: #555;
 }
 
 /* Tables
