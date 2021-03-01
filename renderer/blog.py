@@ -192,7 +192,7 @@ def _generate_id(filepath):
 
 
 def _globmds(markdown_dir):
-    return glob.glob(os.path.join(markdown_dir, '*.md'))
+    return sorted(glob.glob(os.path.join(markdown_dir, '*.md')))
 
 
 def _render_post(env, post: dict, output_dir):
