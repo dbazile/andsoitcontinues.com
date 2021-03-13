@@ -1,0 +1,2 @@
+User-Agent: *
+Disallow: /you_werent_supposed_to_do_that
