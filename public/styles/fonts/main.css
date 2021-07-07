@@ -1,0 +1,67 @@
+/* =========================================================================
+   Abhaya Libre
+   ========================================================================= */
+
+@font-face {
+    font-family: 'Abhaya Libre';
+    font-style: normal;
+    font-weight: 400;
+    src: url('/styles/fonts/abhaya_libre/AbhayaLibre-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Abhaya Libre';
+    font-style: normal;
+    font-weight: 700;
+    src: url(/styles/fonts/abhaya_libre/AbhayaLibre-Bold.ttf) format('truetype');
+}
+
+
+/* =========================================================================
+   Cormorant Garamond
+   ========================================================================= */
+
+@font-face {
+    font-family: 'Cormorant Garamond';
+    font-style: italic;
+    font-weight: 400;
+    src: url(/styles/fonts/cormorant_garamond/CormorantGaramond-Italic.otf) format('opentype');
+}
+
+@font-face {
+    font-family: 'Cormorant Garamond';
+    font-style: italic;
+    font-weight: 700;
+    src: url(/styles/fonts/cormorant_garamond/CormorantGaramond-BoldItalic.otf) format('opentype');
+}
+
+
+/* =========================================================================
+   Fira Mono
+   ========================================================================= */
+
+@font-face {
+    font-family: 'Fira Mono';
+    font-style: normal;
+    font-weight: 400;
+    src: url(/styles/fonts/fira_mono/FiraMono-Regular.otf) format('opentype');
+}
+
+@font-face {
+    font-family: 'Fira Mono';
+    font-style: normal;
+    font-weight: 700;
+    src: url(/styles/fonts/fira_mono/Bold.otf) format('opentype');
+}
+
+
+/* =========================================================================
+   Hammersmith One
+   ========================================================================= */
+
+@font-face {
+    font-family: 'Hammersmith One';
+    font-style: normal;
+    font-weight: 400;
+    src: url(/styles/fonts/hammersmith_one/HammersmithOne.ttf) format('truetype');
+}
