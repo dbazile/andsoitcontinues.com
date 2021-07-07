@@ -657,11 +657,15 @@ crash eventually. If it's code someone's selling to solve a people
 problem, it will fail in the most poetically ironic way at the most
 inconvenient time possible.
 
+Assume things will break. Don't put all your eggs in one basket. Have a
+contingency plan for things you've delegated to technology.
+
 
 #### 7. Stop telling everyone "learn to code"
 
 Stop trying to force the non-technically inclined to learn to code. By
-all means, encourage underrepresented groups to try it out and see if they like it but stop painting it as some thing people _have_ to do.
+all means, encourage underrepresented groups to try it out and see if
+they like it but stop painting it as some thing people _have_ to do.
 
 Lets let nerds be nerds and let jocks be jocks. Techies need the jocks
 to deal with meatspace things and the jocks need techies to deal with
