@@ -1,19 +1,17 @@
-__pycache__
 *.pyc
-.idea
-blog.sublime-workspace
-
+*.sublime-workspace
 *.swo
 *.swp
-
-# Rendered files
-/public/index.html
-/public/about.html
-/public/404.html
-/public/search.html
+/.idea
+/__pycache__
 /public/.about.html
 /public/.blog.html
 /public/.portfolio.html
+/public/404.html
+/public/about.html
+/public/index.html
 /public/portfolio/index.html
+/public/search.html
 /public/writing/*.html
 /public/writing/2???/
+/venv
