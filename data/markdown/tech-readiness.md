@@ -657,8 +657,7 @@ crash eventually. If it's code someone's selling to solve a people
 problem, it will fail in the most poetically ironic way at the most
 inconvenient time possible.
 
-Assume things will break. Don't put all your eggs in one basket. Have a
-contingency plan for things you've delegated to technology.
+Have contingency plans for what you're delegating to technology.
 
 
 #### 7. Stop telling everyone "learn to code"
